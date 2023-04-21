@@ -1,0 +1,151 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"6 C:\LABORAL\codigos_clase_micros\ZARZAL2023A\CLASE_UART.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"5 C:\LABORAL\codigos_clase_micros\ZARZAL2023A\CLASE_UART.X\UART_LIB.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"42
+[v _UART_Write_Chr UART_Write_Chr `(v  1 e 1 0 ]
+"46
+[v _UART_Write_Text UART_Write_Text `(v  1 e 1 0 ]
+[s S127 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 SPPIF 1 0 :1:7 
+]
+"4493 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[s S136 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[u S142 . 1 `S127 1 . 1 0 `S136 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES142  1 e 1 @3998 ]
+"4937
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+"5147
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+[s S74 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"5186
+[s S83 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S92 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S95 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S97 . 1 `S74 1 . 1 0 `S83 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES97  1 e 1 @4012 ]
+"5403
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5415
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5427
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"9026
+[v _BRGH BRGH `VEb  1 e 0 @32098 ]
+"10529
+[v _RX9 RX9 `VEb  1 e 0 @32094 ]
+"10589
+[v _SPEN SPEN `VEb  1 e 0 @32095 ]
+"10715
+[v _SYNC SYNC `VEb  1 e 0 @32100 ]
+"11021
+[v _TX9 TX9 `VEb  1 e 0 @32102 ]
+"11027
+[v _TX9D TX9D `VEb  1 e 0 @32096 ]
+"11039
+[v _TXEN TXEN `VEb  1 e 0 @32101 ]
+"6 C:\LABORAL\codigos_clase_micros\ZARZAL2023A\CLASE_UART.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+[s S24 . 8 `ul 1 baud_rate 4 0 `uc 1 data_bits 1 4 `uc 1 parity 1 5 `uc 1 stop_bits 1 6 `uc 1 speed_module 1 7 ]
+"7
+[v main@uartConfig uartConfig `S24  1 a 8 31 ]
+"21
+} 0
+"46 C:\LABORAL\codigos_clase_micros\ZARZAL2023A\CLASE_UART.X\UART_LIB.c
+[v _UART_Write_Text UART_Write_Text `(v  1 e 1 0 ]
+{
+[v UART_Write_Text@text text `*.25uc  1 p 2 1 ]
+"51
+} 0
+"42
+[v _UART_Write_Chr UART_Write_Chr `(v  1 e 1 0 ]
+{
+[v UART_Write_Chr@letter letter `uc  1 a 1 wreg ]
+[v UART_Write_Chr@letter letter `uc  1 a 1 wreg ]
+[v UART_Write_Chr@letter letter `uc  1 a 1 0 ]
+"45
+} 0
+"5
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+"7
+[v UART_Init@spbrg_val spbrg_val `ul  1 a 4 25 ]
+[s S24 . 8 `ul 1 baud_rate 4 0 `uc 1 data_bits 1 4 `uc 1 parity 1 5 `uc 1 stop_bits 1 6 `uc 1 speed_module 1 7 ]
+"5
+[v UART_Init@config config `S24  1 p 8 13 ]
+"41
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"30
+} 0
