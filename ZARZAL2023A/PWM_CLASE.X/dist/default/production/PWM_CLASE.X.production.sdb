@@ -1,0 +1,236 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"14 C:\LABORAL\MICROSZARZAL\PWM_CLASE.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"7 C:\LABORAL\MICROSZARZAL\PWM_CLASE.X\PWM_LIB.c
+[v _PWM1_Init PWM1_Init `(v  1 e 1 0 ]
+"60
+[v _PWM1_Set_Duty PWM1_Set_Duty `(v  1 e 1 0 ]
+"68
+[v _PWM1_Start PWM1_Start `(v  1 e 1 0 ]
+[s S51 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3876 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[s S58 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S65 . 1 `S51 1 . 1 0 `S58 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES65  1 e 1 @3988 ]
+[s S157 . 1 `uc 1 CCP2M 1 0 :4:0 
+`uc 1 DC2B 1 0 :2:4 
+]
+"6262
+[s S160 . 1 `uc 1 CCP2M0 1 0 :1:0 
+`uc 1 CCP2M1 1 0 :1:1 
+`uc 1 CCP2M2 1 0 :1:2 
+`uc 1 CCP2M3 1 0 :1:3 
+`uc 1 DC2B0 1 0 :1:4 
+`uc 1 DC2B1 1 0 :1:5 
+]
+[u S167 . 1 `S157 1 . 1 0 `S160 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES167  1 e 1 @4026 ]
+"6314
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
+[s S83 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+`uc 1 P1M 1 0 :2:6 
+]
+"6355
+[s S87 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+`uc 1 P1M0 1 0 :1:6 
+`uc 1 P1M1 1 0 :1:7 
+]
+[u S96 . 1 `S83 1 . 1 0 `S87 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES96  1 e 1 @4029 ]
+"6497
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
+"6582
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S113 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"7229
+[s S117 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[s S125 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 TOUTPS0 1 0 :1:3 
+`uc 1 TOUTPS1 1 0 :1:4 
+`uc 1 TOUTPS2 1 0 :1:5 
+`uc 1 TOUTPS3 1 0 :1:6 
+]
+[u S131 . 1 `S113 1 . 1 0 `S117 1 . 1 0 `S125 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES131  1 e 1 @4042 ]
+"7299
+[v _PR2 PR2 `VEuc  1 e 1 @4043 ]
+"12 C:\LABORAL\MICROSZARZAL\PWM_CLASE.X\main.c
+[v _duty duty `i  1 e 2 0 ]
+"5 C:\LABORAL\MICROSZARZAL\PWM_CLASE.X\PWM_LIB.c
+[v _reg10bits reg10bits `f  1 e 4 0 ]
+"14 C:\LABORAL\MICROSZARZAL\PWM_CLASE.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"32
+} 0
+"68 C:\LABORAL\MICROSZARZAL\PWM_CLASE.X\PWM_LIB.c
+[v _PWM1_Start PWM1_Start `(v  1 e 1 0 ]
+{
+"70
+} 0
+"60
+[v _PWM1_Set_Duty PWM1_Set_Duty `(v  1 e 1 0 ]
+{
+[v PWM1_Set_Duty@duty duty `uc  1 a 1 wreg ]
+"61
+[v PWM1_Set_Duty@val val `f  1 a 4 91 ]
+"60
+[v PWM1_Set_Duty@duty duty `uc  1 a 1 wreg ]
+[v PWM1_Set_Duty@duty duty `uc  1 a 1 90 ]
+"64
+} 0
+"7
+[v _PWM1_Init PWM1_Init `(v  1 e 1 0 ]
+{
+"9
+[v PWM1_Init@prees prees `uc  1 a 1 4 ]
+"7
+[v PWM1_Init@freq freq `us  1 p 2 90 ]
+"33
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 89 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 88 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 80 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S511 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S516 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S519 . 4 `l 1 i 4 0 `d 1 f 4 0 `S511 1 fAsBytes 4 0 `S516 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S519  1 a 4 33 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 27 ]
+[s S587 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S590 . 2 `s 1 i 2 0 `us 1 n 2 0 `S587 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S590  1 a 2 37 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 32 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 31 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 26 ]
+"8
+[v ___flmul@b b `d  1 p 4 14 ]
+[v ___flmul@a a `d  1 p 4 18 ]
+"205
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 58 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 51 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 56 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 63 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 62 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 55 ]
+"11
+[v ___fldiv@b b `d  1 p 4 39 ]
+[v ___fldiv@a a `d  1 p 4 43 ]
+"185
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 79 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 78 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 77 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 76 ]
+"10
+[v ___fladd@b b `d  1 p 4 64 ]
+[v ___fladd@a a `d  1 p 4 68 ]
+"237
+} 0

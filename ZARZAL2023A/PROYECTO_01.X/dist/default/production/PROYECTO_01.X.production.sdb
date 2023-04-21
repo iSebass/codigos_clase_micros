@@ -1,0 +1,403 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"17 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\main.c
+[e E3574 . `uc
+menuPAL 1
+menuSelMotor 2
+menuFuncM1 3
+menuFuncM2 4
+menuSen 5
+]
+"88 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\config.c
+[e E3571 . `uc
+menuPAL 1
+menuSelMotor 2
+menuFuncM1 3
+menuFuncM2 4
+menuSen 5
+]
+"4 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\ADC_LIB.c
+[v _ADC_Init ADC_Init `(v  1 e 1 0 ]
+"11
+[v _ADC_Read ADC_Read `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"92 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\config.c
+[v _SystemInit SystemInit `(v  1 e 1 0 ]
+"108
+[v _girarMA_Derecha girarMA_Derecha `(v  1 e 1 0 ]
+"112
+[v _girarMA_Izquierda girarMA_Izquierda `(v  1 e 1 0 ]
+"116
+[v _pararMA pararMA `(v  1 e 1 0 ]
+"121
+[v _girarMB_Derecha girarMB_Derecha `(v  1 e 1 0 ]
+"125
+[v _girarMB_Izquierda girarMB_Izquierda `(v  1 e 1 0 ]
+"129
+[v _pararMB pararMB `(v  1 e 1 0 ]
+"151
+[v _menuPPAL menuPPAL `(v  1 e 1 0 ]
+"194
+[v _menuSelM menuSelM `(v  1 e 1 0 ]
+"245
+[v _menuM1 menuM1 `(v  1 e 1 0 ]
+"306
+[v _menuM2 menuM2 `(v  1 e 1 0 ]
+"366
+[v _menuSensores menuSensores `(v  1 e 1 0 ]
+"10 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\LCD_LIB.c
+[v __write_nibble _write_nibble `(v  1 e 1 0 ]
+"23
+[v __send_byte _send_byte `(v  1 e 1 0 ]
+"33
+[v _lcd_write lcd_write `(v  1 e 1 0 ]
+"36
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+"40
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"86
+[v _lcd_set_cursor lcd_set_cursor `(v  1 e 1 0 ]
+"97
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+"122
+[v _lcd_disable_blink lcd_disable_blink `(v  1 e 1 0 ]
+"133
+[v _lcd_disable_cursor lcd_disable_cursor `(v  1 e 1 0 ]
+"156
+[v _lcd_out lcd_out `(v  1 e 1 0 ]
+"164
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+"20 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S96 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2484 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[s S223 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S231 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S234 . 1 `S96 1 . 1 0 `S223 1 . 1 0 `S231 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES234  1 e 1 @3969 ]
+"2706
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S136 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2737
+[s S176 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S185 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S188 . 1 `S136 1 . 1 0 `S176 1 . 1 0 `S185 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES188  1 e 1 @3971 ]
+[s S87 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3658
+[u S105 . 1 `S87 1 . 1 0 `S96 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES105  1 e 1 @3987 ]
+"4002
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S127 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4034
+[u S145 . 1 `S127 1 . 1 0 `S136 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES145  1 e 1 @3989 ]
+[s S443 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :3:3 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"6532
+[s S448 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+]
+[u S455 . 1 `S443 1 . 1 0 `S448 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES455  1 e 1 @4032 ]
+"6582
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S408 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"6607
+[s S411 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S418 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+`uc 1 VCFG01 1 0 :1:4 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S423 . 1 `S408 1 . 1 0 `S411 1 . 1 0 `S418 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES423  1 e 1 @4033 ]
+[s S471 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"6711
+[s S474 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S478 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S485 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S488 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S491 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S494 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S497 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S500 . 1 `S471 1 . 1 0 `S474 1 . 1 0 `S478 1 . 1 0 `S485 1 . 1 0 `S488 1 . 1 0 `S491 1 . 1 0 `S494 1 . 1 0 `S497 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES500  1 e 1 @4034 ]
+"6793
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"6800
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"88 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\config.c
+[v _currentMenu currentMenu `i  1 e 2 0 ]
+"89
+[v _menuOp menuOp `i  1 e 2 0 ]
+"5 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\LCD_LIB.c
+[v __lcd_params _lcd_params `uc  1 s 1 _lcd_params ]
+"20 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"37
+} 0
+"366 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\config.c
+[v _menuSensores menuSensores `(v  1 e 1 0 ]
+{
+"368
+} 0
+"194
+[v _menuSelM menuSelM `(v  1 e 1 0 ]
+{
+"244
+} 0
+"151
+[v _menuPPAL menuPPAL `(v  1 e 1 0 ]
+{
+"193
+} 0
+"306
+[v _menuM2 menuM2 `(v  1 e 1 0 ]
+{
+"365
+} 0
+"129
+[v _pararMB pararMB `(v  1 e 1 0 ]
+{
+"132
+} 0
+"125
+[v _girarMB_Izquierda girarMB_Izquierda `(v  1 e 1 0 ]
+{
+"128
+} 0
+"121
+[v _girarMB_Derecha girarMB_Derecha `(v  1 e 1 0 ]
+{
+"124
+} 0
+"245
+[v _menuM1 menuM1 `(v  1 e 1 0 ]
+{
+"305
+} 0
+"116
+[v _pararMA pararMA `(v  1 e 1 0 ]
+{
+"119
+} 0
+"156 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\LCD_LIB.c
+[v _lcd_out lcd_out `(v  1 e 1 0 ]
+{
+[v lcd_out@row row `uc  1 a 1 wreg ]
+[v lcd_out@row row `uc  1 a 1 wreg ]
+[v lcd_out@col col `uc  1 p 1 10 ]
+[v lcd_out@str str `*.25uc  1 p 2 11 ]
+[v lcd_out@row row `uc  1 a 1 13 ]
+"163
+} 0
+"97
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+{
+"100
+} 0
+"164
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+{
+[v lcd_char@row row `uc  1 a 1 wreg ]
+[v lcd_char@row row `uc  1 a 1 wreg ]
+[v lcd_char@col col `uc  1 p 1 10 ]
+[v lcd_char@letra letra `uc  1 p 1 11 ]
+[v lcd_char@row row `uc  1 a 1 12 ]
+"167
+} 0
+"33
+[v _lcd_write lcd_write `(v  1 e 1 0 ]
+{
+[v lcd_write@letra letra `uc  1 a 1 wreg ]
+[v lcd_write@letra letra `uc  1 a 1 wreg ]
+[v lcd_write@letra letra `uc  1 a 1 5 ]
+"35
+} 0
+"86
+[v _lcd_set_cursor lcd_set_cursor `(v  1 e 1 0 ]
+{
+[v lcd_set_cursor@row row `uc  1 a 1 wreg ]
+[v lcd_set_cursor@row row `uc  1 a 1 wreg ]
+[v lcd_set_cursor@col col `uc  1 p 1 6 ]
+[v lcd_set_cursor@row row `uc  1 a 1 9 ]
+"94
+} 0
+"112 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\config.c
+[v _girarMA_Izquierda girarMA_Izquierda `(v  1 e 1 0 ]
+{
+"115
+} 0
+"108
+[v _girarMA_Derecha girarMA_Derecha `(v  1 e 1 0 ]
+{
+"111
+} 0
+"92
+[v _SystemInit SystemInit `(v  1 e 1 0 ]
+{
+"106
+} 0
+"40 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\LCD_LIB.c
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"75
+} 0
+"133
+[v _lcd_disable_cursor lcd_disable_cursor `(v  1 e 1 0 ]
+{
+"137
+} 0
+"122
+[v _lcd_disable_blink lcd_disable_blink `(v  1 e 1 0 ]
+{
+"126
+} 0
+"36
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+{
+[v lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_command@cmd cmd `uc  1 a 1 5 ]
+"38
+} 0
+"23
+[v __send_byte _send_byte `(v  1 e 1 0 ]
+{
+[v __send_byte@value value `uc  1 a 1 wreg ]
+[v __send_byte@value value `uc  1 a 1 wreg ]
+[v __send_byte@mode mode `uc  1 p 1 1 ]
+[v __send_byte@value value `uc  1 a 1 4 ]
+"31
+} 0
+"10
+[v __write_nibble _write_nibble `(v  1 e 1 0 ]
+{
+[v __write_nibble@nibble nibble `uc  1 a 1 wreg ]
+[v __write_nibble@nibble nibble `uc  1 a 1 wreg ]
+[v __write_nibble@nibble nibble `uc  1 a 1 0 ]
+"21
+} 0
+"4 C:\LABORAL\MICROSZARZAL\PROYECTO_01.X\ADC_LIB.c
+[v _ADC_Init ADC_Init `(v  1 e 1 0 ]
+{
+"10
+} 0
