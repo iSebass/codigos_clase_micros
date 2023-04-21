@@ -1,0 +1,412 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"692 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1390
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"49 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"50 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"58
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"74
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"66 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+"145
+[v _UART1_Read UART1_Read `(uc  1 e 1 0 ]
+"170
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+"184
+[v _putch putch `(v  1 e 1 0 ]
+"193
+[v _UART1_DefaultFramingErrorHandler UART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"195
+[v _UART1_DefaultOverrunErrorHandler UART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"197
+[v _UART1_DefaultErrorHandler UART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"200
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"204
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"208
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+"1281 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-Q_DFP/1.13.211/xc8\pic\include\proc\pic18f57q43.h
+[v _PMD0 PMD0 `VEuc  1 e 1 @96 ]
+"1338
+[v _PMD1 PMD1 `VEuc  1 e 1 @97 ]
+"1400
+[v _PMD3 PMD3 `VEuc  1 e 1 @99 ]
+"1451
+[v _PMD4 PMD4 `VEuc  1 e 1 @100 ]
+"1507
+[v _PMD5 PMD5 `VEuc  1 e 1 @101 ]
+"1558
+[v _PMD6 PMD6 `VEuc  1 e 1 @102 ]
+"1620
+[v _PMD7 PMD7 `VEuc  1 e 1 @103 ]
+"1682
+[v _PMD8 PMD8 `VEuc  1 e 1 @104 ]
+"5141
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5211
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5351
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5391
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5449
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5651
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"10605
+[v _RF0PPS RF0PPS `VEuc  1 e 1 @553 ]
+"14779
+[v _U1RXPPS U1RXPPS `VEuc  1 e 1 @626 ]
+"15475
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15607
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15739
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15871
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"17048
+[v _U1RXB U1RXB `VEuc  1 e 1 @673 ]
+"17106
+[v _U1TXB U1TXB `VEuc  1 e 1 @675 ]
+"17171
+[v _U1P1L U1P1L `VEuc  1 e 1 @677 ]
+"17191
+[v _U1P1H U1P1H `VEuc  1 e 1 @678 ]
+"17218
+[v _U1P2L U1P2L `VEuc  1 e 1 @679 ]
+"17238
+[v _U1P2H U1P2H `VEuc  1 e 1 @680 ]
+"17265
+[v _U1P3L U1P3L `VEuc  1 e 1 @681 ]
+"17285
+[v _U1P3H U1P3H `VEuc  1 e 1 @682 ]
+"17305
+[v _U1CON0 U1CON0 `VEuc  1 e 1 @683 ]
+[s S99 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+]
+"17338
+[s S104 . 1 `uc 1 U1MODE 1 0 :4:0 
+`uc 1 U1RXEN 1 0 :1:4 
+`uc 1 U1TXEN 1 0 :1:5 
+`uc 1 U1ABDEN 1 0 :1:6 
+`uc 1 U1BRGS 1 0 :1:7 
+]
+[s S110 . 1 `uc 1 U1MODE0 1 0 :1:0 
+`uc 1 U1MODE1 1 0 :1:1 
+`uc 1 U1MODE2 1 0 :1:2 
+`uc 1 U1MODE3 1 0 :1:3 
+]
+[s S115 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 RXEN 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 ABDEN 1 0 :1:6 
+`uc 1 BRGS 1 0 :1:7 
+]
+[u S121 . 1 `S99 1 . 1 0 `S104 1 . 1 0 `S110 1 . 1 0 `S115 1 . 1 0 ]
+[v _U1CON0bits U1CON0bits `VES121  1 e 1 @683 ]
+"17433
+[v _U1CON1 U1CON1 `VEuc  1 e 1 @684 ]
+"17513
+[v _U1CON2 U1CON2 `VEuc  1 e 1 @685 ]
+"17662
+[v _U1BRGL U1BRGL `VEuc  1 e 1 @686 ]
+"17682
+[v _U1BRGH U1BRGH `VEuc  1 e 1 @687 ]
+"17702
+[v _U1FIFO U1FIFO `VEuc  1 e 1 @688 ]
+"17832
+[v _U1UIR U1UIR `VEuc  1 e 1 @689 ]
+"17888
+[v _U1ERRIR U1ERRIR `VEuc  1 e 1 @690 ]
+[s S149 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"17915
+[s S158 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+`uc 1 U1RXFOIF 1 0 :1:1 
+`uc 1 U1RXBKIF 1 0 :1:2 
+`uc 1 U1FERIF 1 0 :1:3 
+`uc 1 U1CERIF 1 0 :1:4 
+`uc 1 U1ABDOVF 1 0 :1:5 
+`uc 1 U1PERIF 1 0 :1:6 
+`uc 1 U1TXMTIF 1 0 :1:7 
+]
+[u S167 . 1 `S149 1 . 1 0 `S158 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES167  1 e 1 @690 ]
+"18000
+[v _U1ERRIE U1ERRIE `VEuc  1 e 1 @691 ]
+"39117
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"39179
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"39241
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"39303
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"39365
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"39613
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"39675
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"39737
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"39799
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"39861
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40109
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"40171
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"40233
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"40295
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"40357
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"40605
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"40667
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"40729
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"40791
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"40853
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"40915
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"40947
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"40985
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41017
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41049
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41150
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"41212
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"41274
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"41336
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"41398
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+[s S80 . 1 `uc 1 U1RXIF 1 0 :1:0 
+`uc 1 U1TXIF 1 0 :1:1 
+`uc 1 U1EIF 1 0 :1:2 
+`uc 1 U1IF 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIF 1 0 :1:6 
+`uc 1 PWM1IF 1 0 :1:7 
+]
+"46876
+[u S88 . 1 `S80 1 . 1 0 ]
+"46876
+"46876
+[v _PIR4bits PIR4bits `VES88  1 e 1 @1202 ]
+"47513
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"47575
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"47637
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+"47699
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"47761
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"47793
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"47855
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"47917
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"47979
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"48041
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"48103
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"48135
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+"55 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"69
+[v _nout nout `i  1 s 2 nout ]
+[s S24 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"53 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/uart1.c
+[u S29 . 1 `S24 1 . 1 0 `uc 1 status 1 0 ]
+[v _uart1RxLastError uart1RxLastError `VES29  1 s 1 uart1RxLastError ]
+"58
+[v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.38(v  1 e 3 0 ]
+"59
+[v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
+"60
+[v _UART1_ErrorHandler UART1_ErrorHandler `*.38(v  1 e 3 0 ]
+"49 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"69
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.39v  1 a 2 27 ]
+"5
+[v printf@fmt fmt `*.32Cuc  1 p 2 25 ]
+"13
+} 0
+"1390 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1393
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 23 ]
+[s S820 _IO_FILE 0 ]
+"1390
+[v vfprintf@fp fp `*.2S820  1 p 2 17 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 19 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 21 ]
+"1404
+} 0
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S820 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.2S820  1 p 2 11 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 13 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 15 ]
+"1387
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 2 ]
+[u S798 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S801 _IO_FILE 11 `S798 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.2S801  1 p 2 4 ]
+"24
+} 0
+"184 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/uart1.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"186
+[v putch@txData txData `uc  1 a 1 1 ]
+"187
+} 0
+"170
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+{
+[v UART1_Write@txData txData `uc  1 a 1 wreg ]
+[v UART1_Write@txData txData `uc  1 a 1 wreg ]
+[v UART1_Write@txData txData `uc  1 a 1 0 ]
+"177
+} 0
+"50 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"66 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+{
+"124
+} 0
+"204
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"206
+} 0
+"200
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"202
+} 0
+"208
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
+"210
+} 0
+"74 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"55 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"144
+} 0
+"58 C:\LABORAL\MICROS_TULUA\CLASE UART\PRUEBAREAL.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
