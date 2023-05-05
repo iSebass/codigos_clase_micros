@@ -5942,30 +5942,14 @@ uint8_t UART_Read(void);
 # 5 "main.c" 2
 
 
-char opletra = 'a';
-char strRx[50]=" ", interpretarFlag = 0;
-int indexRx = 0;
-
 
 void __attribute__((picinterrupt(("")))) appLedRxData(){
 
-    if(PIR1bits.RC1IF == 1){
-        strRx[indexRx] = UART_Read();
-        if( strRx[indexRx]== '#' ){
-            interpretarFlag = 1;
-        }
-        indexRx++;
-    }
+
 
 }
 
 void main(void){
-
-    TRISDbits.RD0 = 0;
-
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIE1bits.RCIE = 1;
 
     UART_Config uartConfig;
 
@@ -5978,23 +5962,7 @@ void main(void){
 
 
     while(1){
-        if( interpretarFlag == 1){
 
-            if( strstr(strRx,"LedOn") ){
-                PORTDbits.RD0 = 1;
-            }
-            else if( strstr(strRx,"LedOff") ){
-                PORTDbits.RD0 = 0;
-            }
-            indexRx = 0;
-            memset(strRx," ",50);
-            interpretarFlag=0;
-
-        }
-
-
-        UART_Write_Text("Univalle \r\n");
-        _delay((unsigned long)((300)*(20000000UL/4000.0)));
     }
     return;
 }

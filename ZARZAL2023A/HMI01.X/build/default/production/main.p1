@@ -1,74 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T36 __interrupt ]
-"4475 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4475:     struct {
-[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S178 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
-"4485
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4485:     struct {
-[s S179 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S179 . . TX1IF RC1IF . PSPIF ]
-"4474
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4474: typedef union {
-[u S177 `S178 1 `S179 1 ]
-[n S177 . . . ]
-"4493
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4493: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS177 ~T0 @X0 0 e@3998 ]
-"25 ./UART_LIB.h
-[; ;./UART_LIB.h: 25: uint8_t UART_Read(void);
-[v _UART_Read `(uc ~T0 @X0 0 ef ]
 [p mainexit ]
-"4013 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4013:     struct {
-[s S160 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S160 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
-"4023
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4023:     struct {
-[s S161 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S161 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"4012
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4012: typedef union {
-[u S159 `S160 1 `S161 1 ]
-[n S159 . . . ]
-"4034
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4034: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
-[v _TRISDbits `VS159 ~T0 @X0 0 e@3989 ]
-"8589
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8589:     struct {
-[s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S360 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8599
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8599:     struct {
-[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S361 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8609
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8609:     struct {
-[s S362 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S362 . . GIEL GIEH ]
-"8588
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8588: typedef union {
-[u S359 `S360 1 `S361 1 `S362 1 ]
-[n S359 . . . . ]
-"8615
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8615: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS359 ~T0 @X0 0 e@4082 ]
-"4391
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4391:     struct {
-[s S175 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S175 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
-"4401
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4401:     struct {
-[s S176 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S176 . . TX1IE RC1IE . PSPIE ]
-"4390
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4390: typedef union {
-[u S174 `S175 1 `S176 1 ]
-[n S174 . . . ]
-"4409
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4409: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
-[v _PIE1bits `VS174 ~T0 @X0 0 e@3997 ]
 "14 ./UART_LIB.h
 [; ;./UART_LIB.h: 14: typedef struct {
 [s S370 `ul 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
@@ -76,38 +9,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;./UART_LIB.h: 22: void UART_Init(UART_Config config);
 [v _UART_Init `(v ~T0 @X0 0 ef1`S370 ]
-"51 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h: 51: char *strstr (const char *, const char *);
-[v _strstr `(*uc ~T0 @X0 0 ef2`*Cuc`*Cuc ]
-"2712 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2712:     struct {
-[s S117 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S117 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"2722
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2722:     struct {
-[s S118 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S118 . SPP0 SPP1 SPP2 SPP3 SPP4 SPP5 SPP6 SPP7 ]
-"2732
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2732:     struct {
-[s S119 :7 `uc 1 :1 `uc 1 ]
-[n S119 . . SS2 ]
-"2711
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2711: typedef union {
-[u S116 `S117 1 `S118 1 `S119 1 ]
-[n S116 . . . . ]
-"2737
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2737: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-[v _PORTDbits `VS116 ~T0 @X0 0 e@3971 ]
-"29 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
-[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
-"24 ./UART_LIB.h
-[; ;./UART_LIB.h: 24: void UART_Write_Text(char *text);
-[v _UART_Write_Text `(v ~T0 @X0 0 ef1`*uc ]
-[v F192 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\builtins.h
-[v __delay `JF192 ~T0 @X0 0 e ]
-[p i __delay ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -618,171 +519,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"7 main.c
-[; ;main.c: 7: char opletra = 'a';
-[v _opletra `uc ~T0 @X0 1 e ]
-[i _opletra
--> -> 97 `ui `uc
-]
-"8
-[; ;main.c: 8: char strRx[50]=" ", interpretarFlag = 0;
-[v _strRx `uc ~T0 @X0 -> 50 `i e ]
-[i _strRx
-:U ..
--> 32 `c
--> 0 `c
-..
-]
-[v _interpretarFlag `uc ~T0 @X0 1 e ]
-[i _interpretarFlag
--> -> 0 `i `uc
-]
-"9
-[; ;main.c: 9: int indexRx = 0;
-[v _indexRx `i ~T0 @X0 1 e ]
-[i _indexRx
--> 0 `i
-]
 [v $root$_appLedRxData `(v ~T0 @X0 0 e ]
-"12
-[; ;main.c: 12: void __attribute__((picinterrupt(("")))) appLedRxData(){
+"8 main.c
+[; ;main.c: 8: void __attribute__((picinterrupt(("")))) appLedRxData(){
 [v _appLedRxData `(v ~T36 @X0 1 ef ]
 {
 [e :U _appLedRxData ]
 [f ]
-"14
-[; ;main.c: 14:     if(PIR1bits.RC1IF == 1){
-[e $ ! == -> . . _PIR1bits 1 2 `i -> 1 `i 372  ]
-{
-"15
-[; ;main.c: 15:         strRx[indexRx] = UART_Read();
-[e = *U + &U _strRx * -> -> _indexRx `ui `ux -> -> # *U &U _strRx `ui `ux -> ( _UART_Read ..  `uc ]
-"16
-[; ;main.c: 16:         if( strRx[indexRx]== '#' ){
-[e $ ! == -> *U + &U _strRx * -> -> _indexRx `ui `ux -> -> # *U &U _strRx `ui `ux `ui -> 35 `ui 373  ]
-{
-"17
-[; ;main.c: 17:             interpretarFlag = 1;
-[e = _interpretarFlag -> -> 1 `i `uc ]
-"18
-[; ;main.c: 18:         }
-}
-[e :U 373 ]
-"19
-[; ;main.c: 19:         indexRx++;
-[e ++ _indexRx -> 1 `i ]
-"20
-[; ;main.c: 20:     }
-}
-[e :U 372 ]
-"22
-[; ;main.c: 22: }
+"12
+[; ;main.c: 12: }
 [e :UE 371 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"24
-[; ;main.c: 24: void main(void){
+"14
+[; ;main.c: 14: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"26
-[; ;main.c: 26:     TRISDbits.RD0 = 0;
-[e = . . _TRISDbits 1 0 -> -> 0 `i `uc ]
-"28
-[; ;main.c: 28:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"29
-[; ;main.c: 29:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"30
-[; ;main.c: 30:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"32
-[; ;main.c: 32:     UART_Config uartConfig;
+"16
+[; ;main.c: 16:     UART_Config uartConfig;
 [v _uartConfig `S370 ~T0 @X0 1 a ]
-"34
-[; ;main.c: 34:     uartConfig.baud_rate = 9600;
+"18
+[; ;main.c: 18:     uartConfig.baud_rate = 9600;
 [e = . _uartConfig 0 -> -> -> 9600 `i `l `ul ]
-"35
-[; ;main.c: 35:     uartConfig.data_bits = 8;
+"19
+[; ;main.c: 19:     uartConfig.data_bits = 8;
 [e = . _uartConfig 1 -> -> 8 `i `uc ]
-"36
-[; ;main.c: 36:     uartConfig.parity = 0;
+"20
+[; ;main.c: 20:     uartConfig.parity = 0;
 [e = . _uartConfig 2 -> -> 0 `i `uc ]
-"37
-[; ;main.c: 37:     uartConfig.stop_bits = 1;
+"21
+[; ;main.c: 21:     uartConfig.stop_bits = 1;
 [e = . _uartConfig 3 -> -> 1 `i `uc ]
-"39
-[; ;main.c: 39:     UART_Init(uartConfig);
+"23
+[; ;main.c: 23:     UART_Init(uartConfig);
 [e ( _UART_Init (1 _uartConfig ]
-"42
-[; ;main.c: 42:     while(1){
-[e :U 376 ]
+"26
+[; ;main.c: 26:     while(1){
+[e :U 374 ]
 {
-"43
-[; ;main.c: 43:         if( interpretarFlag == 1){
-[e $ ! == -> _interpretarFlag `i -> 1 `i 378  ]
-{
-"45
-[; ;main.c: 45:             if( strstr(strRx,"LedOn") ){
-[e $ ! != ( _strstr (2 , -> &U _strRx `*Cuc :s 2C -> -> 0 `i `*uc 379  ]
-{
-"46
-[; ;main.c: 46:                 PORTDbits.RD0 = 1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"47
-[; ;main.c: 47:             }
+"28
+[; ;main.c: 28:     }
 }
-[e $U 380  ]
-"48
-[; ;main.c: 48:             else if( strstr(strRx,"LedOff") ){
-[e :U 379 ]
-[e $ ! != ( _strstr (2 , -> &U _strRx `*Cuc :s 4C -> -> 0 `i `*uc 381  ]
-{
-"49
-[; ;main.c: 49:                 PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"50
-[; ;main.c: 50:             }
-}
-[e :U 381 ]
-[e :U 380 ]
-"51
-[; ;main.c: 51:             indexRx = 0;
-[e = _indexRx -> 0 `i ]
-"52
-[; ;main.c: 52:             memset(strRx," ",50);
-[e ( _memset (3 , , -> &U _strRx `*v -> :s 5C `i -> -> 50 `i `ui ]
-"53
-[; ;main.c: 53:             interpretarFlag=0;
-[e = _interpretarFlag -> -> 0 `i `uc ]
-"55
-[; ;main.c: 55:         }
-}
-[e :U 378 ]
-"58
-[; ;main.c: 58:         UART_Write_Text("Univalle \r\n");
-[e ( _UART_Write_Text (1 :s 6C ]
-"59
-[; ;main.c: 59:         _delay((unsigned long)((300)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"60
-[; ;main.c: 60:     }
-}
+[e :U 373 ]
+[e $U 374  ]
 [e :U 375 ]
-[e $U 376  ]
-[e :U 377 ]
-"61
-[; ;main.c: 61:     return;
-[e $UE 374  ]
-"62
-[; ;main.c: 62: }
-[e :UE 374 ]
+"29
+[; ;main.c: 29:     return;
+[e $UE 372  ]
+"30
+[; ;main.c: 30: }
+[e :UE 372 ]
 }
-[a 1C 76 101 100 79 110 0 ]
-[a 2C 76 101 100 79 110 0 ]
-[a 3C 76 101 100 79 102 102 0 ]
-[a 4C 76 101 100 79 102 102 0 ]
-[a 5C 32 0 ]
-[a 6C 85 110 105 118 97 108 108 101 32 13 10 0 ]
