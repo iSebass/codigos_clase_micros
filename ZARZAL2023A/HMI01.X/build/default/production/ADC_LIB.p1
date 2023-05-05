@@ -1,36 +1,83 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[t ~ __interrupt . k ]
-[t T36 __interrupt ]
-[p mainexit ]
-"6582 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6582: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"32 ./ADC_LIB.h
-[; ;./ADC_LIB.h: 32: void ADC_Init(void);
-[v _ADC_Init `(v ~T0 @X0 0 ef ]
-"14 ./UART_LIB.h
-[; ;./UART_LIB.h: 14: typedef struct {
-[s S370 `ul 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S370 . baud_rate data_bits parity stop_bits speed_module ]
-"22
-[; ;./UART_LIB.h: 22: void UART_Init(UART_Config config);
-[v _UART_Init `(v ~T0 @X0 0 ef1`S370 ]
-"33 ./ADC_LIB.h
-[; ;./ADC_LIB.h: 33: int ADC_Read(uint8_t channel);
-[v _ADC_Read `(i ~T0 @X0 0 ef1`uc ]
-"34
-[; ;./ADC_LIB.h: 34: float ADC_MAP(int conver, float xi,
-[v _ADC_MAP `(f ~T0 @X0 0 ef5`i`f`f`f`f ]
-"109 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h
-[; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"24 ./UART_LIB.h
-[; ;./UART_LIB.h: 24: void UART_Write_Text(char *text);
-[v _UART_Write_Text `(v ~T0 @X0 0 ef1`*uc ]
-[v F192 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\builtins.h
-[v __delay `JF192 ~T0 @X0 0 e ]
-[p i __delay ]
+"6588 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6588:     struct {
+[s S269 :4 `uc 1 :2 `uc 1 ]
+[n S269 . PCFG VCFG ]
+"6592
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6592:     struct {
+[s S270 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S270 . PCFG0 PCFG1 PCFG2 PCFG3 VCFG0 VCFG1 ]
+"6600
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6600:     struct {
+[s S271 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S271 . . CHSN3 VCFG01 VCFG11 ]
+"6587
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6587: typedef union {
+[u S268 `S269 1 `S270 1 `S271 1 ]
+[n S268 . . . . ]
+"6607
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6607: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
+[v _ADCON1bits `VS268 ~T0 @X0 0 e@4033 ]
+"6517
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6517:     struct {
+[s S266 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S266 . ADCS ACQT . ADFM ]
+"6523
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6523:     struct {
+[s S267 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S267 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
+"6516
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6516: typedef union {
+[u S265 `S266 1 `S267 1 ]
+[n S265 . . . ]
+"6532
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6532: extern volatile ADCON2bits_t ADCON2bits __attribute__((address(0xFC0)));
+[v _ADCON2bits `VS265 ~T0 @X0 0 e@4032 ]
+"6673
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6673:     struct {
+[s S273 :1 `uc 1 :1 `uc 1 ]
+[n S273 . . GO_NOT_DONE ]
+"6677
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6677:     struct {
+[s S274 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S274 . ADON GO_nDONE CHS ]
+"6682
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6682:     struct {
+[s S275 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S275 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
+"6690
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6690:     struct {
+[s S276 :1 `uc 1 :1 `uc 1 ]
+[n S276 . . DONE ]
+"6694
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6694:     struct {
+[s S277 :1 `uc 1 :1 `uc 1 ]
+[n S277 . . GO ]
+"6698
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6698:     struct {
+[s S278 :1 `uc 1 :1 `uc 1 ]
+[n S278 . . NOT_DONE ]
+"6702
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6702:     struct {
+[s S279 :1 `uc 1 :1 `uc 1 ]
+[n S279 . . nDONE ]
+"6706
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6706:     struct {
+[s S280 :1 `uc 1 :1 `uc 1 ]
+[n S280 . . GODONE ]
+"6672
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6672: typedef union {
+[u S272 `S273 1 `S274 1 `S275 1 `S276 1 `S277 1 `S278 1 `S279 1 `S280 1 ]
+[n S272 . . . . . . . . . ]
+"6711
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6711: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS272 ~T0 @X0 0 e@4034 ]
+"6800
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6800: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"6793
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6793: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -541,108 +588,81 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"9 main.c
-[; ;main.c: 9: int conver;
-[v _conver `i ~T0 @X0 1 e ]
-"10
-[; ;main.c: 10: float temp, hum, pressure;
-[v _temp `f ~T0 @X0 1 e ]
-[v _hum `f ~T0 @X0 1 e ]
-[v _pressure `f ~T0 @X0 1 e ]
-"12
-[; ;main.c: 12: char strUART[50]=" ";
-[v _strUART `uc ~T0 @X0 -> 50 `i e ]
-[i _strUART
-:U ..
--> 32 `c
--> 0 `c
-..
-]
-[v $root$_appLedRxData `(v ~T0 @X0 0 e ]
-"15
-[; ;main.c: 15: void __attribute__((picinterrupt(("")))) appLedRxData(){
-[v _appLedRxData `(v ~T36 @X0 1 ef ]
+"4 ADC_LIB.c
+[; ;ADC_LIB.c: 4: void ADC_Init(void){
+[v _ADC_Init `(v ~T0 @X0 1 ef ]
 {
-[e :U _appLedRxData ]
+[e :U _ADC_Init ]
+[f ]
+"5
+[; ;ADC_LIB.c: 5:     ADCON1bits.VCFG = 0b00;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"6
+[; ;ADC_LIB.c: 6:     ADCON2bits.ADFM = 1;
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+"7
+[; ;ADC_LIB.c: 7:     ADCON2bits.ADCS = 6;
+[e = . . _ADCON2bits 0 0 -> -> 6 `i `uc ]
+"8
+[; ;ADC_LIB.c: 8:     ADCON2bits.ACQT = 7;
+[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
+"9
+[; ;ADC_LIB.c: 9:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"10
+[; ;ADC_LIB.c: 10: }
+[e :UE 367 ]
+}
+"11
+[; ;ADC_LIB.c: 11: int ADC_Read(uint8_t channel){
+[v _ADC_Read `(i ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ADC_Read ]
+[v _channel `uc ~T0 @X0 1 r1 ]
+[f ]
+"12
+[; ;ADC_LIB.c: 12:     ADCON0bits.CHS = channel & 0x0F;
+[e = . . _ADCON0bits 1 2 -> & -> _channel `i -> 15 `i `uc ]
+"13
+[; ;ADC_LIB.c: 13:     ADCON0bits.GODONE = 1;
+[e = . . _ADCON0bits 7 1 -> -> 1 `i `uc ]
+"14
+[; ;ADC_LIB.c: 14:     while(ADCON0bits.GODONE == 1);
+[e $U 369  ]
+[e :U 370 ]
+[e :U 369 ]
+[e $ == -> . . _ADCON0bits 7 1 `i -> 1 `i 370  ]
+[e :U 371 ]
+"15
+[; ;ADC_LIB.c: 15:     return ( (ADRESH<<8) | (ADRESL<<0));
+[e ) | << -> _ADRESH `i -> 8 `i << -> _ADRESL `i -> 0 `i ]
+[e $UE 368  ]
+"16
+[; ;ADC_LIB.c: 16: }
+[e :UE 368 ]
+}
+"18
+[; ;ADC_LIB.c: 18: float ADC_MAP(int conver, float xi,float xf, float yi, float yf){
+[v _ADC_MAP `(f ~T0 @X0 1 ef5`i`f`f`f`f ]
+{
+[e :U _ADC_MAP ]
+[v _conver `i ~T0 @X0 1 r1 ]
+[v _xi `f ~T0 @X0 1 r2 ]
+[v _xf `f ~T0 @X0 1 r3 ]
+[v _yi `f ~T0 @X0 1 r4 ]
+[v _yf `f ~T0 @X0 1 r5 ]
 [f ]
 "19
-[; ;main.c: 19: }
-[e :UE 371 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
+[; ;ADC_LIB.c: 19:     float m;
+[v _m `f ~T0 @X0 1 a ]
+"20
+[; ;ADC_LIB.c: 20:     m = (yf-yi)/(xf-xi);
+[e = _m / - _yf _yi - _xf _xi ]
 "21
-[; ;main.c: 21: void main(void){
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[e :U _main ]
-[f ]
-"23
-[; ;main.c: 23:     ADCON1 = 12;
-[e = _ADCON1 -> -> 12 `i `uc ]
-"25
-[; ;main.c: 25:     ADC_Init();
-[e ( _ADC_Init ..  ]
-"27
-[; ;main.c: 27:     UART_Config uartConfig;
-[v _uartConfig `S370 ~T0 @X0 1 a ]
-"29
-[; ;main.c: 29:     uartConfig.baud_rate = 9600;
-[e = . _uartConfig 0 -> -> -> 9600 `i `l `ul ]
-"30
-[; ;main.c: 30:     uartConfig.data_bits = 8;
-[e = . _uartConfig 1 -> -> 8 `i `uc ]
-"31
-[; ;main.c: 31:     uartConfig.parity = 0;
-[e = . _uartConfig 2 -> -> 0 `i `uc ]
-"32
-[; ;main.c: 32:     uartConfig.stop_bits = 1;
-[e = . _uartConfig 3 -> -> 1 `i `uc ]
-"34
-[; ;main.c: 34:     UART_Init(uartConfig);
-[e ( _UART_Init (1 _uartConfig ]
-"37
-[; ;main.c: 37:     while(1){
-[e :U 374 ]
-{
-"38
-[; ;main.c: 38:         conver = ADC_Read(0);
-[e = _conver ( _ADC_Read (1 -> -> 0 `i `uc ]
-"39
-[; ;main.c: 39:         temp = ADC_MAP(conver, 0.0, 1023.0, 0.0, 150.0);
-[e = _temp ( _ADC_MAP (4 , , , , _conver -> .0.0 `f -> .1023.0 `f -> .0.0 `f -> .150.0 `f ]
-"41
-[; ;main.c: 41:         conver = ADC_Read(1);
-[e = _conver ( _ADC_Read (1 -> -> 1 `i `uc ]
-"42
-[; ;main.c: 42:         hum = ADC_MAP(conver, 0.0, 1023.0, 100.0, 0.0);
-[e = _hum ( _ADC_MAP (4 , , , , _conver -> .0.0 `f -> .1023.0 `f -> .100.0 `f -> .0.0 `f ]
-"44
-[; ;main.c: 44:         conver = ADC_Read(2);
-[e = _conver ( _ADC_Read (1 -> -> 2 `i `uc ]
-"45
-[; ;main.c: 45:         pressure = ADC_MAP(conver, 0.0, 1023.0, 700.0, 1100.0);
-[e = _pressure ( _ADC_MAP (4 , , , , _conver -> .0.0 `f -> .1023.0 `f -> .700.0 `f -> .1100.0 `f ]
-"47
-[; ;main.c: 47:         sprintf(strUART,"* %f / %f / %f #\r\n",temp, hum, pressure);
-[e ( _sprintf (1 , , , (. , &U _strUART :s 1C -> _temp `d -> _hum `d -> _pressure `d ]
-"48
-[; ;main.c: 48:         UART_Write_Text(strUART);
-[e ( _UART_Write_Text (1 &U _strUART ]
-"50
-[; ;main.c: 50:         _delay((unsigned long)((500)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"51
-[; ;main.c: 51:     }
-}
-[e :U 373 ]
-[e $U 374  ]
-[e :U 375 ]
-"52
-[; ;main.c: 52:     return;
+[; ;ADC_LIB.c: 21:     return (m*conver-m*xi+yi);
+[e ) + - * _m -> _conver `f * _m _xi _yi ]
 [e $UE 372  ]
-"53
-[; ;main.c: 53: }
+"23
+[; ;ADC_LIB.c: 23: }
 [e :UE 372 ]
 }
-[p f _sprintf 8396800 ]
-[a 1C 42 32 37 102 32 47 32 37 102 32 47 32 37 102 32 35 13 10 0 ]
