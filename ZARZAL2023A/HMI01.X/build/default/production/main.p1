@@ -623,14 +623,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 45:         pressure = ADC_MAP(conver, 0.0, 1023.0, 700.0, 1100.0);
 [e = _pressure ( _ADC_MAP (4 , , , , _conver -> .0.0 `f -> .1023.0 `f -> .700.0 `f -> .1100.0 `f ]
 "47
-[; ;main.c: 47:         sprintf(strUART,"* %f / %f / %f #\r\n",temp, hum, pressure);
+[; ;main.c: 47:         sprintf(strUART,"*%5.1f/%5.1f/%6.1f#\r\n",temp, hum, pressure);
 [e ( _sprintf (1 , , , (. , &U _strUART :s 1C -> _temp `d -> _hum `d -> _pressure `d ]
 "48
 [; ;main.c: 48:         UART_Write_Text(strUART);
 [e ( _UART_Write_Text (1 &U _strUART ]
 "50
-[; ;main.c: 50:         _delay((unsigned long)((500)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 50:         _delay((unsigned long)((100)*(20000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
 "51
 [; ;main.c: 51:     }
 }
@@ -644,5 +644,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 53: }
 [e :UE 372 ]
 }
-[p f _sprintf 8396800 ]
-[a 1C 42 32 37 102 32 47 32 37 102 32 47 32 37 102 32 35 13 10 0 ]
+[p f _sprintf 8495104 ]
+[a 1C 42 37 53 46 49 102 47 37 53 46 49 102 47 37 54 46 49 102 35 13 10 0 ]

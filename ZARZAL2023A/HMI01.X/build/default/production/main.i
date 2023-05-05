@@ -5991,10 +5991,10 @@ void main(void){
         conver = ADC_Read(2);
         pressure = ADC_MAP(conver, 0.0, 1023.0, 700.0, 1100.0);
 
-        sprintf(strUART,"* %f / %f / %f #\r\n",temp, hum, pressure);
+        sprintf(strUART,"*%5.1f/%5.1f/%6.1f#\r\n",temp, hum, pressure);
         UART_Write_Text(strUART);
 
-        _delay((unsigned long)((500)*(20000000UL/4000.0)));
+        _delay((unsigned long)((100)*(20000000UL/4000.0)));
     }
     return;
 }
