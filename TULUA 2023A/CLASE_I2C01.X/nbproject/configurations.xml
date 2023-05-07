@@ -7,9 +7,6 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <itemPath>mcc_generated_files/examples/i2c_master_example.h</itemPath>
-        </logicalFolder>
         <itemPath>mcc_generated_files/device_config.h</itemPath>
         <itemPath>mcc_generated_files/i2c_master.h</itemPath>
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
@@ -26,9 +23,6 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <itemPath>mcc_generated_files/examples/i2c_master_example.c</itemPath>
-        </logicalFolder>
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/i2c_master.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>

@@ -1,0 +1,1194 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+idloc IDLOC 5 8000 8000 4 2 1
+reset_vec CODE 0 0 0 2 2 1
+end_init CODE 0 2 2 2 2 1
+config CONFIG 4 8007 8007 2 2 1
+$dist/default/production\CLASE_I2C01.X.production.o
+cinit CODE 0 7F5 7F5 B 2 1
+idloc IDLOC 5 8000 8000 4 2 1
+text1 CODE 0 65A 65A 53 2 1
+text2 CODE 0 702 702 5F 2 1
+text3 CODE 0 41A 41A D 2 1
+text4 CODE 0 367 367 4 2 1
+text5 CODE 0 4DC 4DC 22 2 1
+text6 CODE 0 3DA 3DA C 2 1
+text7 CODE 0 3D1 3D1 9 2 1
+text8 CODE 0 5AA 5AA 30 2 1
+text9 CODE 0 40D 40D D 2 1
+text10 CODE 0 3A2 3A2 5 2 1
+text11 CODE 0 4BC 4BC 20 2 1
+text12 CODE 0 5DA 5DA 3A 2 1
+text13 CODE 0 400 400 D 2 1
+text14 CODE 0 39D 39D 5 2 1
+text15 CODE 0 49E 49E 1E 2 1
+text16 CODE 0 3F3 3F3 D 2 1
+text17 CODE 0 3AD 3AD 6 2 1
+text18 CODE 0 524 524 2B 2 1
+text19 CODE 0 54F 54F 2C 2 1
+text20 CODE 0 398 398 5 2 1
+text21 CODE 0 393 393 5 2 1
+text22 CODE 0 38E 38E 5 2 1
+text23 CODE 0 389 389 5 2 1
+text24 CODE 0 384 384 5 2 1
+text25 CODE 0 37F 37F 5 2 1
+text26 CODE 0 37A 37A 5 2 1
+text27 CODE 0 375 375 5 2 1
+text28 CODE 0 3B9 3B9 7 2 1
+text29 CODE 0 614 614 46 2 1
+text30 CODE 0 6AD 6AD 55 2 1
+text31 CODE 0 3C0 3C0 8 2 1
+text32 CODE 0 3C8 3C8 9 2 1
+text33 CODE 0 370 370 5 2 1
+text34 CODE 0 57B 57B 2F 2 1
+text35 CODE 0 35C 35C 3 2 1
+text36 CODE 0 3A7 3A7 6 2 1
+text37 CODE 0 36B 36B 5 2 1
+text38 CODE 0 363 363 4 2 1
+text39 CODE 0 359 359 3 2 1
+text40 CODE 0 35F 35F 4 2 1
+text41 CODE 0 356 356 3 2 1
+text42 CODE 0 46A 46A 18 2 1
+text43 CODE 0 459 459 11 2 1
+text44 CODE 0 448 448 11 2 1
+text45 CODE 0 342 342 2 2 1
+text46 CODE 0 340 340 2 2 1
+text47 CODE 0 437 437 11 2 1
+text48 CODE 0 3E6 3E6 D 2 1
+text49 CODE 0 4FE 4FE 26 2 1
+text50 CODE 0 427 427 10 2 1
+text51 CODE 0 353 353 3 2 1
+text52 CODE 0 350 350 3 2 1
+text53 CODE 0 34D 34D 3 2 1
+text54 CODE 0 482 482 1C 2 1
+text55 CODE 0 34A 34A 3 2 1
+text56 CODE 0 347 347 3 2 1
+text57 CODE 0 344 344 3 2 1
+maintext CODE 0 761 761 94 2 1
+cstackCOMMON COMMON 1 70 70 E 1 1
+cstackBANK0 BANK0 1 42 42 3 1 1
+stringtext1 STRCODE 0 800 800 20 2 1
+stringtext2 STRCODE 0 820 820 A 2 1
+bssBANK0 BANK0 1 20 20 22 1 1
+clrtext CODE 0 3B3 3B3 6 2 1
+config CONFIG 4 8007 8007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 45-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-64F 1
+BANK0 45-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 4-33F 2
+CONST 82A-3FFF 2
+ENTRY 4-33F 2
+ENTRY 82A-3FFF 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+CODE 4-33F 2
+CODE 82A-3FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-64F 1
+BIGRAM 2000-23EF 1
+EEDATA F000-F0FF 2
+STRCODE 4-33F 2
+STRCODE 82A-3FFF 2
+STRING 4-33F 2
+STRING 82A-3FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\CLASE_I2C01.X.production.o
+7F5 cinit CODE >2145:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7F5 cinit CODE >2148:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7F5 cinit CODE >2184:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7F6 cinit CODE >2185:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7F7 cinit CODE >2186:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7F8 cinit CODE >2187:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7F9 cinit CODE >2188:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7FA cinit CODE >2189:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7FD cinit CODE >2195:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7FD cinit CODE >2197:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+7FE cinit CODE >2198:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+344 text57 CODE >594:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+344 text57 CODE >596:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+346 text57 CODE >597:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+347 text56 CODE >511:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+347 text56 CODE >514:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+349 text56 CODE >515:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+34A text55 CODE >589:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+34A text55 CODE >591:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+34C text55 CODE >592:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+482 text54 CODE >163:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+482 text54 CODE >165:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+484 text54 CODE >166:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+489 text54 CODE >168:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+48A text54 CODE >169:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+48E text54 CODE >170:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+491 text54 CODE >171:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+494 text54 CODE >172:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+497 text54 CODE >173:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+49C text54 CODE >175:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+49D text54 CODE >176:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+34D text53 CODE >542:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+34D text53 CODE >544:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+34F text53 CODE >545:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+350 text52 CODE >527:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+350 text52 CODE >529:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+352 text52 CODE >530:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+353 text51 CODE >547:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+353 text51 CODE >549:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+355 text51 CODE >550:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+427 text50 CODE >217:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+428 text50 CODE >219:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+42D text50 CODE >221:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+431 text50 CODE >222:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+435 text50 CODE >223:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+436 text50 CODE >225:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4FE text49 CODE >252:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4FF text49 CODE >254:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+505 text49 CODE >256:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+50D text49 CODE >257:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+515 text49 CODE >258:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+516 text49 CODE >261:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+51E text49 CODE >262:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+523 text49 CODE >264:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3E6 text48 CODE >227:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3E6 text48 CODE >229:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3F2 text48 CODE >230:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+437 text47 CODE >746:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+437 text47 CODE >748:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+43F text47 CODE >749:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+446 text47 CODE >750:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+447 text47 CODE >751:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+340 text46 CODE >474:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+340 text46 CODE >476:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+341 text46 CODE >477:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+342 text45 CODE >479:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+342 text45 CODE >481:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+343 text45 CODE >482:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+448 text44 CODE >725:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+448 text44 CODE >727:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+450 text44 CODE >728:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+457 text44 CODE >729:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+458 text44 CODE >730:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+459 text43 CODE >739:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+459 text43 CODE >741:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+461 text43 CODE >742:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+468 text43 CODE >743:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+469 text43 CODE >744:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+46A text42 CODE >753:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+46A text42 CODE >755:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+479 text42 CODE >756:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+480 text42 CODE >757:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+481 text42 CODE >758:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+356 text41 CODE >537:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+356 text41 CODE >539:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+358 text41 CODE >540:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+35F text40 CODE >563:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+35F text40 CODE >565:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+361 text40 CODE >566:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+362 text40 CODE >567:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+359 text39 CODE >517:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+359 text39 CODE >519:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+35B text39 CODE >520:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+363 text38 CODE >557:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+363 text38 CODE >559:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+365 text38 CODE >560:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+366 text38 CODE >561:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+36B text37 CODE >522:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+36C text37 CODE >524:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+36F text37 CODE >525:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3A7 text36 CODE >552:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3A7 text36 CODE >554:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3AC text36 CODE >555:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+35C text35 CODE >599:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+35C text35 CODE >601:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+35E text35 CODE >602:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+57B text34 CODE >363:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+57B text34 CODE >365:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+57D text34 CODE >366:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+57E text34 CODE >370:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+582 text34 CODE >372:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+585 text34 CODE >373:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+587 text34 CODE >376:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+58B text34 CODE >377:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+598 text34 CODE >377:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+59D text34 CODE >377:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5A0 text34 CODE >377:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5A3 text34 CODE >377:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5A6 text34 CODE >377:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5A9 text34 CODE >378:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+370 text33 CODE >287:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+370 text33 CODE >289:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+372 text33 CODE >290:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+373 text33 CODE >291:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+374 text33 CODE >292:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C8 text32 CODE >294:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C8 text32 CODE >296:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3CA text32 CODE >297:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3CF text32 CODE >298:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D0 text32 CODE >299:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C0 text31 CODE >301:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C0 text31 CODE >303:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C2 text31 CODE >304:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C6 text31 CODE >305:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3C7 text31 CODE >306:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6AD text30 CODE >308:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6AD text30 CODE >310:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6B1 text30 CODE >310:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6B6 text30 CODE >315:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6BA text30 CODE >317:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6BE text30 CODE >321:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6C2 text30 CODE >322:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6D4 text30 CODE >322:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6D9 text30 CODE >322:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6DC text30 CODE >322:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6DF text30 CODE >322:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6E2 text30 CODE >322:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6E5 text30 CODE >324:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6E5 text30 CODE >326:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6E7 text30 CODE >327:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+6F3 text30 CODE >328:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+701 text30 CODE >330:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+614 text29 CODE >332:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+614 text29 CODE >334:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+622 text29 CODE >335:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+62C text29 CODE >337:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+62F text29 CODE >338:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+631 text29 CODE >340:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+631 text29 CODE >342:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+632 text29 CODE >343:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+633 text29 CODE >347:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+637 text29 CODE >351:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+63B text29 CODE >352:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+648 text29 CODE >352:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+64D text29 CODE >352:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+650 text29 CODE >352:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+653 text29 CODE >352:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+656 text29 CODE >352:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+659 text29 CODE >354:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3B9 text28 CODE >356:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3B9 text28 CODE >358:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3BB text28 CODE >359:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3BE text28 CODE >360:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3BF text28 CODE >361:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+375 text27 CODE >404:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+375 text27 CODE >406:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+378 text27 CODE >407:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+379 text27 CODE >408:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+37A text26 CODE >410:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+37A text26 CODE >412:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+37D text26 CODE >413:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+37E text26 CODE >414:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+37F text25 CODE >417:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+37F text25 CODE >419:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+382 text25 CODE >420:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+383 text25 CODE >421:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+384 text24 CODE >423:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+384 text24 CODE >425:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+387 text24 CODE >426:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+388 text24 CODE >427:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+389 text23 CODE >429:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+389 text23 CODE >431:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+38C text23 CODE >432:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+38D text23 CODE >433:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+38E text22 CODE >436:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+38E text22 CODE >438:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+391 text22 CODE >439:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+392 text22 CODE >440:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+393 text21 CODE >442:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+393 text21 CODE >444:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+396 text21 CODE >445:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+397 text21 CODE >446:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+398 text20 CODE >448:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+398 text20 CODE >450:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+39A text20 CODE >451:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+39B text20 CODE >452:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+39C text20 CODE >453:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+54F text19 CODE >454:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+54F text19 CODE >456:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+551 text19 CODE >457:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+555 text19 CODE >458:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+556 text19 CODE >462:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+55A text19 CODE >464:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+55E text19 CODE >465:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+56F text19 CODE >465:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+574 text19 CODE >465:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+577 text19 CODE >465:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+57A text19 CODE >466:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+524 text18 CODE >275:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+524 text18 CODE >277:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+527 text18 CODE >279:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+530 text18 CODE >279:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+534 text18 CODE >281:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+539 text18 CODE >283:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+54E text18 CODE >284:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3AD text17 CODE >604:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3AD text17 CODE >606:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3AD text17 CODE >608:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3B2 text17 CODE >613:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3F3 text16 CODE >266:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3F3 text16 CODE >268:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3F4 text16 CODE >270:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3F7 text16 CODE >271:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3FA text16 CODE >268:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3FF text16 CODE >273:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+49E text15 CODE >178:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+49F text15 CODE >180:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4A1 text15 CODE >181:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4A6 text15 CODE >183:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4A7 text15 CODE >184:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4A8 text15 CODE >186:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4AD text15 CODE >188:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4AF text15 CODE >189:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4B0 text15 CODE >192:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4B4 text15 CODE >194:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4B7 text15 CODE >195:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4BA text15 CODE >197:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4BB text15 CODE >198:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+39D text14 CODE >200:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+39D text14 CODE >202:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3A1 text14 CODE >203:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+400 text13 CODE >497:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+400 text13 CODE >499:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+405 text13 CODE >501:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+406 text13 CODE >502:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+408 text13 CODE >503:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+409 text13 CODE >504:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+40B text13 CODE >505:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+40C text13 CODE >509:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5DA text12 CODE >130:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5DB text12 CODE >132:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5DD text12 CODE >134:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5E2 text12 CODE >136:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5E6 text12 CODE >137:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5E7 text12 CODE >138:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5E8 text12 CODE >139:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5E9 text12 CODE >140:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5ED text12 CODE >141:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5F1 text12 CODE >142:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5F2 text12 CODE >145:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5F6 text12 CODE >146:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5F7 text12 CODE >147:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5FB text12 CODE >148:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5FC text12 CODE >149:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+600 text12 CODE >150:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+601 text12 CODE >151:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+605 text12 CODE >152:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+606 text12 CODE >153:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+60A text12 CODE >154:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+60B text12 CODE >156:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+60E text12 CODE >157:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+611 text12 CODE >158:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+612 text12 CODE >159:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+612 text12 CODE >160:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+613 text12 CODE >161:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4BC text11 CODE >634:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4BD text11 CODE >635:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4BE text11 CODE >637:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4C3 text11 CODE >637:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4C7 text11 CODE >638:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4CF text11 CODE >639:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4D2 text11 CODE >640:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4D6 text11 CODE >640:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4DA text11 CODE >642:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+4DB text11 CODE >643:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3A2 text10 CODE >205:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3A2 text10 CODE >207:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3A6 text10 CODE >208:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+40D text9 CODE >237:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+40D text9 CODE >239:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+419 text9 CODE >240:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5AA text8 CODE >674:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5AB text8 CODE >676:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5B0 text8 CODE >676:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5B4 text8 CODE >677:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5BF text8 CODE >678:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5C7 text8 CODE >679:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5CE text8 CODE >680:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5D1 text8 CODE >681:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5D5 text8 CODE >681:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+5D9 text8 CODE >682:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D1 text7 CODE >121:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D1 text7 CODE >123:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D3 text7 CODE >124:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D5 text7 CODE >125:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D6 text7 CODE >126:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D8 text7 CODE >127:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3D9 text7 CODE >128:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+3DA text6 CODE >13:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+3DA text6 CODE >16:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+3DD text6 CODE >18:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+3DE text6 CODE >20:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+3E0 text6 CODE >22:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+3E0 text6 CODE >24:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+3E5 text6 CODE >25:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+4DC text5 CODE >3:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4DC text5 CODE >8:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4DE text5 CODE >9:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4DF text5 CODE >10:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4E0 text5 CODE >11:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4E1 text5 CODE >12:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4E2 text5 CODE >17:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4E5 text5 CODE >18:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4E7 text5 CODE >19:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4E9 text5 CODE >20:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4EB text5 CODE >21:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4ED text5 CODE >26:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4F0 text5 CODE >27:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4F2 text5 CODE >28:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4F4 text5 CODE >29:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4F6 text5 CODE >34:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4F8 text5 CODE >35:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4F9 text5 CODE >36:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4FB text5 CODE >41:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+4FD text5 CODE >42:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+367 text4 CODE >27:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+367 text4 CODE >30:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+36A text4 CODE >31:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+41A text3 CODE >4:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+41A text3 CODE >7:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+41D text3 CODE >8:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+420 text3 CODE >9:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+423 text3 CODE >10:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+426 text3 CODE >11:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+702 text2 CODE >5:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+702 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+703 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+707 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+70A text2 CODE >15:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+70C text2 CODE >16:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+70E text2 CODE >18:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+712 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+715 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+717 text2 CODE >20:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+71B text2 CODE >22:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+71D text2 CODE >23:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+723 text2 CODE >24:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+725 text2 CODE >25:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+726 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+72B text2 CODE >27:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+72F text2 CODE >25:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+733 text2 CODE >30:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+738 text2 CODE >31:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+73A text2 CODE >31:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+73E text2 CODE >31:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+742 text2 CODE >32:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+746 text2 CODE >33:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+747 text2 CODE >35:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+74C text2 CODE >36:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+752 text2 CODE >38:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+757 text2 CODE >39:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+75A text2 CODE >39:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+75C text2 CODE >40:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+760 text2 CODE >41:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+65A text1 CODE >5:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+65A text1 CODE >12:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+65B text1 CODE >13:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+65F text1 CODE >14:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+662 text1 CODE >14:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+664 text1 CODE >15:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+666 text1 CODE >17:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+66A text1 CODE >18:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+66D text1 CODE >18:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+66F text1 CODE >19:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+675 text1 CODE >20:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+677 text1 CODE >21:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+678 text1 CODE >22:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+67D text1 CODE >23:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+681 text1 CODE >21:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+685 text1 CODE >26:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+687 text1 CODE >26:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+68B text1 CODE >26:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+68F text1 CODE >27:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+693 text1 CODE >28:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+698 text1 CODE >29:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+69E text1 CODE >31:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+6A3 text1 CODE >32:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+6A6 text1 CODE >32:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+6A8 text1 CODE >33:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+6AC text1 CODE >34:C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+761 maintext CODE >23:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+761 maintext CODE >25:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+764 maintext CODE >27:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+764 maintext CODE >28:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+778 maintext CODE >29:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+78B maintext CODE >30:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+790 maintext CODE >30:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+79B maintext CODE >31:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7A1 maintext CODE >31:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7AC maintext CODE >33:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7B7 maintext CODE >34:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7C8 maintext CODE >35:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7D4 maintext CODE >36:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7DB maintext CODE >37:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7E0 maintext CODE >39:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7E2 maintext CODE >41:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7E8 maintext CODE >42:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7E9 maintext CODE >44:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+7EE maintext CODE >45:C:\LABORAL\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+3B3 clrtext CODE >2173:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B3 clrtext CODE >2174:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B4 clrtext CODE >2175:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B4 clrtext CODE >2176:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B5 clrtext CODE >2177:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B6 clrtext CODE >2178:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B7 clrtext CODE >2179:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+3B8 clrtext CODE >2180:C:\Users\iProf\AppData\Local\Temp\xcAs8c4.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 3 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_Rd 9B8 0 CODE 0 text11 dist/default/production\CLASE_I2C01.X.production.o
+__Hspace_0 82A 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 10010 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__end_of_I2C_Close 93C 0 CODE 0 text54 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_RX CB4 0 CODE 0 text29 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_TX E04 0 CODE 0 text30 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_WDT_Initialize 6D6 0 CODE 0 text4 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_CallbackReturnStop 680 0 CODE 0 text46 dist/default/production\CLASE_I2C01.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_LATA 10C 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_LATB 10D 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_LATC 10E 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_LATD 10F 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_LATE 110 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_PLLR 4D6 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_WPUB 20D 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_WPUE 210 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+_main EC2 0 CODE 0 maintext dist/default/production\CLASE_I2C01.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterOperation 978 0 CODE 0 text15 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterSendTxData 6E0 0 CODE 0 text37 dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetCallback@cb 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+start 4 0 CODE 0 init C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+_I2C_DO_ADDRESS_NACK A9E 0 CODE 0 text19 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterStartRx 6AC 0 CODE 0 text41 dist/default/production\CLASE_I2C01.X.production.o
+I2C_MasterSendTxData@data 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_IDLE 6EA 0 CODE 0 text33 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_RCEN 780 0 CODE 0 text28 dist/default/production\CLASE_I2C01.X.production.o
+_OPTION_REGbits 95 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_RX_ACK 71C 0 CODE 0 text23 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_Close 904 0 CODE 0 text54 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_RX C28 0 CODE 0 text29 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_TX D5A 0 CODE 0 text30 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_wr2RegCompleteHandler 890 0 CODE 0 text47 dist/default/production\CLASE_I2C01.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+I2C_SetCallback@idx 74 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetCallback@ptr 72 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_TX_EMPTY AF6 0 CODE 0 text34 dist/default/production\CLASE_I2C01.X.production.o
+___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_i2c_fsmStateTable 1040 0 STRCODE 0 stringtext1 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_SEND_ADR_WRITE 790 0 CODE 0 text31 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_SetBuffer 84E 0 CODE 0 text50 dist/default/production\CLASE_I2C01.X.production.o
+rd1RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterFsm A9E 0 CODE 0 text18 dist/default/production\CLASE_I2C01.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+__end_of_I2C_MasterClearIrq 68E 0 CODE 0 text57 dist/default/production\CLASE_I2C01.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+_wr2RegCompleteHandler 86E 0 CODE 0 text47 dist/default/production\CLASE_I2C01.X.production.o
+___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext -
+_I2C_MasterWaitForEvent 75A 0 CODE 0 text17 dist/default/production\CLASE_I2C01.X.production.o
+_decenas 3F 0 BANK0 1 bssBANK0 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_SEND_ADR_WRITE 780 0 CODE 0 text31 dist/default/production\CLASE_I2C01.X.production.o
+I2C_Open@returnValue 72 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_I2C_SetDataCompleteCallback 7CC 0 CODE 0 text48 dist/default/production\CLASE_I2C01.X.production.o
+_rdBlkRegCompleteHandler 8D4 0 CODE 0 text42 dist/default/production\CLASE_I2C01.X.production.o
+_ANSELA 18C 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_ANSELB 18D 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_ANSELD 18F 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_ANSELE 190 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_APFCON 11D 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_BORCON 116 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__end_of_rdBlkRegCompleteHandler 904 0 CODE 0 text42 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterOpen 800 0 CODE 0 text13 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterRead 73A 0 CODE 0 text14 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterStop 6A6 0 CODE 0 text51 dist/default/production\CLASE_I2C01.X.production.o
+_unidades 40 0 BANK0 1 bssBANK0 dist/default/production\CLASE_I2C01.X.production.o
+_digitos 1040 0 STRCODE 0 stringtext2 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_Open BB4 0 CODE 0 text12 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterClearIrq 688 0 CODE 0 text57 dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetDataCompleteCallback@ptr 77 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_RX_NACK_RESTART 726 0 CODE 0 text21 dist/default/production\CLASE_I2C01.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+__end_of_I2C_Open C28 0 CODE 0 text12 dist/default/production\CLASE_I2C01.X.production.o
+___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of___awdiv EC2 0 CODE 0 text2 dist/default/production\CLASE_I2C01.X.production.o
+__end_of___awmod D5A 0 CODE 0 text1 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_Rd 978 0 CODE 0 text11 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_ADDRESS_NACK AF6 0 CODE 0 text19 dist/default/production\CLASE_I2C01.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+___stacklo 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+__end_of_I2C_DO_SEND_ADR_READ 7A2 0 CODE 0 text32 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterGetRxData 6B2 0 CODE 0 text39 dist/default/production\CLASE_I2C01.X.production.o
+_i2c_fsmStateTable 1000 0 STRCODE 0 stringtext1 dist/default/production\CLASE_I2C01.X.production.o
+_PIN_MANAGER_Initialize 9B8 0 CODE 0 text5 dist/default/production\CLASE_I2C01.X.production.o
+I2C_MasterOperation@read 78 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+start_initialization FEA 0 CODE 0 cinit dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterOpen 81A 0 CODE 0 text13 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterRead 744 0 CODE 0 text14 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterStop 6AC 0 CODE 0 text51 dist/default/production\CLASE_I2C01.X.production.o
+_OSCCON 99 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterIsNack 74E 0 CODE 0 text36 dist/default/production\CLASE_I2C01.X.production.o
+I2C_Open@address 71 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_statusbtn 3D 0 BANK0 1 bssBANK0 dist/default/production\CLASE_I2C01.X.production.o
+rdBlkRegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_SYSTEM_Initialize 84E 0 CODE 0 text3 dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetBuffer@buffer 73 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_CallbackReturnStop 684 0 CODE 0 text46 dist/default/production\CLASE_I2C01.X.production.o
+clear_ram0 766 0 CODE 0 clrtext dist/default/production\CLASE_I2C01.X.production.o
+__pcstackBANK0 42 0 BANK0 1 cstackBANK0 dist/default/production\CLASE_I2C01.X.production.o
+_SSPADD 212 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_SSPBUF 211 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetDataCompleteCallback@cb 75 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_SEND_RESTART 6FE 0 CODE 0 text25 dist/default/production\CLASE_I2C01.X.production.o
+_WDTCON 97 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+__end_of_I2C_SetBuffer 86E 0 CODE 0 text50 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_Write1ByteRegister B54 0 CODE 0 text8 dist/default/production\CLASE_I2C01.X.production.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 ABS 0 bank7 -
+__Hbank8 0 0 ABS 0 bank8 -
+__Hbank9 0 0 ABS 0 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 10008 0 IDLOC 5 idloc -
+I2C_SetAddressNackCallback@ptr 77 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__end_of_wr1RegCompleteHandler 8D4 0 CODE 0 text43 dist/default/production\CLASE_I2C01.X.production.o
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 ABS 0 bank10 -
+__Hbank11 0 0 ABS 0 bank11 -
+__Hbank12 0 0 ABS 0 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+_I2C_DO_SEND_RESTART_READ 6EA 0 CODE 0 text27 dist/default/production\CLASE_I2C01.X.production.o
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+_I2C_MasterSetIrq 6B8 0 CODE 0 text35 dist/default/production\CLASE_I2C01.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 ABS 0 bank7 -
+__Lbank8 0 0 ABS 0 bank8 -
+__Lbank9 0 0 ABS 0 bank9 -
+__Lcinit FEA 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+__end_of_I2C_DO_SEND_RESTART_WRITE 6FE 0 CODE 0 text26 dist/default/production\CLASE_I2C01.X.production.o
+_wr1RegCompleteHandler 8B2 0 CODE 0 text43 dist/default/production\CLASE_I2C01.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit 4 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Lheap 0 0 HEAP 7 heap -
+__Linit 4 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\CLASE_I2C01.X.production.o
+__pstringtext2 1040 0 STRCODE 0 stringtext2 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_SetAddressNackCallback 834 0 CODE 0 text9 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_Poller 7E6 0 CODE 0 text16 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterWaitForEvent 766 0 CODE 0 text17 dist/default/production\CLASE_I2C01.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__end_of_I2C_MasterDisableIrq 69A 0 CODE 0 text55 dist/default/production\CLASE_I2C01.X.production.o
+__S0 82A 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_I2C_MasterSendTxData 6D6 0 CODE 0 text37 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterGetRxData 6B8 0 CODE 0 text39 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_SEND_STOP 708 0 CODE 0 text24 dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetBuffer@bufferSize 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_I2C_Status 20 0 BANK0 1 bssBANK0 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterIsNack 75A 0 CODE 0 text36 dist/default/production\CLASE_I2C01.X.production.o
+I2C_SetAddressNackCallback@cb 75 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_SYSTEM_Initialize 834 0 CODE 0 text3 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_RX_NACK_RESTART 730 0 CODE 0 text21 dist/default/production\CLASE_I2C01.X.production.o
+__Lintentry 4 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+_I2C_DO_RESET 730 0 CODE 0 text20 dist/default/production\CLASE_I2C01.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__end_of_I2C_DO_SEND_RESTART 708 0 CODE 0 text25 dist/default/production\CLASE_I2C01.X.production.o
+__Lstringtext1 0 0 ABS 0 stringtext1 -
+__Lstringtext2 0 0 ABS 0 stringtext2 -
+wr2RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+I2C_Close@returnValue 71 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_PIE1bits 91 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterSetIrq 6BE 0 CODE 0 text35 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_Poller 800 0 CODE 0 text16 dist/default/production\CLASE_I2C01.X.production.o
+__ptext10 744 0 CODE 0 text10 dist/default/production\CLASE_I2C01.X.production.o
+__ptext11 978 0 CODE 0 text11 dist/default/production\CLASE_I2C01.X.production.o
+__ptext12 BB4 0 CODE 0 text12 dist/default/production\CLASE_I2C01.X.production.o
+__ptext13 800 0 CODE 0 text13 dist/default/production\CLASE_I2C01.X.production.o
+__ptext14 73A 0 CODE 0 text14 dist/default/production\CLASE_I2C01.X.production.o
+__ptext15 93C 0 CODE 0 text15 dist/default/production\CLASE_I2C01.X.production.o
+__ptext16 7E6 0 CODE 0 text16 dist/default/production\CLASE_I2C01.X.production.o
+__ptext17 75A 0 CODE 0 text17 dist/default/production\CLASE_I2C01.X.production.o
+__ptext18 A48 0 CODE 0 text18 dist/default/production\CLASE_I2C01.X.production.o
+__ptext19 A9E 0 CODE 0 text19 dist/default/production\CLASE_I2C01.X.production.o
+__ptext20 730 0 CODE 0 text20 dist/default/production\CLASE_I2C01.X.production.o
+__ptext21 726 0 CODE 0 text21 dist/default/production\CLASE_I2C01.X.production.o
+__ptext22 71C 0 CODE 0 text22 dist/default/production\CLASE_I2C01.X.production.o
+__ptext23 712 0 CODE 0 text23 dist/default/production\CLASE_I2C01.X.production.o
+__ptext24 708 0 CODE 0 text24 dist/default/production\CLASE_I2C01.X.production.o
+__ptext25 6FE 0 CODE 0 text25 dist/default/production\CLASE_I2C01.X.production.o
+__ptext26 6F4 0 CODE 0 text26 dist/default/production\CLASE_I2C01.X.production.o
+__ptext27 6EA 0 CODE 0 text27 dist/default/production\CLASE_I2C01.X.production.o
+__ptext28 772 0 CODE 0 text28 dist/default/production\CLASE_I2C01.X.production.o
+__ptext29 C28 0 CODE 0 text29 dist/default/production\CLASE_I2C01.X.production.o
+__ptext30 D5A 0 CODE 0 text30 dist/default/production\CLASE_I2C01.X.production.o
+__ptext31 780 0 CODE 0 text31 dist/default/production\CLASE_I2C01.X.production.o
+__ptext32 790 0 CODE 0 text32 dist/default/production\CLASE_I2C01.X.production.o
+__ptext33 6E0 0 CODE 0 text33 dist/default/production\CLASE_I2C01.X.production.o
+__ptext34 AF6 0 CODE 0 text34 dist/default/production\CLASE_I2C01.X.production.o
+__ptext35 6B8 0 CODE 0 text35 dist/default/production\CLASE_I2C01.X.production.o
+__ptext36 74E 0 CODE 0 text36 dist/default/production\CLASE_I2C01.X.production.o
+__ptext37 6D6 0 CODE 0 text37 dist/default/production\CLASE_I2C01.X.production.o
+__ptext38 6C6 0 CODE 0 text38 dist/default/production\CLASE_I2C01.X.production.o
+__ptext39 6B2 0 CODE 0 text39 dist/default/production\CLASE_I2C01.X.production.o
+__ptext40 6BE 0 CODE 0 text40 dist/default/production\CLASE_I2C01.X.production.o
+__ptext41 6AC 0 CODE 0 text41 dist/default/production\CLASE_I2C01.X.production.o
+__ptext42 8D4 0 CODE 0 text42 dist/default/production\CLASE_I2C01.X.production.o
+__ptext43 8B2 0 CODE 0 text43 dist/default/production\CLASE_I2C01.X.production.o
+__ptext44 890 0 CODE 0 text44 dist/default/production\CLASE_I2C01.X.production.o
+__ptext45 684 0 CODE 0 text45 dist/default/production\CLASE_I2C01.X.production.o
+__ptext46 680 0 CODE 0 text46 dist/default/production\CLASE_I2C01.X.production.o
+__ptext47 86E 0 CODE 0 text47 dist/default/production\CLASE_I2C01.X.production.o
+__ptext48 7CC 0 CODE 0 text48 dist/default/production\CLASE_I2C01.X.production.o
+__ptext49 9FC 0 CODE 0 text49 dist/default/production\CLASE_I2C01.X.production.o
+__ptext50 84E 0 CODE 0 text50 dist/default/production\CLASE_I2C01.X.production.o
+__ptext51 6A6 0 CODE 0 text51 dist/default/production\CLASE_I2C01.X.production.o
+__ptext52 6A0 0 CODE 0 text52 dist/default/production\CLASE_I2C01.X.production.o
+__ptext53 69A 0 CODE 0 text53 dist/default/production\CLASE_I2C01.X.production.o
+__ptext54 904 0 CODE 0 text54 dist/default/production\CLASE_I2C01.X.production.o
+__ptext55 694 0 CODE 0 text55 dist/default/production\CLASE_I2C01.X.production.o
+__ptext56 68E 0 CODE 0 text56 dist/default/production\CLASE_I2C01.X.production.o
+__ptext57 688 0 CODE 0 text57 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_PIN_MANAGER_Initialize 9FC 0 CODE 0 text5 dist/default/production\CLASE_I2C01.X.production.o
+___awdiv E04 0 CODE 0 text2 dist/default/production\CLASE_I2C01.X.production.o
+___awmod CB4 0 CODE 0 text1 dist/default/production\CLASE_I2C01.X.production.o
+__Lbank10 0 0 ABS 0 bank10 -
+__Lbank11 0 0 ABS 0 bank11 -
+__Lbank12 0 0 ABS 0 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext EC2 0 CODE 0 maintext dist/default/production\CLASE_I2C01.X.production.o
+__Lbigram 0 0 ABS 0 bigram -
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__end_of_rd1RegCompleteHandler 8B2 0 CODE 0 text44 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_SEND_STOP 712 0 CODE 0 text24 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterClose 694 0 CODE 0 text56 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_IDLE 6E0 0 CODE 0 text33 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_RCEN 772 0 CODE 0 text28 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterStart 6A0 0 CODE 0 text53 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterWrite 74E 0 CODE 0 text10 dist/default/production\CLASE_I2C01.X.production.o
+_OSCTUNE 98 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_I2C_CallbackReturnReset 684 0 CODE 0 text45 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_CallbackReturnReset 688 0 CODE 0 text45 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_SEND_ADR_READ 790 0 CODE 0 text32 dist/default/production\CLASE_I2C01.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__end_of_I2C_Write1ByteRegister BB4 0 CODE 0 text8 dist/default/production\CLASE_I2C01.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_rd1RegCompleteHandler 890 0 CODE 0 text44 dist/default/production\CLASE_I2C01.X.production.o
+_PIR1bits 11 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+I2C_Rd@address 7A 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_PIR2bits 12 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__Lend_init 4 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_RESET 73A 0 CODE 0 text20 dist/default/production\CLASE_I2C01.X.production.o
+__Hintentry 4 0 CODE 0 intentry -
+__end_of_I2C_SetDataCompleteCallback 7E6 0 CODE 0 text48 dist/default/production\CLASE_I2C01.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterSendAck 6CE 0 CODE 0 text38 dist/default/production\CLASE_I2C01.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_RX_NACK_STOP 71C 0 CODE 0 text22 dist/default/production\CLASE_I2C01.X.production.o
+_SSPCON1bits 215 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_SSPCON2bits 216 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__ptext1 CB4 0 CODE 0 text1 dist/default/production\CLASE_I2C01.X.production.o
+__ptext2 E04 0 CODE 0 text2 dist/default/production\CLASE_I2C01.X.production.o
+__ptext3 834 0 CODE 0 text3 dist/default/production\CLASE_I2C01.X.production.o
+__ptext4 6CE 0 CODE 0 text4 dist/default/production\CLASE_I2C01.X.production.o
+__ptext5 9B8 0 CODE 0 text5 dist/default/production\CLASE_I2C01.X.production.o
+__ptext6 7B4 0 CODE 0 text6 dist/default/production\CLASE_I2C01.X.production.o
+__ptext7 7A2 0 CODE 0 text7 dist/default/production\CLASE_I2C01.X.production.o
+__ptext8 B54 0 CODE 0 text8 dist/default/production\CLASE_I2C01.X.production.o
+__ptext9 81A 0 CODE 0 text9 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterEnableRestart 6A0 0 CODE 0 text52 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterEnableRestart 6A6 0 CODE 0 text52 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterClose 68E 0 CODE 0 text56 dist/default/production\CLASE_I2C01.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_I2C_MasterStart 69A 0 CODE 0 text53 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterWrite 744 0 CODE 0 text10 dist/default/production\CLASE_I2C01.X.production.o
+wr1RegCompleteHandler@ptr 79 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+_I2C_DO_RX_ACK 712 0 CODE 0 text23 dist/default/production\CLASE_I2C01.X.production.o
+__Hstringtext1 0 0 ABS 0 stringtext1 -
+__Hstringtext2 0 0 ABS 0 stringtext2 -
+___heap_hi 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+___heap_lo 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs8c4.o
+__end_of_I2C_DO_SEND_RESTART_READ 6F4 0 CODE 0 text27 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_DO_SEND_RESTART_WRITE 6F4 0 CODE 0 text26 dist/default/production\CLASE_I2C01.X.production.o
+I2C_MasterOperation@returnValue 79 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\CLASE_I2C01.X.production.o
+___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+_I2C_SetAddressNackCallback 81A 0 CODE 0 text9 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_digitos 1054 0 STRCODE 0 stringtext2 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterFsm A48 0 CODE 0 text18 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_SetCallback A48 0 CODE 0 text49 dist/default/production\CLASE_I2C01.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+_I2C_Initialize 7A2 0 CODE 0 text7 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterOperation 93C 0 CODE 0 text15 dist/default/production\CLASE_I2C01.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterStartRx 6B2 0 CODE 0 text41 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_MasterSendNack 6C6 0 CODE 0 text40 dist/default/production\CLASE_I2C01.X.production.o
+_SSPCON1 215 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_SSPCON2 216 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_SSPSTAT 214 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__Hend_init 8 0 CODE 0 end_init -
+__end_of_main FEA 0 CODE 0 maintext dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterDisableIrq 694 0 CODE 0 text55 dist/default/production\CLASE_I2C01.X.production.o
+_TRISA 8C 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_TRISB 8D 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_TRISC 8E 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_TRISD 8F 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_TRISE 90 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_WDT_Initialize 6CE 0 CODE 0 text4 dist/default/production\CLASE_I2C01.X.production.o
+_SSPSTATbits 214 0 ABS 0 - dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterSendAck 6C6 0 CODE 0 text38 dist/default/production\CLASE_I2C01.X.production.o
+I2C_Write1ByteRegister@reg 7A 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_OSCILLATOR_Initialize 7CC 0 CODE 0 text6 dist/default/production\CLASE_I2C01.X.production.o
+_contador 41 0 BANK0 1 bssBANK0 dist/default/production\CLASE_I2C01.X.production.o
+__initialization FEA 0 CODE 0 cinit dist/default/production\CLASE_I2C01.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_RX_NACK_STOP 726 0 CODE 0 text22 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_MasterSendNack 6BE 0 CODE 0 text40 dist/default/production\CLASE_I2C01.X.production.o
+_I2C_SetCallback 9FC 0 CODE 0 text49 dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_Initialize 7B4 0 CODE 0 text7 dist/default/production\CLASE_I2C01.X.production.o
+I2C_Write1ByteRegister@data 7B 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+I2C_Write1ByteRegister@address 7D 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+__end_of_I2C_DO_TX_EMPTY B54 0 CODE 0 text34 dist/default/production\CLASE_I2C01.X.production.o
+_OSCILLATOR_Initialize 7B4 0 CODE 0 text6 dist/default/production\CLASE_I2C01.X.production.o
+I2C_Rd@returnValue 7B 0 COMMON 1 cstackCOMMON dist/default/production\CLASE_I2C01.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7F5 FEA B 2
+text1 0 65A CB4 53 2
+text2 0 702 E04 5F 2
+text3 0 41A 834 D 2
+text4 0 367 6CE 4 2
+text5 0 4DC 9B8 22 2
+text6 0 3DA 7B4 C 2
+text7 0 3D1 7A2 9 2
+text8 0 5AA B54 30 2
+text9 0 40D 81A D 2
+text10 0 3A2 744 5 2
+text11 0 4BC 978 20 2
+text12 0 5DA BB4 3A 2
+text13 0 400 800 D 2
+text14 0 39D 73A 5 2
+text15 0 49E 93C 1E 2
+text16 0 3F3 7E6 D 2
+text17 0 3AD 75A 6 2
+text18 0 524 A48 2B 2
+text19 0 54F A9E 2C 2
+text20 0 398 730 5 2
+text21 0 393 726 5 2
+text22 0 38E 71C 5 2
+text23 0 389 712 5 2
+text24 0 384 708 5 2
+text25 0 37F 6FE 5 2
+text26 0 37A 6F4 5 2
+text27 0 375 6EA 5 2
+text28 0 3B9 772 7 2
+text29 0 614 C28 46 2
+text30 0 6AD D5A 55 2
+text31 0 3C0 780 8 2
+text32 0 3C8 790 9 2
+text33 0 370 6E0 5 2
+text34 0 57B AF6 2F 2
+text35 0 35C 6B8 3 2
+text36 0 3A7 74E 6 2
+text37 0 36B 6D6 5 2
+text38 0 363 6C6 4 2
+text39 0 359 6B2 3 2
+text40 0 35F 6BE 4 2
+text41 0 356 6AC 3 2
+text42 0 46A 8D4 18 2
+text43 0 459 8B2 11 2
+text44 0 448 890 11 2
+text45 0 342 684 2 2
+text46 0 340 680 2 2
+text47 0 437 86E 11 2
+text48 0 3E6 7CC D 2
+text49 0 4FE 9FC 26 2
+text50 0 427 84E 10 2
+text51 0 353 6A6 3 2
+text52 0 350 6A0 3 2
+text53 0 34D 69A 3 2
+text54 0 482 904 1C 2
+text55 0 34A 694 3 2
+text56 0 347 68E 3 2
+text57 0 344 688 3 2
+maintext 0 761 EC2 94 2
+cstackCOMMON 1 70 70 E 1
+stringtext1 0 800 1000 2A 2
+reset_vec 0 0 0 4 2
+bssBANK0 1 20 20 25 1
+clrtext 0 3B3 766 6 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
