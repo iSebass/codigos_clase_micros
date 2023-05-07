@@ -631,16 +631,6 @@ static i2c_operations_t wr2RegCompleteHandler(void *ptr);
 static i2c_operations_t rdBlkRegCompleteHandler(void *ptr);
 
 
-uint8_t I2C_Rd(i2c_address_t address) {
-    uint8_t returnValue = 0x00;
-    
-    while(!I2C_Open(address)); // sit here until we get the bus..
-    I2C_SetBuffer(&returnValue,1);
-    I2C_MasterRead();
-    while(I2C_BUSY == I2C_Close()); // sit here until finished.
-    
-    return returnValue;
-}
 
 
 uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg)
@@ -755,4 +745,28 @@ static i2c_operations_t rdBlkRegCompleteHandler(void *ptr)
     I2C_SetBuffer(((i2c_buffer_t *)ptr)->data,((i2c_buffer_t*)ptr)->len);
     I2C_SetDataCompleteCallback(NULL,NULL);
     return I2C_RESTART_READ;
+}
+
+
+/*******************************************
+ *   METODOS PERSONALIZADOS POR iSEBAS     *
+ *******************************************/
+
+uint8_t I2C_Wr(i2c_address_t address, uint8_t data){
+    while(!I2C_Open(address)); // sit here until we get the bus..
+    I2C_SetBuffer(&data,1);
+    I2C_SetAddressNackCallback(NULL,NULL); //NACK polling?
+    I2C_MasterWrite();
+    while(I2C_BUSY == I2C_Close()); // sit here until finished.
+}
+
+uint8_t I2C_Rd(i2c_address_t address) {
+    uint8_t returnValue = 0x00;
+    
+    while(!I2C_Open(address)); // sit here until we get the bus..
+    I2C_SetBuffer(&returnValue,1);
+    I2C_MasterRead();
+    while(I2C_BUSY == I2C_Close()); // sit here until finished.
+    
+    return returnValue;
 }
