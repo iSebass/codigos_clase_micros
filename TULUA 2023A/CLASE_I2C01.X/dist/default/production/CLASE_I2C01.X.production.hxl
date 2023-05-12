@@ -9,11 +9,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 7h		(dist/default/production\CLASE_I2C01.X.production.hex)
-  680h - 1053h		(dist/default/production\CLASE_I2C01.X.production.hex)
+  696h - 1053h		(dist/default/production\CLASE_I2C01.X.production.hex)
   10000h - 10007h		(dist/default/production\CLASE_I2C01.X.production.hex)
   1000Eh - 10011h		(dist/default/production\CLASE_I2C01.X.production.hex)
  Unused ranges:
-  8h - 67Fh
+  8h - 695h
   1054h - FFFFh
   10008h - 1000Dh
 
@@ -26,8 +26,7 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00000680 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000690 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000690 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000006A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000006B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000006C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

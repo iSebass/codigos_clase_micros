@@ -27,8 +27,8 @@ void main(void)
     while (1){
         unidades = contador % 10;
         decenas  = contador / 10;
-        I2C_Write1ByteRegister(DIR_DP1, 0, digitos[unidades]);
-        I2C_Write1ByteRegister(DIR_DP2, 0, digitos[decenas]);
+        I2C_Wr(DIR_DP1, digitos[unidades]);
+        I2C_Wr(DIR_DP2, digitos[decenas]);
         
         statusbtn=I2C_Rd(DIR_DP1);
         statusbtn = ( statusbtn& 0b10000000 ) >> 7;
