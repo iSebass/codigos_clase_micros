@@ -10,11 +10,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\BUS_I2C.X.production.hex)
-  7F36h - 7FFFh		(dist/default/production\BUS_I2C.X.production.hex)
+  7F06h - 7FFFh		(dist/default/production\BUS_I2C.X.production.hex)
   200000h - 200007h		(dist/default/production\BUS_I2C.X.production.hex)
   300000h - 30000Dh		(dist/default/production\BUS_I2C.X.production.hex)
  Unused ranges:
-  4h - 7F35h
+  4h - 7F05h
   8000h - 1FFFFFh
   200008h - 2FFFFFh
 
@@ -27,7 +27,10 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-00007F30 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00007F00 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00007F10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00007F20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00007F30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007F40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007F50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007F60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

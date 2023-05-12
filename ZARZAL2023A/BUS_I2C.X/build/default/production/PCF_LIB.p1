@@ -1,21 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"6582 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 6582: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"9 ./I2C_LIB.h
-[; ;./I2C_LIB.h: 9: void I2C_Init(void);
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"18 ./PCF_LIB.h
-[; ;./PCF_LIB.h: 18: char PCF8574A_Rd(char dir);
-[v _PCF8574A_Rd `(uc ~T0 @X0 0 ef1`uc ]
-"15
-[; ;./PCF_LIB.h: 15: void PCF8574_Wr(char dir, char data);
-[v _PCF8574_Wr `(v ~T0 @X0 0 ef2`uc`uc ]
-[v F192 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\builtins.h
-[v __delay `JF192 ~T0 @X0 0 e ]
-[p i __delay ]
+"10 ./I2C_LIB.h
+[; ;./I2C_LIB.h: 10: void I2C_Start(void);
+[v _I2C_Start `(v ~T0 @X0 0 ef ]
+"13
+[; ;./I2C_LIB.h: 13: void I2C_Wr(unsigned char data);
+[v _I2C_Wr `(v ~T0 @X0 0 ef1`uc ]
+"11
+[; ;./I2C_LIB.h: 11: void I2C_Stop(void);
+[v _I2C_Stop `(v ~T0 @X0 0 ef ]
+"14
+[; ;./I2C_LIB.h: 14: char I2C_Rd(void);
+[v _I2C_Rd `(uc ~T0 @X0 0 ef ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -526,45 +521,123 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"6 main.c
-[; ;main.c: 6: char data;
-[v _data `uc ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"8
-[; ;main.c: 8: void main(void){
-[v _main `(v ~T0 @X0 1 ef ]
+"3 PCF_LIB.c
+[; ;PCF_LIB.c: 3: void PCF8574_Wr(char dir, char data){
+[v _PCF8574_Wr `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _main ]
+[e :U _PCF8574_Wr ]
+[v _dir `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-"10
-[; ;main.c: 10:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
-"12
-[; ;main.c: 12:     I2C_Init();
-[e ( _I2C_Init ..  ]
-"14
-[; ;main.c: 14:     while(1){
-[e :U 369 ]
-{
-"16
-[; ;main.c: 16:         data = PCF8574A_Rd(0);
-[e = _data ( _PCF8574A_Rd (1 -> -> 0 `i `uc ]
-"17
-[; ;main.c: 17:         PCF8574_Wr(0,data);
-[e ( _PCF8574_Wr (2 , -> -> 0 `i `uc _data ]
-"18
-[; ;main.c: 18:         _delay((unsigned long)((500)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"20
-[; ;main.c: 20:     }
-}
-[e :U 368 ]
-[e $U 369  ]
-[e :U 370 ]
-"22
-[; ;main.c: 22:     return;
-[e $UE 367  ]
-"23
-[; ;main.c: 23: }
+"4
+[; ;PCF_LIB.c: 4:     dir = ((0b0100<<3)|dir)<<1;
+[e = _dir -> << | << -> 4 `i -> 3 `i -> _dir `i -> 1 `i `uc ]
+"5
+[; ;PCF_LIB.c: 5:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"6
+[; ;PCF_LIB.c: 6:     I2C_Wr( dir | 0 );
+[e ( _I2C_Wr (1 -> | -> _dir `i -> 0 `i `uc ]
+"7
+[; ;PCF_LIB.c: 7:     I2C_Wr(data);
+[e ( _I2C_Wr (1 -> _data `uc ]
+"8
+[; ;PCF_LIB.c: 8:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"9
+[; ;PCF_LIB.c: 9: }
 [e :UE 367 ]
+}
+"10
+[; ;PCF_LIB.c: 10: void PCF8574A_Wr(char dir, char data){
+[v _PCF8574A_Wr `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _PCF8574A_Wr ]
+[v _dir `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+[f ]
+"11
+[; ;PCF_LIB.c: 11:     dir = ((0b0111<<3)|dir)<<1;
+[e = _dir -> << | << -> 7 `i -> 3 `i -> _dir `i -> 1 `i `uc ]
+"12
+[; ;PCF_LIB.c: 12:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"13
+[; ;PCF_LIB.c: 13:     I2C_Wr( dir | 0 );
+[e ( _I2C_Wr (1 -> | -> _dir `i -> 0 `i `uc ]
+"14
+[; ;PCF_LIB.c: 14:     I2C_Wr(data);
+[e ( _I2C_Wr (1 -> _data `uc ]
+"15
+[; ;PCF_LIB.c: 15:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"16
+[; ;PCF_LIB.c: 16: }
+[e :UE 368 ]
+}
+"17
+[; ;PCF_LIB.c: 17: char PCF8574_Rd(char dir){
+[v _PCF8574_Rd `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _PCF8574_Rd ]
+[v _dir `uc ~T0 @X0 1 r1 ]
+[f ]
+"18
+[; ;PCF_LIB.c: 18:     char dato;
+[v _dato `uc ~T0 @X0 1 a ]
+"19
+[; ;PCF_LIB.c: 19:     dir = ((0b0100<<3)|dir)<<1;
+[e = _dir -> << | << -> 4 `i -> 3 `i -> _dir `i -> 1 `i `uc ]
+"20
+[; ;PCF_LIB.c: 20:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"21
+[; ;PCF_LIB.c: 21:     I2C_Wr( dir | 1 );
+[e ( _I2C_Wr (1 -> | -> _dir `i -> 1 `i `uc ]
+"22
+[; ;PCF_LIB.c: 22:     dato = I2C_Rd();
+[e = _dato ( _I2C_Rd ..  ]
+"23
+[; ;PCF_LIB.c: 23:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"25
+[; ;PCF_LIB.c: 25:     return dato;
+[e ) _dato ]
+[e $UE 369  ]
+"26
+[; ;PCF_LIB.c: 26: }
+[e :UE 369 ]
+}
+"27
+[; ;PCF_LIB.c: 27: char PCF8574A_Rd(char dir){
+[v _PCF8574A_Rd `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _PCF8574A_Rd ]
+[v _dir `uc ~T0 @X0 1 r1 ]
+[f ]
+"28
+[; ;PCF_LIB.c: 28:     char dato;
+[v _dato `uc ~T0 @X0 1 a ]
+"29
+[; ;PCF_LIB.c: 29:     dir = ((0b0111<<3)|dir)<<1;
+[e = _dir -> << | << -> 7 `i -> 3 `i -> _dir `i -> 1 `i `uc ]
+"30
+[; ;PCF_LIB.c: 30:     I2C_Start();
+[e ( _I2C_Start ..  ]
+"31
+[; ;PCF_LIB.c: 31:     I2C_Wr( dir | 1 );
+[e ( _I2C_Wr (1 -> | -> _dir `i -> 1 `i `uc ]
+"32
+[; ;PCF_LIB.c: 32:     dato = I2C_Rd();
+[e = _dato ( _I2C_Rd ..  ]
+"33
+[; ;PCF_LIB.c: 33:     I2C_Stop();
+[e ( _I2C_Stop ..  ]
+"35
+[; ;PCF_LIB.c: 35:     return dato;
+[e ) _dato ]
+[e $UE 370  ]
+"37
+[; ;PCF_LIB.c: 37: }
+[e :UE 370 ]
 }

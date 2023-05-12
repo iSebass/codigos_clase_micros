@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c config.c I2C_LIB.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c config.c I2C_LIB.c PCF_LIB.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/I2C_LIB.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/I2C_LIB.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/I2C_LIB.p1 ${OBJECTDIR}/PCF_LIB.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/I2C_LIB.p1.d ${OBJECTDIR}/PCF_LIB.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/I2C_LIB.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/I2C_LIB.p1 ${OBJECTDIR}/PCF_LIB.p1
 
 # Source Files
-SOURCEFILES=main.c config.c I2C_LIB.c
+SOURCEFILES=main.c config.c I2C_LIB.c PCF_LIB.c
 
 
 
@@ -118,6 +118,14 @@ ${OBJECTDIR}/I2C_LIB.p1: I2C_LIB.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/I2C_LIB.d ${OBJECTDIR}/I2C_LIB.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/I2C_LIB.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/PCF_LIB.p1: PCF_LIB.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PCF_LIB.p1.d 
+	@${RM} ${OBJECTDIR}/PCF_LIB.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/PCF_LIB.p1 PCF_LIB.c 
+	@-${MV} ${OBJECTDIR}/PCF_LIB.d ${OBJECTDIR}/PCF_LIB.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PCF_LIB.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -142,6 +150,14 @@ ${OBJECTDIR}/I2C_LIB.p1: I2C_LIB.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/I2C_LIB.p1 I2C_LIB.c 
 	@-${MV} ${OBJECTDIR}/I2C_LIB.d ${OBJECTDIR}/I2C_LIB.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/I2C_LIB.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/PCF_LIB.p1: PCF_LIB.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PCF_LIB.p1.d 
+	@${RM} ${OBJECTDIR}/PCF_LIB.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/PCF_LIB.p1 PCF_LIB.c 
+	@-${MV} ${OBJECTDIR}/PCF_LIB.d ${OBJECTDIR}/PCF_LIB.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PCF_LIB.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

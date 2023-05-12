@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "PCF_LIB.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "PCF_LIB.c" 2
+# 1 "./PCF_LIB.h" 1
+# 11 "./PCF_LIB.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5717,10 +5719,10 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 1 "main.c" 2
+# 11 "./PCF_LIB.h" 2
 
 # 1 "./config.h" 1
-# 2 "main.c" 2
+# 12 "./PCF_LIB.h" 2
 
 # 1 "./I2C_LIB.h" 1
 
@@ -5740,32 +5742,48 @@ char I2C_Rd(void);
 
 
 void I2C_Condiciones_Espera(void);
-# 3 "main.c" 2
+# 13 "./PCF_LIB.h" 2
 
-# 1 "./PCF_LIB.h" 1
-# 15 "./PCF_LIB.h"
+
 void PCF8574_Wr(char dir, char data);
 void PCF8574A_Wr(char dir, char data);
 char PCF8574_Rd(char dir);
 char PCF8574A_Rd(char dir);
-# 4 "main.c" 2
+# 1 "PCF_LIB.c" 2
 
 
-char data;
+void PCF8574_Wr(char dir, char data){
+    dir = ((0b0100<<3)|dir)<<1;
+    I2C_Start();
+    I2C_Wr( dir | 0 );
+    I2C_Wr(data);
+    I2C_Stop();
+}
+void PCF8574A_Wr(char dir, char data){
+    dir = ((0b0111<<3)|dir)<<1;
+    I2C_Start();
+    I2C_Wr( dir | 0 );
+    I2C_Wr(data);
+    I2C_Stop();
+}
+char PCF8574_Rd(char dir){
+    char dato;
+    dir = ((0b0100<<3)|dir)<<1;
+    I2C_Start();
+    I2C_Wr( dir | 1 );
+    dato = I2C_Rd();
+    I2C_Stop();
 
-void main(void){
+    return dato;
+}
+char PCF8574A_Rd(char dir){
+    char dato;
+    dir = ((0b0111<<3)|dir)<<1;
+    I2C_Start();
+    I2C_Wr( dir | 1 );
+    dato = I2C_Rd();
+    I2C_Stop();
 
-    ADCON1 = 0x0F;
+    return dato;
 
-    I2C_Init();
-
-    while(1){
-
-        data = PCF8574A_Rd(0);
-        PCF8574_Wr(0,data);
-        _delay((unsigned long)((500)*(20000000UL/4000.0)));
-
-    }
-
-    return;
 }
