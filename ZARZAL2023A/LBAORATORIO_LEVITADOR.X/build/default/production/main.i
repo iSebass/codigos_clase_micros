@@ -5896,7 +5896,7 @@ void PWM2_Start(void);
 void PWM1_Stop(void);
 void PWM2_Stop(void);
 # 6 "main.c" 2
-# 19 "main.c"
+# 21 "main.c"
 uint16_t getDistance(void);
 void Motor_Start();
 void Motor_Stop();
@@ -5907,7 +5907,7 @@ uint8_t duty=70;
 
 
 float Kp=0.5, Kd=0.4, Ki=0.1;
-float error, suma=0, ref=80, actual;
+float error, suma=0, ref=80, actual, errorAnte;
 
 void main(void){
     ADCON1 = 0x0F;
@@ -5934,9 +5934,9 @@ void main(void){
     Motor_Start();
 
     while(1){
-        actual = getDistance();
+        actual = 50 - getDistance();
         error = ref - actual;
-        suma += Ki*error;
+        suma += Kp*error + Kd*(error-errorAnte)+Ki*error;
         if(suma>100){
             suma=100;
         }
@@ -5948,6 +5948,7 @@ void main(void){
         sprintf(strUART,"distancia: %0.1f\r\n", actual);
         UART_Write_Text(strUART);
         _delay((unsigned long)((1)*(20000000UL/4000.0)));
+        errorAnte = error;
     }
 
     return;

@@ -49,11 +49,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;./UART_LIB.h: 22: void UART_Init(UART_Config config);
 [v _UART_Init `(v ~T0 @X0 0 ef1`S369 ]
-"20 main.c
-[; ;main.c: 20: void Motor_Start();
+"22 main.c
+[; ;main.c: 22: void Motor_Start();
 [v _Motor_Start `(v ~T0 @X0 0 e? ]
-"19
-[; ;main.c: 19: uint16_t getDistance(void);
+"21
+[; ;main.c: 21: uint16_t getDistance(void);
 [v _getDistance `(us ~T0 @X0 0 ef ]
 "109 C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h
 [; ;C:\Program Files\Microchip\xc8\v2.36\pic\include\c99\stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
@@ -613,11 +613,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"23 main.c
-[; ;main.c: 23: float distancia;
+"25 main.c
+[; ;main.c: 25: float distancia;
 [v _distancia `f ~T0 @X0 1 e ]
-"24
-[; ;main.c: 24: char strUART[50]=" ";
+"26
+[; ;main.c: 26: char strUART[50]=" ";
 [v _strUART `uc ~T0 @X0 -> 50 `i e ]
 [i _strUART
 :U ..
@@ -625,14 +625,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"25
-[; ;main.c: 25: uint8_t duty=70;
+"27
+[; ;main.c: 27: uint8_t duty=70;
 [v _duty `uc ~T0 @X0 1 e ]
 [i _duty
 -> -> 70 `i `uc
 ]
-"28
-[; ;main.c: 28: float Kp=0.5, Kd=0.4, Ki=0.1;
+"30
+[; ;main.c: 30: float Kp=0.5, Kd=0.4, Ki=0.1;
 [v _Kp `f ~T0 @X0 1 e ]
 [i _Kp
 -> .0.5 `f
@@ -645,8 +645,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _Ki
 -> .0.1 `f
 ]
-"29
-[; ;main.c: 29: float error, suma=0, ref=80, actual;
+"31
+[; ;main.c: 31: float error, suma=0, ref=80, actual, errorAnte;
 [v _error `f ~T0 @X0 1 e ]
 [v _suma `f ~T0 @X0 1 e ]
 [i _suma
@@ -657,203 +657,207 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 80 `i `f
 ]
 [v _actual `f ~T0 @X0 1 e ]
+[v _errorAnte `f ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"31
-[; ;main.c: 31: void main(void){
+"33
+[; ;main.c: 33: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"32
-[; ;main.c: 32:     ADCON1 = 0x0F;
-[e = _ADCON1 -> -> 15 `i `uc ]
 "34
-[; ;main.c: 34:     TRISBbits.TRISB0 = 0;
+[; ;main.c: 34:     ADCON1 = 0x0F;
+[e = _ADCON1 -> -> 15 `i `uc ]
+"36
+[; ;main.c: 36:     TRISBbits.TRISB0 = 0;
 [e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-"35
-[; ;main.c: 35:     TRISBbits.TRISB1 = 1;
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
 "37
-[; ;main.c: 37:     TRISDbits.TRISD0 = 0;
+[; ;main.c: 37:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"39
+[; ;main.c: 39:     TRISDbits.TRISD0 = 0;
 [e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
-"38
-[; ;main.c: 38:     TRISDbits.TRISD1 = 0;
-[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
 "40
-[; ;main.c: 40:     PWM1_Init(2000);
-[e ( _PWM1_Init (1 -> -> 2000 `i `us ]
-"41
-[; ;main.c: 41:     PWM1_Set_Duty(duty);
-[e ( _PWM1_Set_Duty (1 _duty ]
+[; ;main.c: 40:     TRISDbits.TRISD1 = 0;
+[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
 "42
-[; ;main.c: 42:     PWM1_Start();
-[e ( _PWM1_Start ..  ]
+[; ;main.c: 42:     PWM1_Init(2000);
+[e ( _PWM1_Init (1 -> -> 2000 `i `us ]
+"43
+[; ;main.c: 43:     PWM1_Set_Duty(duty);
+[e ( _PWM1_Set_Duty (1 _duty ]
 "44
-[; ;main.c: 44:     UART_Config uartConfig;
-[v _uartConfig `S369 ~T0 @X0 1 a ]
+[; ;main.c: 44:     PWM1_Start();
+[e ( _PWM1_Start ..  ]
 "46
-[; ;main.c: 46:     uartConfig.baud_rate = 9600;
-[e = . _uartConfig 0 -> -> -> 9600 `i `l `ul ]
-"47
-[; ;main.c: 47:     uartConfig.data_bits = 8;
-[e = . _uartConfig 1 -> -> 8 `i `uc ]
+[; ;main.c: 46:     UART_Config uartConfig;
+[v _uartConfig `S369 ~T0 @X0 1 a ]
 "48
-[; ;main.c: 48:     uartConfig.parity = 0;
-[e = . _uartConfig 2 -> -> 0 `i `uc ]
+[; ;main.c: 48:     uartConfig.baud_rate = 9600;
+[e = . _uartConfig 0 -> -> -> 9600 `i `l `ul ]
 "49
-[; ;main.c: 49:     uartConfig.stop_bits = 1;
-[e = . _uartConfig 3 -> -> 1 `i `uc ]
+[; ;main.c: 49:     uartConfig.data_bits = 8;
+[e = . _uartConfig 1 -> -> 8 `i `uc ]
+"50
+[; ;main.c: 50:     uartConfig.parity = 0;
+[e = . _uartConfig 2 -> -> 0 `i `uc ]
 "51
-[; ;main.c: 51:     UART_Init(uartConfig);
-[e ( _UART_Init (1 _uartConfig ]
+[; ;main.c: 51:     uartConfig.stop_bits = 1;
+[e = . _uartConfig 3 -> -> 1 `i `uc ]
 "53
-[; ;main.c: 53:     Motor_Start();
-[e ( _Motor_Start ..  ]
+[; ;main.c: 53:     UART_Init(uartConfig);
+[e ( _UART_Init (1 _uartConfig ]
 "55
-[; ;main.c: 55:     while(1){
+[; ;main.c: 55:     Motor_Start();
+[e ( _Motor_Start ..  ]
+"57
+[; ;main.c: 57:     while(1){
 [e :U 372 ]
 {
-"56
-[; ;main.c: 56:         actual = getDistance();
-[e = _actual -> ( _getDistance ..  `f ]
-"57
-[; ;main.c: 57:         error = ref - actual;
-[e = _error - _ref _actual ]
 "58
-[; ;main.c: 58:         suma += Ki*error;
-[e =+ _suma * _Ki _error ]
+[; ;main.c: 58:         actual = 50 - getDistance();
+[e = _actual -> - -> -> 50 `i `ui -> ( _getDistance ..  `ui `f ]
 "59
-[; ;main.c: 59:         if(suma>100){
+[; ;main.c: 59:         error = ref - actual;
+[e = _error - _ref _actual ]
+"60
+[; ;main.c: 60:         suma += Kp*error + Kd*(error-errorAnte)+Ki*error;
+[e =+ _suma + + * _Kp _error * _Kd - _error _errorAnte * _Ki _error ]
+"61
+[; ;main.c: 61:         if(suma>100){
 [e $ ! > _suma -> -> 100 `i `f 374  ]
 {
-"60
-[; ;main.c: 60:             suma=100;
+"62
+[; ;main.c: 62:             suma=100;
 [e = _suma -> -> 100 `i `f ]
-"61
-[; ;main.c: 61:         }
+"63
+[; ;main.c: 63:         }
 }
 [e $U 375  ]
-"62
-[; ;main.c: 62:         else if(suma<0){
+"64
+[; ;main.c: 64:         else if(suma<0){
 [e :U 374 ]
 [e $ ! < _suma -> -> 0 `i `f 376  ]
 {
-"63
-[; ;main.c: 63:             suma = 0;
+"65
+[; ;main.c: 65:             suma = 0;
 [e = _suma -> -> 0 `i `f ]
-"64
-[; ;main.c: 64:         }
+"66
+[; ;main.c: 66:         }
 }
 [e :U 376 ]
 [e :U 375 ]
-"65
-[; ;main.c: 65:         PWM1_Set_Duty(suma);
-[e ( _PWM1_Set_Duty (1 -> _suma `uc ]
 "67
-[; ;main.c: 67:         sprintf(strUART,"distancia: %0.1f\r\n", actual);
-[e ( _sprintf (1 , (. , &U _strUART :s 1C -> _actual `d ]
-"68
-[; ;main.c: 68:         UART_Write_Text(strUART);
-[e ( _UART_Write_Text (1 &U _strUART ]
+[; ;main.c: 67:         PWM1_Set_Duty(suma);
+[e ( _PWM1_Set_Duty (1 -> _suma `uc ]
 "69
-[; ;main.c: 69:         _delay((unsigned long)((1)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 69:         sprintf(strUART,"distancia: %0.1f\r\n", actual);
+[e ( _sprintf (1 , (. , &U _strUART :s 1C -> _actual `d ]
 "70
-[; ;main.c: 70:     }
+[; ;main.c: 70:         UART_Write_Text(strUART);
+[e ( _UART_Write_Text (1 &U _strUART ]
+"71
+[; ;main.c: 71:         _delay((unsigned long)((1)*(20000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+"72
+[; ;main.c: 72:         errorAnte = error;
+[e = _errorAnte _error ]
+"73
+[; ;main.c: 73:     }
 }
 [e :U 371 ]
 [e $U 372  ]
 [e :U 373 ]
-"72
-[; ;main.c: 72:     return;
+"75
+[; ;main.c: 75:     return;
 [e $UE 370  ]
-"73
-[; ;main.c: 73: }
+"76
+[; ;main.c: 76: }
 [e :UE 370 ]
 }
-"75
-[; ;main.c: 75: uint16_t getDistance(void){
+"78
+[; ;main.c: 78: uint16_t getDistance(void){
 [v _getDistance `(us ~T0 @X0 1 ef ]
 {
 [e :U _getDistance ]
 [f ]
-"76
-[; ;main.c: 76:     uint16_t count=0;
+"79
+[; ;main.c: 79:     uint16_t count=0;
 [v _count `us ~T0 @X0 1 a ]
 [e = _count -> -> 0 `i `us ]
-"77
-[; ;main.c: 77:     PORTBbits.RB0 = 1;
+"80
+[; ;main.c: 80:     PORTBbits.RB0 = 1;
 [e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"78
-[; ;main.c: 78:     _delay((unsigned long)((10)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"79
-[; ;main.c: 79:     PORTBbits.RB0 = 0;
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
 "81
-[; ;main.c: 81:     while(PORTBbits.RB1 == 0);
+[; ;main.c: 81:     _delay((unsigned long)((10)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"82
+[; ;main.c: 82:     PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"84
+[; ;main.c: 84:     while(PORTBbits.RB1 == 0);
 [e $U 378  ]
 [e :U 379 ]
 [e :U 378 ]
 [e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 379  ]
 [e :U 380 ]
-"82
-[; ;main.c: 82:     while(PORTBbits.RB1 == 1){
+"85
+[; ;main.c: 85:     while(PORTBbits.RB1 == 1){
 [e $U 381  ]
 [e :U 382 ]
 {
-"83
-[; ;main.c: 83:         count++;
+"86
+[; ;main.c: 86:         count++;
 [e ++ _count -> -> 1 `i `us ]
-"84
-[; ;main.c: 84:         _delay((unsigned long)((58)*(20000000UL/4000000.0)));
+"87
+[; ;main.c: 87:         _delay((unsigned long)((58)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 58 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"85
-[; ;main.c: 85:     }
+"88
+[; ;main.c: 88:     }
 }
 [e :U 381 ]
-"82
-[; ;main.c: 82:     while(PORTBbits.RB1 == 1){
+"85
+[; ;main.c: 85:     while(PORTBbits.RB1 == 1){
 [e $ == -> . . _PORTBbits 0 1 `i -> 1 `i 382  ]
 [e :U 383 ]
-"87
-[; ;main.c: 87:     return(count);
+"90
+[; ;main.c: 90:     return(count);
 [e ) _count ]
 [e $UE 377  ]
-"88
-[; ;main.c: 88: }
+"91
+[; ;main.c: 91: }
 [e :UE 377 ]
 }
-"90
-[; ;main.c: 90: void Motor_Start(){
+"93
+[; ;main.c: 93: void Motor_Start(){
 [v _Motor_Start `(v ~T0 @X0 1 ef ]
 {
 [e :U _Motor_Start ]
 [f ]
-"91
-[; ;main.c: 91:     PORTDbits.RD0 = 1;
+"94
+[; ;main.c: 94:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"92
-[; ;main.c: 92:     PORTDbits.RD1 = 0;
+"95
+[; ;main.c: 95:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93: }
+"96
+[; ;main.c: 96: }
 [e :UE 384 ]
 }
-"94
-[; ;main.c: 94: void Motor_Stop(){
+"97
+[; ;main.c: 97: void Motor_Stop(){
 [v _Motor_Stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _Motor_Stop ]
 [f ]
-"95
-[; ;main.c: 95:     PORTDbits.RD0 = 0;
+"98
+[; ;main.c: 98:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"96
-[; ;main.c: 96:     PORTDbits.RD1 = 0;
+"99
+[; ;main.c: 99:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"97
-[; ;main.c: 97: }
+"100
+[; ;main.c: 100: }
 [e :UE 385 ]
 }
 [p f _sprintf 8462340 ]
