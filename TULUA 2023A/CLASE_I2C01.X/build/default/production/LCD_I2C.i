@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "LCD_I2C.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,334 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 1 "./mcc_generated_files/mcc.h" 1
+# 1 "LCD_I2C.c" 2
+# 1 "./LCD_I2C.h" 1
+# 11 "./LCD_I2C.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 1 3
 
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
+# 11 "./LCD_I2C.h" 2
+
+# 1 "./mcc_generated_files/i2c_master.h" 1
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 2 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 122 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 4 "./mcc_generated_files/i2c_master.h" 2
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdbool.h" 1 3
+# 6 "./mcc_generated_files/i2c_master.h" 2
+
+
+typedef enum {
+    I2C_NOERR,
+    I2C_BUSY,
+    I2C_FAIL
+
+
+} i2c_error_t;
+
+typedef enum
+{
+    I2C_STOP=1,
+    I2C_RESTART_READ,
+    I2C_RESTART_WRITE,
+    I2C_CONTINUE,
+    I2C_RESET_LINK
+} i2c_operations_t;
+
+typedef uint8_t i2c_address_t;
+typedef i2c_operations_t (*i2c_callback_t)(void *funPtr);
+
+
+i2c_operations_t I2C_CallbackReturnStop(void *funPtr);
+i2c_operations_t I2C_CallbackReturnReset(void *funPtr);
+i2c_operations_t I2C_CallbackRestartWrite(void *funPtr);
+i2c_operations_t I2C_CallbackRestartRead(void *funPtr);
+void I2C_Initialize(void);
+i2c_error_t I2C_Open(i2c_address_t address);
+i2c_error_t I2C_Close(void);
+i2c_error_t I2C_MasterOperation(_Bool read);
+i2c_error_t I2C_MasterWrite(void);
+i2c_error_t I2C_MasterRead(void);
+void I2C_SetTimeout(uint8_t timeOut);
+void I2C_SetBuffer(void *buffer, size_t bufferSize);
+void I2C_SetDataCompleteCallback(i2c_callback_t cb, void *ptr);
+void I2C_SetWriteCollisionCallback(i2c_callback_t cb, void *ptr);
+void I2C_SetAddressNackCallback(i2c_callback_t cb, void *ptr);
+void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
+void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
+
+
+
+
+
+uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
+uint16_t I2C_Read2ByteRegister(i2c_address_t address, uint8_t reg);
+void I2C_Write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data);
+void I2C_Write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data);
+void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
+void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
+void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
+
+uint8_t I2C_Rd(i2c_address_t address);
+uint8_t I2C_Wr(i2c_address_t address, uint8_t data);
+# 12 "./LCD_I2C.h" 2
+
+# 1 "./mcc_generated_files/device_config.h" 1
+# 13 "./LCD_I2C.h" 2
 
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
@@ -23,29 +348,10 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 2 3
 
 
@@ -120,92 +426,7 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
 
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdint.h" 2 3
-# 5 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -5375,245 +5596,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 3 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/device_config.h" 1
-# 4 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 56 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-void PIN_MANAGER_IOC(void);
-# 5 "./mcc_generated_files/mcc.h" 2
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdbool.h" 1 3
-# 7 "./mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 7 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\conio.h" 2 3
-# 8 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/i2c_master.h" 1
-
-
-
-
-
-
-
-typedef enum {
-    I2C_NOERR,
-    I2C_BUSY,
-    I2C_FAIL
-
-
-} i2c_error_t;
-
-typedef enum
-{
-    I2C_STOP=1,
-    I2C_RESTART_READ,
-    I2C_RESTART_WRITE,
-    I2C_CONTINUE,
-    I2C_RESET_LINK
-} i2c_operations_t;
-
-typedef uint8_t i2c_address_t;
-typedef i2c_operations_t (*i2c_callback_t)(void *funPtr);
-
-
-i2c_operations_t I2C_CallbackReturnStop(void *funPtr);
-i2c_operations_t I2C_CallbackReturnReset(void *funPtr);
-i2c_operations_t I2C_CallbackRestartWrite(void *funPtr);
-i2c_operations_t I2C_CallbackRestartRead(void *funPtr);
-void I2C_Initialize(void);
-i2c_error_t I2C_Open(i2c_address_t address);
-i2c_error_t I2C_Close(void);
-i2c_error_t I2C_MasterOperation(_Bool read);
-i2c_error_t I2C_MasterWrite(void);
-i2c_error_t I2C_MasterRead(void);
-void I2C_SetTimeout(uint8_t timeOut);
-void I2C_SetBuffer(void *buffer, size_t bufferSize);
-void I2C_SetDataCompleteCallback(i2c_callback_t cb, void *ptr);
-void I2C_SetWriteCollisionCallback(i2c_callback_t cb, void *ptr);
-void I2C_SetAddressNackCallback(i2c_callback_t cb, void *ptr);
-void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
-void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
-
-
-
-
-
-uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
-uint16_t I2C_Read2ByteRegister(i2c_address_t address, uint8_t reg);
-void I2C_Write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data);
-void I2C_Write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data);
-void I2C_WriteNBytes(i2c_address_t address, uint8_t *data, size_t len);
-void I2C_ReadNBytes(i2c_address_t address, uint8_t *data, size_t len);
-void I2C_ReadDataBlock(i2c_address_t address, uint8_t reg, uint8_t *data, size_t len);
-
-uint8_t I2C_Rd(i2c_address_t address);
-uint8_t I2C_Wr(i2c_address_t address, uint8_t data);
-# 9 "./mcc_generated_files/mcc.h" 2
-
-
-void SYSTEM_Initialize(void);
-void OSCILLATOR_Initialize(void);
-void WDT_Initialize(void);
-# 1 "main.c" 2
-
-# 1 "./LCD_I2C.h" 1
+# 14 "./LCD_I2C.h" 2
 # 154 "./LCD_I2C.h"
 void PCF_Wr(uint8_t dato);
 void loadPCF(uint8_t dato, uint8_t mode);
@@ -5651,21 +5634,168 @@ void i2c_lcd_custom_char(uint8_t mem, uint8_t *charmap);
 
 void i2c_lcd_backlight_on(void);
 void i2c_lcd_backlight_off(void);
-# 2 "main.c" 2
+# 1 "LCD_I2C.c" 2
 
 
 
 
-int statusbtn=0;
-
-void main(void)
-{
-    SYSTEM_Initialize();
-
-    i2c_lcd_init();
 
 
-    while (1){
 
+static uint8_t statusLED = 0b00001000;
+static uint8_t paramsLCD;
+
+void PCF_Wr(uint8_t dato){
+    I2C_Wr (0b0100000 | 0b111, dato|statusLED );
+}
+
+void loadPCF(uint8_t dato, uint8_t mode){
+
+    switch(mode){
+        case 1 : dato |= (1<<0); break;
+        case 0: dato &= ~(1<<0); break;
     }
+
+
+    PCF_Wr(dato);
+    dato |= (1<<2);
+    PCF_Wr(dato);
+    dato &= ~(1<<2);
+    PCF_Wr(dato);
+
+    _delay((unsigned long)((30)*(32000000/4000000.0)));
+
+}
+void sendDATA(uint8_t dato){
+    uint8_t NibbleH, NibbleL;
+    NibbleH = (dato & 0xF0);
+    NibbleL = (dato & 0x0F)<<4;
+    loadPCF(NibbleH,1);
+    loadPCF(NibbleL,1);
+}
+void sendCMD(uint8_t cmd){
+     uint8_t NibbleH, NibbleL;
+     NibbleH = cmd & 0xF0;
+     NibbleL = (cmd & 0x0F)<<4;
+     loadPCF(NibbleH,0);
+     loadPCF(NibbleL,0);
+}
+
+void i2c_lcd_init(void){
+
+    PCF_Wr(0x00);
+    _delay((unsigned long)((15)*(32000000/4000.0)));
+    sendCMD(0x03);
+    _delay((unsigned long)((4100)*(32000000/4000000.0)));
+    sendCMD(0x03);
+    _delay((unsigned long)((100)*(32000000/4000000.0)));
+    sendCMD(0x03);
+    sendCMD(0x02);
+
+    sendCMD(0x20 | 0x00 | 0x08 | 0x00);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+
+    paramsLCD = 0x04 | 0x02 | 0x01;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+
+    sendCMD(0x01);
+    _delay((unsigned long)((2)*(32000000/4000.0)));
+
+
+}
+void i2c_lcd_write(uint8_t letra){
+    sendDATA(letra);
+}
+void i2c_lcd_command(uint8_t cmd){
+    sendCMD(cmd);
+}
+
+void i2c_lcd_puts(char *str){
+
+    while(*str){
+        sendDATA(*str);
+        str++;
+    }
+
+}
+void i2c_lcd_set_cursor(uint8_t row, uint8_t col){
+    static uint8_t local_mem[4]={0x00,0x40,0x14,0x54};
+    sendCMD(0x80 | (local_mem[row-1]+(col-1) ) );
+}
+
+
+
+
+void i2c_lcd_backlight_on(void){
+    statusLED=0b00001000;
+    sendCMD(0x08 | paramsLCD);
+
+}
+void i2c_lcd_backlight_off(void){
+    statusLED=0b00000000;
+    sendCMD(0x08 | paramsLCD);
+
+}
+
+
+void i2c_lcd_clear(void){
+    sendCMD(0x01);
+    _delay((unsigned long)((2)*(32000000/4000.0)));
+}
+
+void i2c_lcd_return_home(void){
+    sendCMD(0x02);
+    _delay((unsigned long)((2)*(32000000/4000.0)));
+}
+
+void i2c_lcd_enable_blink(void){
+    paramsLCD |= 0x01;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+void i2c_lcd_disable_blink(void){
+    paramsLCD &= ~0x01;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+
+void i2c_lcd_enable_cursor(void){
+    paramsLCD |= 0x02;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+void i2c_lcd_disable_cursor(void){
+    paramsLCD &= ~0x02;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+
+void i2c_lcd_on(void){
+    paramsLCD |= 0x04 ;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+void i2c_lcd_off(void){
+    paramsLCD &= ~0x04 ;
+    sendCMD(0x08 | paramsLCD);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+
+void i2c_lcd_scroll_left(void){
+    sendCMD(0x10 | 0x08 | 0x00);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+void i2c_lcd_scroll_right(void){
+    sendCMD(0x10 | 0x08 | 0x04);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
+}
+
+void i2c_lcd_custom_char(uint8_t mem, uint8_t *charmap){
+    sendCMD(0x40 | ( (mem&0b111)<<3) ) ;
+    for(char i=0; i<=7; i++){
+        sendDATA(charmap[i]);
+    }
+    sendCMD(0x80);
+    _delay((unsigned long)((37)*(32000000/4000000.0)));
 }
