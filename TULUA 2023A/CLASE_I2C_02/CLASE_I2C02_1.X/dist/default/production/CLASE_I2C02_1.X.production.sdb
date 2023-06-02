@@ -1,0 +1,695 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1939 ]
+[d frameptr 6 ]
+"105 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/i2c_master.c
+[e E3368 . `uc
+I2C_IDLE 0
+I2C_SEND_ADR_READ 1
+I2C_SEND_ADR_WRITE 2
+I2C_TX 3
+I2C_RX 4
+I2C_RCEN 5
+I2C_TX_EMPTY 6
+I2C_SEND_RESTART_READ 7
+I2C_SEND_RESTART_WRITE 8
+I2C_SEND_RESTART 9
+I2C_SEND_STOP 10
+I2C_RX_ACK 11
+I2C_RX_NACK_STOP 12
+I2C_RX_NACK_RESTART 13
+I2C_RESET 14
+I2C_ADDRESS_NACK 15
+]
+"124
+[e E360 . `uc
+I2C_STOP 1
+I2C_RESTART_READ 2
+I2C_RESTART_WRITE 3
+I2C_CONTINUE 4
+I2C_RESET_LINK 5
+]
+[e E355 . `uc
+I2C_NOERR 0
+I2C_BUSY 1
+I2C_FAIL 2
+]
+"150
+[e E3386 . `uc
+I2C_DATA_COMPLETE 0
+I2C_WRITE_COLLISION 1
+I2C_ADDR_NACK 2
+I2C_DATA_NACK 3
+I2C_TIMEOUT 4
+I2C_NULL 5
+]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"11 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\LCD_I2C.c
+[v _PCF_Wr PCF_Wr `(v  1 e 1 0 ]
+"15
+[v _loadPCF loadPCF `(v  1 e 1 0 ]
+"32
+[v _sendDATA sendDATA `(v  1 e 1 0 ]
+"39
+[v _sendCMD sendCMD `(v  1 e 1 0 ]
+"47
+[v _i2c_lcd_init i2c_lcd_init `(v  1 e 1 0 ]
+"4 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"126 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/i2c_master.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+"135
+[v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
+"168
+[v _I2C_Close I2C_Close `(E355  1 e 1 0 ]
+"183
+[v _I2C_MasterOperation I2C_MasterOperation `(E355  1 e 1 0 ]
+"205
+[v _I2C_MasterRead I2C_MasterRead `(E355  1 e 1 0 ]
+"210
+[v _I2C_MasterWrite I2C_MasterWrite `(E355  1 e 1 0 ]
+"222
+[v _I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
+"232
+[v _I2C_SetDataCompleteCallback I2C_SetDataCompleteCallback `(v  1 e 1 0 ]
+"242
+[v _I2C_SetAddressNackCallback I2C_SetAddressNackCallback `(v  1 e 1 0 ]
+"257
+[v _I2C_SetCallback I2C_SetCallback `(v  1 s 1 I2C_SetCallback ]
+"271
+[v _I2C_Poller I2C_Poller `(v  1 s 1 I2C_Poller ]
+"280
+[v _I2C_MasterFsm I2C_MasterFsm `T(v  1 s 1 I2C_MasterFsm ]
+"292
+[v _I2C_DO_IDLE I2C_DO_IDLE `(E3368  1 s 1 I2C_DO_IDLE ]
+"299
+[v _I2C_DO_SEND_ADR_READ I2C_DO_SEND_ADR_READ `(E3368  1 s 1 I2C_DO_SEND_ADR_READ ]
+"306
+[v _I2C_DO_SEND_ADR_WRITE I2C_DO_SEND_ADR_WRITE `(E3368  1 s 1 I2C_DO_SEND_ADR_WRITE ]
+"313
+[v _I2C_DO_TX I2C_DO_TX `(E3368  1 s 1 I2C_DO_TX ]
+"337
+[v _I2C_DO_RX I2C_DO_RX `(E3368  1 s 1 I2C_DO_RX ]
+"361
+[v _I2C_DO_RCEN I2C_DO_RCEN `(E3368  1 s 1 I2C_DO_RCEN ]
+"368
+[v _I2C_DO_TX_EMPTY I2C_DO_TX_EMPTY `(E3368  1 s 1 I2C_DO_TX_EMPTY ]
+"409
+[v _I2C_DO_SEND_RESTART_READ I2C_DO_SEND_RESTART_READ `(E3368  1 s 1 I2C_DO_SEND_RESTART_READ ]
+"415
+[v _I2C_DO_SEND_RESTART_WRITE I2C_DO_SEND_RESTART_WRITE `(E3368  1 s 1 I2C_DO_SEND_RESTART_WRITE ]
+"422
+[v _I2C_DO_SEND_RESTART I2C_DO_SEND_RESTART `(E3368  1 s 1 I2C_DO_SEND_RESTART ]
+"428
+[v _I2C_DO_SEND_STOP I2C_DO_SEND_STOP `(E3368  1 s 1 I2C_DO_SEND_STOP ]
+"434
+[v _I2C_DO_RX_ACK I2C_DO_RX_ACK `(E3368  1 s 1 I2C_DO_RX_ACK ]
+"441
+[v _I2C_DO_RX_NACK_STOP I2C_DO_RX_NACK_STOP `(E3368  1 s 1 I2C_DO_RX_NACK_STOP ]
+"447
+[v _I2C_DO_RX_NACK_RESTART I2C_DO_RX_NACK_RESTART `(E3368  1 s 1 I2C_DO_RX_NACK_RESTART ]
+"453
+[v _I2C_DO_RESET I2C_DO_RESET `(E3368  1 s 1 I2C_DO_RESET ]
+"459
+[v _I2C_DO_ADDRESS_NACK I2C_DO_ADDRESS_NACK `(E3368  1 s 1 I2C_DO_ADDRESS_NACK ]
+"479
+[v _I2C_CallbackReturnStop I2C_CallbackReturnStop `(E360  1 e 1 0 ]
+"484
+[v _I2C_CallbackReturnReset I2C_CallbackReturnReset `(E360  1 e 1 0 ]
+"502
+[v _I2C_MasterOpen I2C_MasterOpen `T(a  1 s 1 I2C_MasterOpen ]
+"516
+[v _I2C_MasterClose I2C_MasterClose `T(v  1 s 1 I2C_MasterClose ]
+"522
+[v _I2C_MasterGetRxData I2C_MasterGetRxData `T(uc  1 s 1 I2C_MasterGetRxData ]
+"527
+[v _I2C_MasterSendTxData I2C_MasterSendTxData `T(v  1 s 1 I2C_MasterSendTxData ]
+"532
+[v _I2C_MasterEnableRestart I2C_MasterEnableRestart `T(v  1 s 1 I2C_MasterEnableRestart ]
+"537
+[v _I2C_MasterDisableRestart I2C_MasterDisableRestart `T(v  1 s 1 I2C_MasterDisableRestart ]
+"542
+[v _I2C_MasterStartRx I2C_MasterStartRx `T(v  1 s 1 I2C_MasterStartRx ]
+"547
+[v _I2C_MasterStart I2C_MasterStart `T(v  1 s 1 I2C_MasterStart ]
+"552
+[v _I2C_MasterStop I2C_MasterStop `T(v  1 s 1 I2C_MasterStop ]
+"557
+[v _I2C_MasterIsNack I2C_MasterIsNack `T(a  1 s 1 I2C_MasterIsNack ]
+"562
+[v _I2C_MasterSendAck I2C_MasterSendAck `T(v  1 s 1 I2C_MasterSendAck ]
+"568
+[v _I2C_MasterSendNack I2C_MasterSendNack `T(v  1 s 1 I2C_MasterSendNack ]
+"574
+[v _I2C_MasterClearBusCollision I2C_MasterClearBusCollision `T(v  1 s 1 I2C_MasterClearBusCollision ]
+"584
+[v _I2C_MasterEnableIrq I2C_MasterEnableIrq `T(v  1 s 1 I2C_MasterEnableIrq ]
+"594
+[v _I2C_MasterDisableIrq I2C_MasterDisableIrq `T(v  1 s 1 I2C_MasterDisableIrq ]
+"599
+[v _I2C_MasterClearIrq I2C_MasterClearIrq `T(v  1 s 1 I2C_MasterClearIrq ]
+"604
+[v _I2C_MasterSetIrq I2C_MasterSetIrq `T(v  1 s 1 I2C_MasterSetIrq ]
+"609
+[v _I2C_MasterWaitForEvent I2C_MasterWaitForEvent `T(v  1 s 1 I2C_MasterWaitForEvent ]
+"667
+[v _I2C_Write1ByteRegister I2C_Write1ByteRegister `(v  1 e 1 0 ]
+"718
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+"725
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+"732
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+"739
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+"746
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+"50 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"59
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"73
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+[s S449 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"733 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h
+[u S458 . 1 `S449 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES458  1 e 1 @17 ]
+[s S386 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 LCDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"795
+[u S395 . 1 `S386 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES395  1 e 1 @18 ]
+"1314
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1376
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1438
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1500
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+"1562
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S428 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1617
+[u S437 . 1 `S428 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES437  1 e 1 @145 ]
+[s S38 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1788
+[s S47 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S52 . 1 `S38 1 . 1 0 `S47 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES52  1 e 1 @149 ]
+"1899
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1958
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"2016
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2358
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2420
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2482
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2544
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+"2614
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"2924
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3273
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3329
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3387
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3445
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+"3515
+[v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"4064
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4134
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"4155
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"4175
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"4215
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S407 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"4232
+[u S416 . 1 `S407 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES416  1 e 1 @532 ]
+"4277
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S200 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"4302
+[s S209 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S211 . 1 `S200 1 . 1 0 `S209 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES211  1 e 1 @533 ]
+"4415
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+[s S365 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4432
+[u S374 . 1 `S365 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES374  1 e 1 @534 ]
+"8844
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"8 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\LCD_I2C.c
+[v _statusLED statusLED `uc  1 s 1 statusLED ]
+"9
+[v _paramsLCD paramsLCD `uc  1 s 1 paramsLCD ]
+"105 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/i2c_master.c
+[v _i2c_fsmStateTable i2c_fsmStateTable `DC[16]*.37(E3368  1 e 32 0 ]
+[s S174 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.1uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E3368 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+`uc 1 busy 1 28 :1:1 
+`uc 1 inUse 1 28 :1:2 
+`uc 1 bufferFree 1 28 :1:3 
+]
+"124
+[v _I2C_Status I2C_Status `S174  1 e 29 0 ]
+"4 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"14
+} 0
+"47 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\LCD_I2C.c
+[v _i2c_lcd_init i2c_lcd_init `(v  1 e 1 0 ]
+{
+"69
+} 0
+"39
+[v _sendCMD sendCMD `(v  1 e 1 0 ]
+{
+[v sendCMD@cmd cmd `uc  1 a 1 wreg ]
+"40
+[v sendCMD@NibbleL NibbleL `uc  1 a 1 9 ]
+[v sendCMD@NibbleH NibbleH `uc  1 a 1 8 ]
+"39
+[v sendCMD@cmd cmd `uc  1 a 1 wreg ]
+"41
+[v sendCMD@cmd cmd `uc  1 a 1 10 ]
+"45
+} 0
+"15
+[v _loadPCF loadPCF `(v  1 e 1 0 ]
+{
+[v loadPCF@dato dato `uc  1 a 1 wreg ]
+[v loadPCF@dato dato `uc  1 a 1 wreg ]
+[v loadPCF@mode mode `uc  1 p 1 2 ]
+[v loadPCF@dato dato `uc  1 a 1 5 ]
+"31
+} 0
+"11
+[v _PCF_Wr PCF_Wr `(v  1 e 1 0 ]
+{
+[v PCF_Wr@dato dato `uc  1 a 1 wreg ]
+[v PCF_Wr@dato dato `uc  1 a 1 wreg ]
+[v PCF_Wr@dato dato `uc  1 a 1 1 ]
+"13
+} 0
+"667 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/i2c_master.c
+[v _I2C_Write1ByteRegister I2C_Write1ByteRegister `(v  1 e 1 0 ]
+{
+[v I2C_Write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C_Write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C_Write1ByteRegister@reg reg `uc  1 p 1 10 ]
+[v I2C_Write1ByteRegister@data data `uc  1 p 1 11 ]
+[v I2C_Write1ByteRegister@address address `uc  1 a 1 13 ]
+"675
+} 0
+"242
+[v _I2C_SetAddressNackCallback I2C_SetAddressNackCallback `(v  1 e 1 0 ]
+{
+[v I2C_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 5 ]
+[v I2C_SetAddressNackCallback@ptr ptr `*.1v  1 p 1 7 ]
+"245
+} 0
+"135
+[v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
+{
+[v I2C_Open@address address `uc  1 a 1 wreg ]
+"137
+[v I2C_Open@returnValue returnValue `E355  1 a 1 2 ]
+"135
+[v I2C_Open@address address `uc  1 a 1 wreg ]
+"137
+[v I2C_Open@address address `uc  1 a 1 1 ]
+"166
+} 0
+"502
+[v _I2C_MasterOpen I2C_MasterOpen `T(a  1 s 1 I2C_MasterOpen ]
+{
+"514
+} 0
+"210
+[v _I2C_MasterWrite I2C_MasterWrite `(E355  1 e 1 0 ]
+{
+"213
+} 0
+"183
+[v _I2C_MasterOperation I2C_MasterOperation `(E355  1 e 1 0 ]
+{
+[v I2C_MasterOperation@read read `a  1 a 1 wreg ]
+"185
+[v I2C_MasterOperation@returnValue returnValue `E355  1 a 1 9 ]
+"183
+[v I2C_MasterOperation@read read `a  1 a 1 wreg ]
+"185
+[v I2C_MasterOperation@read read `a  1 a 1 8 ]
+"203
+} 0
+"271
+[v _I2C_Poller I2C_Poller `(v  1 s 1 I2C_Poller ]
+{
+"278
+} 0
+"609
+[v _I2C_MasterWaitForEvent I2C_MasterWaitForEvent `T(v  1 s 1 I2C_MasterWaitForEvent ]
+{
+"618
+} 0
+"280
+[v _I2C_MasterFsm I2C_MasterFsm `T(v  1 s 1 I2C_MasterFsm ]
+{
+"289
+} 0
+"459
+[v _I2C_DO_ADDRESS_NACK I2C_DO_ADDRESS_NACK `(E3368  1 s 1 I2C_DO_ADDRESS_NACK ]
+{
+"471
+} 0
+"453
+[v _I2C_DO_RESET I2C_DO_RESET `(E3368  1 s 1 I2C_DO_RESET ]
+{
+"458
+} 0
+"447
+[v _I2C_DO_RX_NACK_RESTART I2C_DO_RX_NACK_RESTART `(E3368  1 s 1 I2C_DO_RX_NACK_RESTART ]
+{
+"451
+} 0
+"441
+[v _I2C_DO_RX_NACK_STOP I2C_DO_RX_NACK_STOP `(E3368  1 s 1 I2C_DO_RX_NACK_STOP ]
+{
+"445
+} 0
+"434
+[v _I2C_DO_RX_ACK I2C_DO_RX_ACK `(E3368  1 s 1 I2C_DO_RX_ACK ]
+{
+"438
+} 0
+"428
+[v _I2C_DO_SEND_STOP I2C_DO_SEND_STOP `(E3368  1 s 1 I2C_DO_SEND_STOP ]
+{
+"432
+} 0
+"422
+[v _I2C_DO_SEND_RESTART I2C_DO_SEND_RESTART `(E3368  1 s 1 I2C_DO_SEND_RESTART ]
+{
+"426
+} 0
+"415
+[v _I2C_DO_SEND_RESTART_WRITE I2C_DO_SEND_RESTART_WRITE `(E3368  1 s 1 I2C_DO_SEND_RESTART_WRITE ]
+{
+"419
+} 0
+"409
+[v _I2C_DO_SEND_RESTART_READ I2C_DO_SEND_RESTART_READ `(E3368  1 s 1 I2C_DO_SEND_RESTART_READ ]
+{
+"413
+} 0
+"361
+[v _I2C_DO_RCEN I2C_DO_RCEN `(E3368  1 s 1 I2C_DO_RCEN ]
+{
+"366
+} 0
+"337
+[v _I2C_DO_RX I2C_DO_RX `(E3368  1 s 1 I2C_DO_RX ]
+{
+"359
+} 0
+"313
+[v _I2C_DO_TX I2C_DO_TX `(E3368  1 s 1 I2C_DO_TX ]
+{
+"335
+} 0
+"306
+[v _I2C_DO_SEND_ADR_WRITE I2C_DO_SEND_ADR_WRITE `(E3368  1 s 1 I2C_DO_SEND_ADR_WRITE ]
+{
+"311
+} 0
+"299
+[v _I2C_DO_SEND_ADR_READ I2C_DO_SEND_ADR_READ `(E3368  1 s 1 I2C_DO_SEND_ADR_READ ]
+{
+"304
+} 0
+"292
+[v _I2C_DO_IDLE I2C_DO_IDLE `(E3368  1 s 1 I2C_DO_IDLE ]
+{
+"297
+} 0
+"368
+[v _I2C_DO_TX_EMPTY I2C_DO_TX_EMPTY `(E3368  1 s 1 I2C_DO_TX_EMPTY ]
+{
+"383
+} 0
+"604
+[v _I2C_MasterSetIrq I2C_MasterSetIrq `T(v  1 s 1 I2C_MasterSetIrq ]
+{
+"607
+} 0
+"557
+[v _I2C_MasterIsNack I2C_MasterIsNack `T(a  1 s 1 I2C_MasterIsNack ]
+{
+"560
+} 0
+"527
+[v _I2C_MasterSendTxData I2C_MasterSendTxData `T(v  1 s 1 I2C_MasterSendTxData ]
+{
+[v I2C_MasterSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C_MasterSendTxData@data data `uc  1 a 1 wreg ]
+"529
+[v I2C_MasterSendTxData@data data `uc  1 a 1 0 ]
+"530
+} 0
+"562
+[v _I2C_MasterSendAck I2C_MasterSendAck `T(v  1 s 1 I2C_MasterSendAck ]
+{
+"566
+} 0
+"522
+[v _I2C_MasterGetRxData I2C_MasterGetRxData `T(uc  1 s 1 I2C_MasterGetRxData ]
+{
+"525
+} 0
+"568
+[v _I2C_MasterSendNack I2C_MasterSendNack `T(v  1 s 1 I2C_MasterSendNack ]
+{
+"572
+} 0
+"542
+[v _I2C_MasterStartRx I2C_MasterStartRx `T(v  1 s 1 I2C_MasterStartRx ]
+{
+"545
+} 0
+"746
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+{
+[v rdBlkRegCompleteHandler@ptr ptr `*.1v  1 p 1 9 ]
+"751
+} 0
+"732
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@ptr ptr `*.1v  1 p 1 9 ]
+"737
+} 0
+"725
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+{
+[v rd2RegCompleteHandler@ptr ptr `*.1v  1 p 1 9 ]
+"730
+} 0
+"718
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+{
+[v rd1RegCompleteHandler@ptr ptr `*.1v  1 p 1 9 ]
+"723
+} 0
+"484
+[v _I2C_CallbackReturnReset I2C_CallbackReturnReset `(E360  1 e 1 0 ]
+{
+"487
+} 0
+"479
+[v _I2C_CallbackReturnStop I2C_CallbackReturnStop `(E360  1 e 1 0 ]
+{
+"482
+} 0
+"739
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+{
+[v wr2RegCompleteHandler@ptr ptr `*.1v  1 p 1 9 ]
+"744
+} 0
+"232
+[v _I2C_SetDataCompleteCallback I2C_SetDataCompleteCallback `(v  1 e 1 0 ]
+{
+[v I2C_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 5 ]
+[v I2C_SetDataCompleteCallback@ptr ptr `*.1v  1 p 1 7 ]
+"235
+} 0
+"257
+[v _I2C_SetCallback I2C_SetCallback `(v  1 s 1 I2C_SetCallback ]
+{
+[v I2C_SetCallback@idx idx `E3386  1 a 1 wreg ]
+[v I2C_SetCallback@idx idx `E3386  1 a 1 wreg ]
+[v I2C_SetCallback@cb cb `*.37(E360  1 p 2 0 ]
+[v I2C_SetCallback@ptr ptr `*.1v  1 p 1 2 ]
+"259
+[v I2C_SetCallback@idx idx `E3386  1 a 1 4 ]
+"269
+} 0
+"222
+[v _I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
+{
+[v I2C_SetBuffer@buffer buffer `*.1v  1 a 1 wreg ]
+[v I2C_SetBuffer@buffer buffer `*.1v  1 a 1 wreg ]
+[v I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 0 ]
+"224
+[v I2C_SetBuffer@buffer buffer `*.1v  1 a 1 3 ]
+"230
+} 0
+"552
+[v _I2C_MasterStop I2C_MasterStop `T(v  1 s 1 I2C_MasterStop ]
+{
+"555
+} 0
+"532
+[v _I2C_MasterEnableRestart I2C_MasterEnableRestart `T(v  1 s 1 I2C_MasterEnableRestart ]
+{
+"535
+} 0
+"547
+[v _I2C_MasterStart I2C_MasterStart `T(v  1 s 1 I2C_MasterStart ]
+{
+"550
+} 0
+"168
+[v _I2C_Close I2C_Close `(E355  1 e 1 0 ]
+{
+"170
+[v I2C_Close@returnValue returnValue `E355  1 a 1 1 ]
+"181
+} 0
+"594
+[v _I2C_MasterDisableIrq I2C_MasterDisableIrq `T(v  1 s 1 I2C_MasterDisableIrq ]
+{
+"597
+} 0
+"516
+[v _I2C_MasterClose I2C_MasterClose `T(v  1 s 1 I2C_MasterClose ]
+{
+"520
+} 0
+"599
+[v _I2C_MasterClearIrq I2C_MasterClearIrq `T(v  1 s 1 I2C_MasterClearIrq ]
+{
+"602
+} 0
+"50 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"57
+} 0
+"73
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"55 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"101
+} 0
+"59 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"126 C:\LABORAL\UNIVALLE\codigos_clase_micros\TULUA 2023A\CLASE_I2C_02\CLASE_I2C02_1.X\mcc_generated_files/i2c_master.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+{
+"133
+} 0

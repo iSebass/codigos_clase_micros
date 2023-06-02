@@ -24,7 +24,7 @@ void Motor_Stop();
 
 float distancia;
 char strUART[50]=" ";
-uint8_t duty=70;
+int duty=70;
 
 //VARIABLES DE CONTROL
 float Kp=0.5, Kd=0.4, Ki=0.1;
@@ -40,7 +40,7 @@ void main(void){
     DIR_M1B = 0;
     
     PWM1_Init(2000);
-    PWM1_Set_Duty(duty);
+    PWM1_Set_Duty( (uint8_t)(duty) );
     PWM1_Start();
      
     UART_Config uartConfig;
@@ -66,13 +66,11 @@ void main(void){
         }
         PWM1_Set_Duty(suma);
         
-        sprintf(strUART,"distancia: %0.1f\r\n", actual);
+        sprintf(strUART,"*%0.1f/%03d/%0.2f/%0.2f/%0.2f#\r\n",actual,duty,Kp,Kd,Ki);
         UART_Write_Text(strUART);
         __delay_ms(1);
         errorAnte = error;
     }
-    
-    return;
 }
 
 uint16_t getDistance(void){

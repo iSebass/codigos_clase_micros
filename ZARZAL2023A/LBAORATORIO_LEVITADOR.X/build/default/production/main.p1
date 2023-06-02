@@ -626,10 +626,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "27
-[; ;main.c: 27: uint8_t duty=70;
-[v _duty `uc ~T0 @X0 1 e ]
+[; ;main.c: 27: int duty=70;
+[v _duty `i ~T0 @X0 1 e ]
 [i _duty
--> -> 70 `i `uc
+-> 70 `i
 ]
 "30
 [; ;main.c: 30: float Kp=0.5, Kd=0.4, Ki=0.1;
@@ -684,8 +684,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 42:     PWM1_Init(2000);
 [e ( _PWM1_Init (1 -> -> 2000 `i `us ]
 "43
-[; ;main.c: 43:     PWM1_Set_Duty(duty);
-[e ( _PWM1_Set_Duty (1 _duty ]
+[; ;main.c: 43:     PWM1_Set_Duty( (uint8_t)(duty) );
+[e ( _PWM1_Set_Duty (1 -> _duty `uc ]
 "44
 [; ;main.c: 44:     PWM1_Start();
 [e ( _PWM1_Start ..  ]
@@ -751,8 +751,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 67:         PWM1_Set_Duty(suma);
 [e ( _PWM1_Set_Duty (1 -> _suma `uc ]
 "69
-[; ;main.c: 69:         sprintf(strUART,"distancia: %0.1f\r\n", actual);
-[e ( _sprintf (1 , (. , &U _strUART :s 1C -> _actual `d ]
+[; ;main.c: 69:         sprintf(strUART,"*%0.1f/%03d/%0.2f/%0.2f/%0.2f#\r\n",actual,duty,Kp,Kd,Ki);
+[e ( _sprintf (1 , , , , , (. , &U _strUART :s 1C -> _actual `d _duty -> _Kp `d -> _Kd `d -> _Ki `d ]
 "70
 [; ;main.c: 70:         UART_Write_Text(strUART);
 [e ( _UART_Write_Text (1 &U _strUART ]
@@ -768,97 +768,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 371 ]
 [e $U 372  ]
 [e :U 373 ]
-"75
-[; ;main.c: 75:     return;
-[e $UE 370  ]
-"76
-[; ;main.c: 76: }
+"74
+[; ;main.c: 74: }
 [e :UE 370 ]
 }
-"78
-[; ;main.c: 78: uint16_t getDistance(void){
+"76
+[; ;main.c: 76: uint16_t getDistance(void){
 [v _getDistance `(us ~T0 @X0 1 ef ]
 {
 [e :U _getDistance ]
 [f ]
-"79
-[; ;main.c: 79:     uint16_t count=0;
+"77
+[; ;main.c: 77:     uint16_t count=0;
 [v _count `us ~T0 @X0 1 a ]
 [e = _count -> -> 0 `i `us ]
-"80
-[; ;main.c: 80:     PORTBbits.RB0 = 1;
+"78
+[; ;main.c: 78:     PORTBbits.RB0 = 1;
 [e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"81
-[; ;main.c: 81:     _delay((unsigned long)((10)*(20000000UL/4000000.0)));
+"79
+[; ;main.c: 79:     _delay((unsigned long)((10)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"82
-[; ;main.c: 82:     PORTBbits.RB0 = 0;
+"80
+[; ;main.c: 80:     PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"84
-[; ;main.c: 84:     while(PORTBbits.RB1 == 0);
+"82
+[; ;main.c: 82:     while(PORTBbits.RB1 == 0);
 [e $U 378  ]
 [e :U 379 ]
 [e :U 378 ]
 [e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 379  ]
 [e :U 380 ]
-"85
-[; ;main.c: 85:     while(PORTBbits.RB1 == 1){
+"83
+[; ;main.c: 83:     while(PORTBbits.RB1 == 1){
 [e $U 381  ]
 [e :U 382 ]
 {
-"86
-[; ;main.c: 86:         count++;
+"84
+[; ;main.c: 84:         count++;
 [e ++ _count -> -> 1 `i `us ]
-"87
-[; ;main.c: 87:         _delay((unsigned long)((58)*(20000000UL/4000000.0)));
+"85
+[; ;main.c: 85:         _delay((unsigned long)((58)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 58 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"88
-[; ;main.c: 88:     }
+"86
+[; ;main.c: 86:     }
 }
 [e :U 381 ]
-"85
-[; ;main.c: 85:     while(PORTBbits.RB1 == 1){
+"83
+[; ;main.c: 83:     while(PORTBbits.RB1 == 1){
 [e $ == -> . . _PORTBbits 0 1 `i -> 1 `i 382  ]
 [e :U 383 ]
-"90
-[; ;main.c: 90:     return(count);
+"88
+[; ;main.c: 88:     return(count);
 [e ) _count ]
 [e $UE 377  ]
-"91
-[; ;main.c: 91: }
+"89
+[; ;main.c: 89: }
 [e :UE 377 ]
 }
-"93
-[; ;main.c: 93: void Motor_Start(){
+"91
+[; ;main.c: 91: void Motor_Start(){
 [v _Motor_Start `(v ~T0 @X0 1 ef ]
 {
 [e :U _Motor_Start ]
 [f ]
-"94
-[; ;main.c: 94:     PORTDbits.RD0 = 1;
+"92
+[; ;main.c: 92:     PORTDbits.RD0 = 1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"95
-[; ;main.c: 95:     PORTDbits.RD1 = 0;
+"93
+[; ;main.c: 93:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"96
-[; ;main.c: 96: }
+"94
+[; ;main.c: 94: }
 [e :UE 384 ]
 }
-"97
-[; ;main.c: 97: void Motor_Stop(){
+"95
+[; ;main.c: 95: void Motor_Stop(){
 [v _Motor_Stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _Motor_Stop ]
 [f ]
-"98
-[; ;main.c: 98:     PORTDbits.RD0 = 0;
+"96
+[; ;main.c: 96:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"99
-[; ;main.c: 99:     PORTDbits.RD1 = 0;
+"97
+[; ;main.c: 97:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"100
-[; ;main.c: 100: }
+"98
+[; ;main.c: 98: }
 [e :UE 385 ]
 }
-[p f _sprintf 8462340 ]
-[a 1C 100 105 115 116 97 110 99 105 97 58 32 37 48 46 49 102 13 10 0 ]
+[p f _sprintf 8495236 ]
+[a 1C 42 37 48 46 49 102 47 37 48 51 100 47 37 48 46 50 102 47 37 48 46 50 102 47 37 48 46 50 102 35 13 10 0 ]
