@@ -44,10 +44,6 @@ I2C_DATA_NACK 3
 I2C_TIMEOUT 4
 I2C_NULL 5
 ]
-"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
@@ -56,7 +52,17 @@ I2C_NULL 5
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"23 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+"11 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\LCD_I2C.c
+[v _PCF_Wr PCF_Wr `(v  1 e 1 0 ]
+"15
+[v _loadPCF loadPCF `(v  1 e 1 0 ]
+"32
+[v _sendDATA sendDATA `(v  1 e 1 0 ]
+"39
+[v _sendCMD sendCMD `(v  1 e 1 0 ]
+"47
+[v _i2c_lcd_init i2c_lcd_init `(v  1 e 1 0 ]
+"8 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "121 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
@@ -164,8 +170,6 @@ I2C_NULL 5
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
 "755
 [v _I2C_Wr I2C_Wr `(uc  1 e 1 0 ]
-"763
-[v _I2C_Rd I2C_Rd `(uc  1 e 1 0 ]
 "4 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "13
@@ -319,14 +323,10 @@ I2C_NULL 5
 [v _SSPCON2bits SSPCON2bits `VES374  1 e 1 @534 ]
 "8844
 [v _PLLR PLLR `VEb  1 e 0 @1238 ]
-"3 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
-[v _contador contador `uc  1 e 1 0 ]
-[v _unidades unidades `uc  1 e 1 0 ]
-[v _decenas decenas `uc  1 e 1 0 ]
-"5
-[v _digitos digitos `DC[10]uc  1 e 10 0 ]
-"21
-[v _statusbtn statusbtn `i  1 e 2 0 ]
+"8 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\LCD_I2C.c
+[v _statusLED statusLED `uc  1 s 1 statusLED ]
+"9
+[v _paramsLCD paramsLCD `uc  1 s 1 paramsLCD ]
 "100 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
 [v _i2c_fsmStateTable i2c_fsmStateTable `DC[16]*.37(E3373  1 e 32 0 ]
 [s S174 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.1uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E3373 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
@@ -336,61 +336,47 @@ I2C_NULL 5
 ]
 "119
 [v _I2C_Status I2C_Status `S174  1 e 29 0 ]
-"23 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
+"8 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"50
+"18
 } 0
-"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
+"47 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\LCD_I2C.c
+[v _i2c_lcd_init i2c_lcd_init `(v  1 e 1 0 ]
 {
-"10
-[v ___awmod@sign sign `uc  1 a 1 6 ]
-[v ___awmod@counter counter `uc  1 a 1 5 ]
-"5
-[v ___awmod@divisor divisor `i  1 p 2 0 ]
-[v ___awmod@dividend dividend `i  1 p 2 2 ]
-"34
+"69
 } 0
-"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"39
+[v _sendCMD sendCMD `(v  1 e 1 0 ]
 {
-"10
-[v ___awdiv@quotient quotient `i  1 a 2 7 ]
-"11
-[v ___awdiv@sign sign `uc  1 a 1 6 ]
-[v ___awdiv@counter counter `uc  1 a 1 5 ]
-"5
-[v ___awdiv@divisor divisor `i  1 p 2 0 ]
-[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+[v sendCMD@cmd cmd `uc  1 a 1 wreg ]
+"40
+[v sendCMD@NibbleL NibbleL `uc  1 a 1 7 ]
+[v sendCMD@NibbleH NibbleH `uc  1 a 1 6 ]
+"39
+[v sendCMD@cmd cmd `uc  1 a 1 wreg ]
 "41
+[v sendCMD@cmd cmd `uc  1 a 1 8 ]
+"45
 } 0
-"4 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
-[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"15
+[v _loadPCF loadPCF `(v  1 e 1 0 ]
 {
-"11
-} 0
-"27
-[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-{
+[v loadPCF@dato dato `uc  1 a 1 wreg ]
+[v loadPCF@dato dato `uc  1 a 1 wreg ]
+[v loadPCF@mode mode `uc  1 p 1 0 ]
+[v loadPCF@dato dato `uc  1 a 1 3 ]
 "31
 } 0
-"3 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
-[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"11
+[v _PCF_Wr PCF_Wr `(v  1 e 1 0 ]
 {
-"42
+[v PCF_Wr@dato dato `uc  1 a 1 wreg ]
+[v PCF_Wr@dato dato `uc  1 a 1 wreg ]
+[v PCF_Wr@dato dato `uc  1 a 1 13 ]
+"13
 } 0
-"13 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
-[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-{
-"25
-} 0
-"121 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
-[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
-{
-"128
-} 0
-"755
+"755 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
 [v _I2C_Wr I2C_Wr `(uc  1 e 1 0 ]
 {
 [v I2C_Wr@address address `uc  1 a 1 wreg ]
@@ -405,22 +391,6 @@ I2C_NULL 5
 [v I2C_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 5 ]
 [v I2C_SetAddressNackCallback@ptr ptr `*.1v  1 p 1 7 ]
 "240
-} 0
-"205
-[v _I2C_MasterWrite I2C_MasterWrite `(E355  1 e 1 0 ]
-{
-"208
-} 0
-"763
-[v _I2C_Rd I2C_Rd `(uc  1 e 1 0 ]
-{
-[v I2C_Rd@address address `uc  1 a 1 wreg ]
-"764
-[v I2C_Rd@returnValue returnValue `uc  1 a 1 11 ]
-"763
-[v I2C_Rd@address address `uc  1 a 1 wreg ]
-[v I2C_Rd@address address `uc  1 a 1 10 ]
-"772
 } 0
 "130
 [v _I2C_Open I2C_Open `(E355  1 e 1 0 ]
@@ -439,10 +409,10 @@ I2C_NULL 5
 {
 "509
 } 0
-"200
-[v _I2C_MasterRead I2C_MasterRead `(E355  1 e 1 0 ]
+"205
+[v _I2C_MasterWrite I2C_MasterWrite `(E355  1 e 1 0 ]
 {
-"203
+"208
 } 0
 "178
 [v _I2C_MasterOperation I2C_MasterOperation `(E355  1 e 1 0 ]
@@ -688,4 +658,29 @@ I2C_NULL 5
 [v _I2C_MasterClearIrq I2C_MasterClearIrq `T(v  1 s 1 I2C_MasterClearIrq ]
 {
 "597
+} 0
+"4 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"11
+} 0
+"27
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"31
+} 0
+"3 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"42
+} 0
+"13 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"25
+} 0
+"121 E:\UNIVALLE\CARPETA POR SEMESTRE\2023A\codigos_clase_micros\TULUA 2023A\CLASE_I2C01.X\mcc_generated_files/i2c_master.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+{
+"128
 } 0
