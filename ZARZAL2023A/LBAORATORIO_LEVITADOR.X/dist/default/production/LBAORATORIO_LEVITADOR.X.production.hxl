@@ -11,15 +11,13 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
   8h - 11h		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
-  800h - 84Ah		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
-  84Ch - 5E0Fh		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
+  800h - 5DF9h		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
   200000h - 200007h		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
   300000h - 30000Dh		(dist/default/production\LBAORATORIO_LEVITADOR.X.production.hex)
  Unused ranges:
   4h - 7h
   12h - 7FFh
-  84Bh - 84Bh
-  5E10h - 1FFFFFh
+  5DFAh - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -36,7 +34,7 @@
 00000810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000820 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000830 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1
+00000840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000850 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000860 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000870 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1407,8 +1405,7 @@
 00005DC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005DD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005DE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005DF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005E00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00005DF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

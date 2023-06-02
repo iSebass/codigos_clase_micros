@@ -5971,24 +5971,23 @@ char letra;
 char bufferRx[50]= " ";
 int indiceRx = 0, flag_Rx_completed = 0, flag_start_Rx = 0;
 
-void __attribute__((picinterrupt(("")))) __name(){
+void __attribute__((picinterrupt(("")))) dataRx(){
 
     if( PIR1bits.RC1IF == 1 ){
 
         letra = UART_Read();
-        if(letra == '*'){
-            flag_start_Rx = 1;
-        }
-        else if( flag_start_Rx== 1){
-
-            if(letra == '#'){
+        if(letra == '#'){
                 flag_Rx_completed = 1;
+        }
+        else{
+            if( letra != '*'){
+                bufferRx[indiceRx] = letra;
+                indiceRx++;
             }
 
-            bufferRx[indiceRx] = letra;
-            indiceRx++;
         }
 
+        PIR1bits.RC1IF = 0;
     }
 
 }
@@ -6005,9 +6004,7 @@ void main(void){
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD1 = 0;
 
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIE1bits.RC1IE = 1;
+
 
     PWM1_Init(2000);
     PWM1_Set_Duty( (uint8_t)(duty) );
@@ -6024,23 +6021,25 @@ void main(void){
 
     Motor_Start();
 
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RC1IE = 1;
+
     while(1){
 
         if(flag_Rx_completed== 1){
-
             char *pch;
-            pch = strtok(bufferRx, "/#");
-            while(pch != ((void*)0)){
-                array_constantes[indice_array] = atof(pch);
-                pch = strtok(bufferRx, "/#");
+            char *pch2;
+            pch = strtok(bufferRx, "/");
+            while (pch != ((void*)0)) {
+                array_constantes[indice_array]=atof(pch);
+                pch = strtok(((void*)0), "/");
                 indice_array++;
             }
-
             ref = array_constantes[0];
             Kp = array_constantes[1];
             Kd = array_constantes[2];
             Ki = array_constantes[3];
-
             indice_array=0;
             indiceRx = 0;
             memset(bufferRx,' ',49);

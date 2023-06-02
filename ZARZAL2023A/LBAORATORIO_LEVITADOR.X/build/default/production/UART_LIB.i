@@ -5744,6 +5744,8 @@ uint8_t UART_Read(void);
 
 
 void UART_Init(UART_Config config){
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
 
     unsigned long spbrg_val = (20000000UL / (16 * config.baud_rate)) - 1;
     SPBRG = (unsigned char)(spbrg_val);

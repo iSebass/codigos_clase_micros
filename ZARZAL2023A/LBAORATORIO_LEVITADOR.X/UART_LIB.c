@@ -3,6 +3,8 @@
 
 
 void UART_Init(UART_Config config){
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
       // Cálculo del valor del registro SPBRG para la velocidad de baudios deseada
     unsigned long spbrg_val = (_XTAL_FREQ / (16 * config.baud_rate)) - 1;
     SPBRG = (unsigned char)(spbrg_val);

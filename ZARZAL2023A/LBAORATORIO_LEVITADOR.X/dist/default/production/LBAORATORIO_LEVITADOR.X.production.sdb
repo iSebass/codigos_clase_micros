@@ -110,12 +110,12 @@
 "10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "39 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
-[v ___name __name `IIH(v  1 e 1 0 ]
-"64
+[v _dataRx dataRx `IIH(v  1 e 1 0 ]
+"63
 [v _main main `(v  1 e 1 0 ]
-"134
+"133
 [v _getDistance getDistance `(us  1 e 2 0 ]
-"149
+"148
 [v _Motor_Start Motor_Start `(v  1 e 1 0 ]
 "7 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\PWM_LIB.c
 [v _PWM1_Init PWM1_Init `(v  1 e 1 0 ]
@@ -125,11 +125,11 @@
 [v _PWM1_Start PWM1_Start `(v  1 e 1 0 ]
 "5 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\UART_LIB.c
 [v _UART_Init UART_Init `(v  1 e 1 0 ]
-"40
+"42
 [v _UART_Write_Chr UART_Write_Chr `(v  1 e 1 0 ]
-"44
+"46
 [v _UART_Write_Text UART_Write_Text `(v  1 e 1 0 ]
-"50
+"52
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
 [s S72 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
@@ -190,7 +190,7 @@
 "3658
 [u S81 . 1 `S63 1 . 1 0 `S72 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES81  1 e 1 @3987 ]
-[s S598 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S486 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -198,15 +198,15 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3876
-[s S605 . 1 `uc 1 RC0 1 0 :1:0 
+[s S493 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S612 . 1 `S598 1 . 1 0 `S605 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES612  1 e 1 @3988 ]
+[u S500 . 1 `S486 1 . 1 0 `S493 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES500  1 e 1 @3988 ]
 [s S103 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
@@ -219,7 +219,7 @@
 "4034
 [u S121 . 1 `S103 1 . 1 0 `S112 1 . 1 0 ]
 [v _TRISDbits TRISDbits `VES121  1 e 1 @3989 ]
-[s S192 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S221 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -229,14 +229,14 @@
 `uc 1 SPPIE 1 0 :1:7 
 ]
 "4409
-[s S201 . 1 `uc 1 . 1 0 :4:0 
+[s S230 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 `uc 1 RC1IE 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S207 . 1 `S192 1 . 1 0 `S201 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES207  1 e 1 @3997 ]
+[u S236 . 1 `S221 1 . 1 0 `S230 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES236  1 e 1 @3997 ]
 [s S24 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -259,7 +259,7 @@
 [v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
 "5147
 [v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
-[s S495 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S528 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -269,7 +269,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5186
-[s S504 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S537 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -278,40 +278,40 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S513 . 1 `uc 1 . 1 0 :6:0 
+[s S546 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S516 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S549 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S518 . 1 `S495 1 . 1 0 `S504 1 . 1 0 `S513 1 . 1 0 `S516 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES518  1 e 1 @4012 ]
+[u S551 . 1 `S528 1 . 1 0 `S537 1 . 1 0 `S546 1 . 1 0 `S549 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES551  1 e 1 @4012 ]
 "5403
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "5415
 [v _RCREG RCREG `VEuc  1 e 1 @4014 ]
 "5427
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
-[s S704 . 1 `uc 1 CCP2M 1 0 :4:0 
+[s S729 . 1 `uc 1 CCP2M 1 0 :4:0 
 `uc 1 DC2B 1 0 :2:4 
 ]
 "6262
-[s S707 . 1 `uc 1 CCP2M0 1 0 :1:0 
+[s S732 . 1 `uc 1 CCP2M0 1 0 :1:0 
 `uc 1 CCP2M1 1 0 :1:1 
 `uc 1 CCP2M2 1 0 :1:2 
 `uc 1 CCP2M3 1 0 :1:3 
 `uc 1 DC2B0 1 0 :1:4 
 `uc 1 DC2B1 1 0 :1:5 
 ]
-[u S714 . 1 `S704 1 . 1 0 `S707 1 . 1 0 ]
-[v _CCP2CONbits CCP2CONbits `VES714  1 e 1 @4026 ]
+[u S739 . 1 `S729 1 . 1 0 `S732 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES739  1 e 1 @4026 ]
 "6314
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @4027 ]
-[s S630 . 1 `uc 1 CCP1M 1 0 :4:0 
+[s S655 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 DC1B 1 0 :2:4 
 `uc 1 P1M 1 0 :2:6 
 ]
 "6355
-[s S634 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S659 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
@@ -320,18 +320,18 @@
 `uc 1 P1M0 1 0 :1:6 
 `uc 1 P1M1 1 0 :1:7 
 ]
-[u S643 . 1 `S630 1 . 1 0 `S634 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES643  1 e 1 @4029 ]
+[u S668 . 1 `S655 1 . 1 0 `S659 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES668  1 e 1 @4029 ]
 "6497
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 "6582
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S660 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S685 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 TOUTPS 1 0 :4:3 
 ]
 "7229
-[s S664 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S689 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -339,17 +339,17 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[s S672 . 1 `uc 1 . 1 0 :3:0 
+[s S697 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 TOUTPS0 1 0 :1:3 
 `uc 1 TOUTPS1 1 0 :1:4 
 `uc 1 TOUTPS2 1 0 :1:5 
 `uc 1 TOUTPS3 1 0 :1:6 
 ]
-[u S678 . 1 `S660 1 . 1 0 `S664 1 . 1 0 `S672 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES678  1 e 1 @4042 ]
+[u S703 . 1 `S685 1 . 1 0 `S689 1 . 1 0 `S697 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES703  1 e 1 @4042 ]
 "7299
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
-[s S143 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S172 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -359,7 +359,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "8615
-[s S152 . 1 `uc 1 . 1 0 :1:0 
+[s S181 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -368,12 +368,12 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S161 . 1 `uc 1 . 1 0 :6:0 
+[s S190 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S165 . 1 `S143 1 . 1 0 `S152 1 . 1 0 `S161 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES165  1 e 1 @4082 ]
+[u S194 . 1 `S172 1 . 1 0 `S181 1 . 1 0 `S190 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES194  1 e 1 @4082 ]
 "9026
 [v _BRGH BRGH `VEb  1 e 0 @32098 ]
 "10529
@@ -415,22 +415,21 @@
 "37
 [v _indiceRx indiceRx `i  1 e 2 0 ]
 [v _flag_Rx_completed flag_Rx_completed `i  1 e 2 0 ]
-[v _flag_start_Rx flag_start_Rx `i  1 e 2 0 ]
-"61
+"60
 [v _array_constantes array_constantes `[4]f  1 e 16 0 ]
-"62
+"61
 [v _indice_array indice_array `i  1 e 2 0 ]
 "5 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\PWM_LIB.c
 [v _reg10bits reg10bits `f  1 e 4 0 ]
-"64 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
+"63 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "96
 [v main@pch pch `*.39uc  1 a 2 25 ]
-[s S240 . 8 `ul 1 baud_rate 4 0 `uc 1 data_bits 1 4 `uc 1 parity 1 5 `uc 1 stop_bits 1 6 `uc 1 speed_module 1 7 ]
-"81
-[v main@uartConfig uartConfig `S240  1 a 8 27 ]
-"132
+[s S157 . 8 `ul 1 baud_rate 4 0 `uc 1 data_bits 1 4 `uc 1 parity 1 5 `uc 1 stop_bits 1 6 `uc 1 speed_module 1 7 ]
+"78
+[v main@uartConfig uartConfig `S157  1 a 8 27 ]
+"131
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strtok.c
 [v _strtok strtok `(*.39uc  1 e 2 0 ]
@@ -471,10 +470,10 @@
 "9 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1200 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S1219 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S1203 _IO_FILE 11 `S1200 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S1203  1 a 11 2 ]
+[s S1222 _IO_FILE 11 `S1219 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1222  1 a 11 2 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 0 ]
 "9
@@ -487,9 +486,9 @@
 {
 "1393
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 125 ]
-[s S1235 _IO_FILE 0 ]
+[s S1254 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S1235  1 p 2 119 ]
+[v vfprintf@fp fp `*.39S1254  1 p 2 119 ]
 [v vfprintf@fmt fmt `*.25Cuc  1 p 2 121 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 123 ]
 "1404
@@ -507,9 +506,9 @@
 [v vfpfcnvrt@done done `i  1 a 2 109 ]
 "694
 [v vfpfcnvrt@c c `uc  1 a 1 118 ]
-[s S1235 _IO_FILE 0 ]
+[s S1254 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S1235  1 p 2 91 ]
+[v vfpfcnvrt@fp fp `*.39S1254  1 p 2 91 ]
 [v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 93 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 95 ]
 "1387
@@ -550,9 +549,9 @@
 "334
 [v efgtoa@mode mode `uc  1 a 1 68 ]
 [v efgtoa@nmode nmode `uc  1 a 1 67 ]
-[s S1235 _IO_FILE 0 ]
+[s S1254 _IO_FILE 0 ]
 "332
-[v efgtoa@fp fp `*.39S1235  1 p 2 29 ]
+[v efgtoa@fp fp `*.39S1254  1 p 2 29 ]
 [v efgtoa@f f `d  1 p 4 31 ]
 [v efgtoa@c c `uc  1 p 1 35 ]
 "525
@@ -584,9 +583,9 @@
 "3 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1386 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1405 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1386  1 a 4 25 ]
+[v floorf@u u `S1405  1 a 4 25 ]
 "7
 [v floorf@m m `ul  1 a 4 19 ]
 "6
@@ -594,21 +593,21 @@
 "3
 [v floorf@x x `f  1 p 4 81 ]
 "4
-[v floorf@F526 F526 `S1386  1 s 4 F526 ]
+[v floorf@F526 F526 `S1405  1 s 4 F526 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1386 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1405 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1386  1 a 4 12 ]
+[v ___fpclassifyf@u u `S1405  1 a 4 12 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 10 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 2 ]
 "5
-[v ___fpclassifyf@F465 F465 `S1386  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S1405  1 s 4 F465 ]
 "11
 } 0
 "245 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
@@ -652,9 +651,9 @@
 [v dtoa@s s `i  1 a 2 53 ]
 [v dtoa@w w `i  1 a 2 51 ]
 [v dtoa@p p `i  1 a 2 49 ]
-[s S1235 _IO_FILE 0 ]
+[s S1254 _IO_FILE 0 ]
 "287
-[v dtoa@fp fp `*.39S1235  1 p 2 29 ]
+[v dtoa@fp fp `*.39S1254  1 p 2 29 ]
 [v dtoa@d d `o  1 p 8 31 ]
 "328
 } 0
@@ -664,9 +663,9 @@
 "74
 [v pad@w w `i  1 a 2 27 ]
 [v pad@i i `i  1 a 2 25 ]
-[s S1235 _IO_FILE 0 ]
+[s S1254 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S1235  1 p 2 18 ]
+[v pad@fp fp `*.39S1254  1 p 2 18 ]
 [v pad@buf buf `*.39uc  1 p 2 20 ]
 [v pad@p p `i  1 p 2 22 ]
 "95
@@ -689,18 +688,18 @@
 [v fputs@c c `uc  1 a 1 15 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 11 ]
-[u S1200 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1203 _IO_FILE 11 `S1200 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.39S1203  1 p 2 13 ]
+[u S1219 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1222 _IO_FILE 11 `S1219 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S1222  1 p 2 13 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 2 ]
-[u S1200 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1203 _IO_FILE 11 `S1200 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.39S1203  1 p 2 4 ]
+[u S1219 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1222 _IO_FILE 11 `S1219 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S1222  1 p 2 4 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\putch.c
@@ -761,12 +760,12 @@
 [v memset@n n `ui  1 p 2 6 ]
 "90
 } 0
-"134 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
+"133 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
 [v _getDistance getDistance `(us  1 e 2 0 ]
 {
-"135
+"134
 [v getDistance@count count `us  1 a 2 4 ]
-"147
+"146
 } 0
 "423 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strtof.c
 [v _atof atof `(d  1 e 4 0 ]
@@ -777,9 +776,9 @@
 "95
 [v _strtof strtof `(f  1 e 4 0 ]
 {
-[u S1508 . 4 `f 1 _l 4 0 `ul 1 _v 4 0 ]
+[u S1527 . 4 `f 1 _l 4 0 `ul 1 _v 4 0 ]
 "113
-[v strtof@_u _u `S1508  1 a 4 25 ]
+[v strtof@_u _u `S1527  1 a 4 25 ]
 "109
 [v strtof@eexp eexp `i  1 a 2 23 ]
 "108
@@ -809,9 +808,9 @@
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nanf.c
 [v _nanf nanf `(f  1 e 4 0 ]
 {
-[u S1386 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1405 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v nanf@u u `S1386  1 a 4 6 ]
+[v nanf@u u `S1405  1 a 4 6 ]
 "4
 [v nanf@s s `*.25Cuc  1 p 2 2 ]
 "9
@@ -874,29 +873,29 @@
 [v ___fleq@ff2 ff2 `d  1 p 4 6 ]
 "12
 } 0
-"44 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\UART_LIB.c
+"46 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\UART_LIB.c
 [v _UART_Write_Text UART_Write_Text `(v  1 e 1 0 ]
 {
 [v UART_Write_Text@text text `*.39uc  1 p 2 3 ]
-"49
+"51
 } 0
-"40
+"42
 [v _UART_Write_Chr UART_Write_Chr `(v  1 e 1 0 ]
 {
 [v UART_Write_Chr@letter letter `uc  1 a 1 wreg ]
 [v UART_Write_Chr@letter letter `uc  1 a 1 wreg ]
 [v UART_Write_Chr@letter letter `uc  1 a 1 2 ]
-"43
+"45
 } 0
 "5
 [v _UART_Init UART_Init `(v  1 e 1 0 ]
 {
-"7
+"9
 [v UART_Init@spbrg_val spbrg_val `ul  1 a 4 27 ]
-[s S240 . 8 `ul 1 baud_rate 4 0 `uc 1 data_bits 1 4 `uc 1 parity 1 5 `uc 1 stop_bits 1 6 `uc 1 speed_module 1 7 ]
+[s S157 . 8 `ul 1 baud_rate 4 0 `uc 1 data_bits 1 4 `uc 1 parity 1 5 `uc 1 stop_bits 1 6 `uc 1 speed_module 1 7 ]
 "5
-[v UART_Init@config config `S240  1 p 8 15 ]
-"39
+[v UART_Init@config config `S157  1 p 8 15 ]
+"41
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -963,17 +962,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1058 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1077 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1063 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1066 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1058 1 fAsBytes 4 0 `S1063 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1066  1 a 4 63 ]
+[s S1082 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1085 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1077 1 fAsBytes 4 0 `S1082 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1085  1 a 4 63 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 58 ]
-[s S1134 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1153 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1137 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1134 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1137  1 a 2 67 ]
+[u S1156 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1153 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1156  1 a 2 67 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 62 ]
 "11
@@ -1021,18 +1020,18 @@
 [v ___fladd@a a `d  1 p 4 24 ]
 "237
 } 0
-"149 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
+"148 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\main.c
 [v _Motor_Start Motor_Start `(v  1 e 1 0 ]
 {
-"152
+"151
 } 0
 "39
-[v ___name __name `IIH(v  1 e 1 0 ]
+[v _dataRx dataRx `IIH(v  1 e 1 0 ]
 {
-"59
+"58
 } 0
-"50 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\UART_LIB.c
+"52 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LBAORATORIO_LEVITADOR.X\UART_LIB.c
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
 {
-"53
+"55
 } 0
