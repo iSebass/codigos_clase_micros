@@ -1,6 +1,8 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 #include "config.h"
 #include "UART_LIB.h"
 #include "PWM_LIB.h"
@@ -30,6 +32,35 @@ int duty=70;
 float Kp=0.5, Kd=0.4, Ki=0.1;
 float error, suma=0, ref=80, actual, errorAnte;
 
+char letra;
+char bufferRx[50]= " ";
+int indiceRx = 0, flag_Rx_completed = 0, flag_start_Rx = 0;
+
+void __interrupt() __name(){
+    
+    if( PIR1bits.RC1IF == 1  ){
+        
+        letra = UART_Read();
+        if(letra == '*'){
+            flag_start_Rx = 1;
+        }
+        else if( flag_start_Rx== 1){
+            
+            if(letra == '#'){
+                flag_Rx_completed = 1;
+            }
+            
+            bufferRx[indiceRx] = letra;
+            indiceRx++;
+        }
+       
+    }
+    
+}
+
+float array_constantes[4];
+int indice_array=0;
+
 void main(void){
     ADCON1  = 0x0F;
     
@@ -38,6 +69,10 @@ void main(void){
     
     DIR_M1A = 0;
     DIR_M1B = 0;
+    
+    INTCONbits.GIE  = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RC1IE  = 1;
     
     PWM1_Init(2000);
     PWM1_Set_Duty( (uint8_t)(duty) );
@@ -55,6 +90,29 @@ void main(void){
     Motor_Start();
     
     while(1){
+        
+        if(flag_Rx_completed== 1){
+            
+            char *pch;
+            pch = strtok(bufferRx, "/#");
+            while(pch != NULL){
+                array_constantes[indice_array] = atof(pch);
+                pch = strtok(bufferRx, "/#");
+                indice_array++;
+            }
+            
+            ref = array_constantes[0];
+            Kp  = array_constantes[1];
+            Kd  = array_constantes[2];
+            Ki  = array_constantes[3];
+            
+            indice_array=0;
+            indiceRx = 0;
+            memset(bufferRx,' ',49);
+            flag_Rx_completed=0;
+        }
+        
+        
         actual = TOPE_MAX - getDistance();
         error = ref - actual;
         suma += Kp*error + Kd*(error-errorAnte)+Ki*error;
@@ -64,7 +122,7 @@ void main(void){
         else if(suma<0){
             suma = 0;
         }
-        PWM1_Set_Duty(suma);
+        PWM1_Set_Duty( (uint8_t) (suma));
         
         sprintf(strUART,"*%0.1f/%03d/%0.2f/%0.2f/%0.2f#\r\n",actual,duty,Kp,Kd,Ki);
         UART_Write_Text(strUART);

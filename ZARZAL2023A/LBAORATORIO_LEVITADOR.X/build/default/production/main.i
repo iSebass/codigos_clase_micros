@@ -5866,8 +5866,66 @@ char *tempnam(const char *, const char *);
 # 2 "main.c" 2
 
 
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 5 "main.c" 2
+
 # 1 "./config.h" 1
-# 4 "main.c" 2
+# 6 "main.c" 2
 
 # 1 "./UART_LIB.h" 1
 # 14 "./UART_LIB.h"
@@ -5883,7 +5941,7 @@ void UART_Init(UART_Config config);
 void UART_Write_Chr(uint8_t letter);
 void UART_Write_Text(char *text);
 uint8_t UART_Read(void);
-# 5 "main.c" 2
+# 7 "main.c" 2
 
 # 1 "./PWM_LIB.h" 1
 # 15 "./PWM_LIB.h"
@@ -5895,8 +5953,8 @@ void PWM1_Start(void);
 void PWM2_Start(void);
 void PWM1_Stop(void);
 void PWM2_Stop(void);
-# 6 "main.c" 2
-# 21 "main.c"
+# 8 "main.c" 2
+# 23 "main.c"
 uint16_t getDistance(void);
 void Motor_Start();
 void Motor_Stop();
@@ -5909,6 +5967,35 @@ int duty=70;
 float Kp=0.5, Kd=0.4, Ki=0.1;
 float error, suma=0, ref=80, actual, errorAnte;
 
+char letra;
+char bufferRx[50]= " ";
+int indiceRx = 0, flag_Rx_completed = 0, flag_start_Rx = 0;
+
+void __attribute__((picinterrupt(("")))) __name(){
+
+    if( PIR1bits.RC1IF == 1 ){
+
+        letra = UART_Read();
+        if(letra == '*'){
+            flag_start_Rx = 1;
+        }
+        else if( flag_start_Rx== 1){
+
+            if(letra == '#'){
+                flag_Rx_completed = 1;
+            }
+
+            bufferRx[indiceRx] = letra;
+            indiceRx++;
+        }
+
+    }
+
+}
+
+float array_constantes[4];
+int indice_array=0;
+
 void main(void){
     ADCON1 = 0x0F;
 
@@ -5917,6 +6004,10 @@ void main(void){
 
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD1 = 0;
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RC1IE = 1;
 
     PWM1_Init(2000);
     PWM1_Set_Duty( (uint8_t)(duty) );
@@ -5934,6 +6025,29 @@ void main(void){
     Motor_Start();
 
     while(1){
+
+        if(flag_Rx_completed== 1){
+
+            char *pch;
+            pch = strtok(bufferRx, "/#");
+            while(pch != ((void*)0)){
+                array_constantes[indice_array] = atof(pch);
+                pch = strtok(bufferRx, "/#");
+                indice_array++;
+            }
+
+            ref = array_constantes[0];
+            Kp = array_constantes[1];
+            Kd = array_constantes[2];
+            Ki = array_constantes[3];
+
+            indice_array=0;
+            indiceRx = 0;
+            memset(bufferRx,' ',49);
+            flag_Rx_completed=0;
+        }
+
+
         actual = 50 - getDistance();
         error = ref - actual;
         suma += Kp*error + Kd*(error-errorAnte)+Ki*error;
@@ -5943,7 +6057,7 @@ void main(void){
         else if(suma<0){
             suma = 0;
         }
-        PWM1_Set_Duty(suma);
+        PWM1_Set_Duty( (uint8_t) (suma));
 
         sprintf(strUART,"*%0.1f/%03d/%0.2f/%0.2f/%0.2f#\r\n",actual,duty,Kp,Kd,Ki);
         UART_Write_Text(strUART);
