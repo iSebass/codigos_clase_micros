@@ -12,8 +12,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
-"152 LCD_I2C_LIB.c
-[; ;LCD_I2C_LIB.c: 152:   lcd_write(charmap[i]);
+"157 LCD_I2C_LIB.c
+[; ;LCD_I2C_LIB.c: 157:   lcd_write(charmap[i]);
 [v _lcd_write `(i ~T0 @X0 0 e? ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
@@ -525,56 +525,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8894
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"6 LCD_I2C_LIB.c
-[; ;LCD_I2C_LIB.c: 6: static uint8_t _lcd_params;
+"9 LCD_I2C_LIB.c
+[; ;LCD_I2C_LIB.c: 9: static uint8_t _lcd_params;
 [v __lcd_params `uc ~T0 @X0 1 s ]
-"8
-[; ;LCD_I2C_LIB.c: 8: void PCF_Wr(int8_t dato){
+"11
+[; ;LCD_I2C_LIB.c: 11: static uint8_t LED_STATUS = (1<<3);
+[v _LED_STATUS `uc ~T0 @X0 1 s ]
+[i _LED_STATUS
+-> << -> 1 `i -> 3 `i `uc
+]
+"13
+[; ;LCD_I2C_LIB.c: 13: void PCF_Wr(int8_t dato){
 [v _PCF_Wr `(v ~T0 @X0 1 ef1`c ]
 {
 [e :U _PCF_Wr ]
 [v _dato `c ~T0 @X0 1 r1 ]
 [f ]
-"9
-[; ;LCD_I2C_LIB.c: 9:     I2C_Start();
+"14
+[; ;LCD_I2C_LIB.c: 14:     I2C_Start();
 [e ( _I2C_Start ..  ]
-"10
-[; ;LCD_I2C_LIB.c: 10:     I2C_Wr( (0x27<<1)|0);
+"15
+[; ;LCD_I2C_LIB.c: 15:     I2C_Wr( (0x27<<1)|0);
 [e ( _I2C_Wr (1 -> | << -> 39 `i -> 1 `i -> 0 `i `uc ]
-"11
-[; ;LCD_I2C_LIB.c: 11:     I2C_Wr(dato);
-[e ( _I2C_Wr (1 -> _dato `uc ]
-"12
-[; ;LCD_I2C_LIB.c: 12:     I2C_Stop();
+"16
+[; ;LCD_I2C_LIB.c: 16:     I2C_Wr(dato | LED_STATUS);
+[e ( _I2C_Wr (1 -> | -> _dato `i -> _LED_STATUS `i `uc ]
+"17
+[; ;LCD_I2C_LIB.c: 17:     I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"13
-[; ;LCD_I2C_LIB.c: 13: }
+"18
+[; ;LCD_I2C_LIB.c: 18: }
 [e :UE 367 ]
 }
-"14
-[; ;LCD_I2C_LIB.c: 14: void loadPCF(int8_t dato, uint8_t mode){
+"19
+[; ;LCD_I2C_LIB.c: 19: void loadPCF(int8_t dato, uint8_t mode){
 [v _loadPCF `(v ~T0 @X0 1 ef2`c`uc ]
 {
 [e :U _loadPCF ]
 [v _dato `c ~T0 @X0 1 r1 ]
 [v _mode `uc ~T0 @X0 1 r2 ]
 [f ]
-"16
-[; ;LCD_I2C_LIB.c: 16:     switch(mode){
+"21
+[; ;LCD_I2C_LIB.c: 21:     switch(mode){
 [e $U 370  ]
 {
-"17
-[; ;LCD_I2C_LIB.c: 17:         case 0: dato &= ~(1<<0); break;
+"22
+[; ;LCD_I2C_LIB.c: 22:         case 0: dato &= ~(1<<0); break;
 [e :U 371 ]
 [e =& _dato -> ~ << -> 1 `i -> 0 `i `c ]
 [e $U 369  ]
-"18
-[; ;LCD_I2C_LIB.c: 18:         case 1: dato |= (1<<0); break;
+"23
+[; ;LCD_I2C_LIB.c: 23:         case 1: dato |= (1<<0); break;
 [e :U 372 ]
 [e =| _dato -> << -> 1 `i -> 0 `i `c ]
 [e $U 369  ]
-"19
-[; ;LCD_I2C_LIB.c: 19:     }
+"24
+[; ;LCD_I2C_LIB.c: 24:     }
 }
 [e $U 369  ]
 [e :U 370 ]
@@ -582,229 +588,229 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 1 `i 372
  369 ]
 [e :U 369 ]
-"21
-[; ;LCD_I2C_LIB.c: 21:     PCF_Wr(dato);
-[e ( _PCF_Wr (1 _dato ]
-"22
-[; ;LCD_I2C_LIB.c: 22:     dato |= (1<<2);
-[e =| _dato -> << -> 1 `i -> 2 `i `c ]
-"23
-[; ;LCD_I2C_LIB.c: 23:     PCF_Wr(dato);
-[e ( _PCF_Wr (1 _dato ]
-"24
-[; ;LCD_I2C_LIB.c: 24:     dato &= ~(1<<2);
-[e =& _dato -> ~ << -> 1 `i -> 2 `i `c ]
-"25
-[; ;LCD_I2C_LIB.c: 25:     PCF_Wr(dato);
-[e ( _PCF_Wr (1 _dato ]
 "26
-[; ;LCD_I2C_LIB.c: 26:     _delay((unsigned long)((30)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+[; ;LCD_I2C_LIB.c: 26:     PCF_Wr(dato);
+[e ( _PCF_Wr (1 _dato ]
+"27
+[; ;LCD_I2C_LIB.c: 27:     dato |= (1<<2);
+[e =| _dato -> << -> 1 `i -> 2 `i `c ]
+"28
+[; ;LCD_I2C_LIB.c: 28:     PCF_Wr(dato);
+[e ( _PCF_Wr (1 _dato ]
 "29
-[; ;LCD_I2C_LIB.c: 29: }
+[; ;LCD_I2C_LIB.c: 29:     dato &= ~(1<<2);
+[e =& _dato -> ~ << -> 1 `i -> 2 `i `c ]
+"30
+[; ;LCD_I2C_LIB.c: 30:     PCF_Wr(dato);
+[e ( _PCF_Wr (1 _dato ]
+"31
+[; ;LCD_I2C_LIB.c: 31:     _delay((unsigned long)((30)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"34
+[; ;LCD_I2C_LIB.c: 34: }
 [e :UE 368 ]
 }
-"30
-[; ;LCD_I2C_LIB.c: 30: void sendDATA(int8_t dato){
+"35
+[; ;LCD_I2C_LIB.c: 35: void sendDATA(int8_t dato){
 [v _sendDATA `(v ~T0 @X0 1 ef1`c ]
 {
 [e :U _sendDATA ]
 [v _dato `c ~T0 @X0 1 r1 ]
 [f ]
-"31
-[; ;LCD_I2C_LIB.c: 31:     char nibbleH, nibbleL;
+"36
+[; ;LCD_I2C_LIB.c: 36:     char nibbleH, nibbleL;
 [v _nibbleH `uc ~T0 @X0 1 a ]
 [v _nibbleL `uc ~T0 @X0 1 a ]
-"33
-[; ;LCD_I2C_LIB.c: 33:     nibbleH = (dato & 0xF0)<<0;
-[e = _nibbleH -> << & -> _dato `i -> 240 `i -> 0 `i `uc ]
-"34
-[; ;LCD_I2C_LIB.c: 34:     nibbleL = (dato & 0x0F)<<4;
-[e = _nibbleL -> << & -> _dato `i -> 15 `i -> 4 `i `uc ]
-"36
-[; ;LCD_I2C_LIB.c: 36:     loadPCF(nibbleH,1);
-[e ( _loadPCF (2 , -> _nibbleH `c -> -> 1 `i `uc ]
-"37
-[; ;LCD_I2C_LIB.c: 37:     loadPCF(nibbleL,1);
-[e ( _loadPCF (2 , -> _nibbleL `c -> -> 1 `i `uc ]
 "38
-[; ;LCD_I2C_LIB.c: 38: }
+[; ;LCD_I2C_LIB.c: 38:     nibbleH = (dato & 0xF0)<<0;
+[e = _nibbleH -> << & -> _dato `i -> 240 `i -> 0 `i `uc ]
+"39
+[; ;LCD_I2C_LIB.c: 39:     nibbleL = (dato & 0x0F)<<4;
+[e = _nibbleL -> << & -> _dato `i -> 15 `i -> 4 `i `uc ]
+"41
+[; ;LCD_I2C_LIB.c: 41:     loadPCF(nibbleH,1);
+[e ( _loadPCF (2 , -> _nibbleH `c -> -> 1 `i `uc ]
+"42
+[; ;LCD_I2C_LIB.c: 42:     loadPCF(nibbleL,1);
+[e ( _loadPCF (2 , -> _nibbleL `c -> -> 1 `i `uc ]
+"43
+[; ;LCD_I2C_LIB.c: 43: }
 [e :UE 373 ]
 }
-"39
-[; ;LCD_I2C_LIB.c: 39: void sendCMD(int8_t cmd){
+"44
+[; ;LCD_I2C_LIB.c: 44: void sendCMD(int8_t cmd){
 [v _sendCMD `(v ~T0 @X0 1 ef1`c ]
 {
 [e :U _sendCMD ]
 [v _cmd `c ~T0 @X0 1 r1 ]
 [f ]
-"40
-[; ;LCD_I2C_LIB.c: 40:     char nibbleH, nibbleL;
+"45
+[; ;LCD_I2C_LIB.c: 45:     char nibbleH, nibbleL;
 [v _nibbleH `uc ~T0 @X0 1 a ]
 [v _nibbleL `uc ~T0 @X0 1 a ]
-"42
-[; ;LCD_I2C_LIB.c: 42:     nibbleH = (cmd & 0xF0)<<0;
-[e = _nibbleH -> << & -> _cmd `i -> 240 `i -> 0 `i `uc ]
-"43
-[; ;LCD_I2C_LIB.c: 43:     nibbleL = (cmd & 0x0F)<<4;
-[e = _nibbleL -> << & -> _cmd `i -> 15 `i -> 4 `i `uc ]
-"45
-[; ;LCD_I2C_LIB.c: 45:     loadPCF(nibbleH,0);
-[e ( _loadPCF (2 , -> _nibbleH `c -> -> 0 `i `uc ]
-"46
-[; ;LCD_I2C_LIB.c: 46:     loadPCF(nibbleL,0);
-[e ( _loadPCF (2 , -> _nibbleL `c -> -> 0 `i `uc ]
 "47
-[; ;LCD_I2C_LIB.c: 47: }
+[; ;LCD_I2C_LIB.c: 47:     nibbleH = (cmd & 0xF0)<<0;
+[e = _nibbleH -> << & -> _cmd `i -> 240 `i -> 0 `i `uc ]
+"48
+[; ;LCD_I2C_LIB.c: 48:     nibbleL = (cmd & 0x0F)<<4;
+[e = _nibbleL -> << & -> _cmd `i -> 15 `i -> 4 `i `uc ]
+"50
+[; ;LCD_I2C_LIB.c: 50:     loadPCF(nibbleH,0);
+[e ( _loadPCF (2 , -> _nibbleH `c -> -> 0 `i `uc ]
+"51
+[; ;LCD_I2C_LIB.c: 51:     loadPCF(nibbleL,0);
+[e ( _loadPCF (2 , -> _nibbleL `c -> -> 0 `i `uc ]
+"52
+[; ;LCD_I2C_LIB.c: 52: }
 [e :UE 374 ]
 }
-"49
-[; ;LCD_I2C_LIB.c: 49: void i2c_lcd_write(uint8_t letra){
+"54
+[; ;LCD_I2C_LIB.c: 54: void i2c_lcd_write(uint8_t letra){
 [v _i2c_lcd_write `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _i2c_lcd_write ]
 [v _letra `uc ~T0 @X0 1 r1 ]
 [f ]
-"50
-[; ;LCD_I2C_LIB.c: 50:     sendDATA(letra);
+"55
+[; ;LCD_I2C_LIB.c: 55:     sendDATA(letra);
 [e ( _sendDATA (1 -> _letra `c ]
-"51
-[; ;LCD_I2C_LIB.c: 51: }
+"56
+[; ;LCD_I2C_LIB.c: 56: }
 [e :UE 375 ]
 }
-"52
-[; ;LCD_I2C_LIB.c: 52: void i2c_lcd_command(uint8_t cmd){
+"57
+[; ;LCD_I2C_LIB.c: 57: void i2c_lcd_command(uint8_t cmd){
 [v _i2c_lcd_command `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _i2c_lcd_command ]
 [v _cmd `uc ~T0 @X0 1 r1 ]
 [f ]
-"53
-[; ;LCD_I2C_LIB.c: 53:     sendCMD(cmd);
+"58
+[; ;LCD_I2C_LIB.c: 58:     sendCMD(cmd);
 [e ( _sendCMD (1 -> _cmd `c ]
-"54
-[; ;LCD_I2C_LIB.c: 54: }
+"59
+[; ;LCD_I2C_LIB.c: 59: }
 [e :UE 376 ]
 }
-"56
-[; ;LCD_I2C_LIB.c: 56: void i2c_lcd_init(){
+"61
+[; ;LCD_I2C_LIB.c: 61: void i2c_lcd_init(){
 [v _i2c_lcd_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_init ]
 [f ]
-"58
-[; ;LCD_I2C_LIB.c: 58:     PCF_Wr(0x00);
-[e ( _PCF_Wr (1 -> -> 0 `i `c ]
-"59
-[; ;LCD_I2C_LIB.c: 59:     _delay((unsigned long)((15)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"60
-[; ;LCD_I2C_LIB.c: 60:     sendCMD(0x03);
-[e ( _sendCMD (1 -> -> 3 `i `c ]
-"61
-[; ;LCD_I2C_LIB.c: 61:     _delay((unsigned long)((5)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"62
-[; ;LCD_I2C_LIB.c: 62:     sendCMD(0x03);
-[e ( _sendCMD (1 -> -> 3 `i `c ]
 "63
-[; ;LCD_I2C_LIB.c: 63:     _delay((unsigned long)((100)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+[; ;LCD_I2C_LIB.c: 63:     PCF_Wr(0x00);
+[e ( _PCF_Wr (1 -> -> 0 `i `c ]
 "64
-[; ;LCD_I2C_LIB.c: 64:     sendCMD(0x03);
-[e ( _sendCMD (1 -> -> 3 `i `c ]
+[; ;LCD_I2C_LIB.c: 64:     _delay((unsigned long)((15)*(20000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
 "65
-[; ;LCD_I2C_LIB.c: 65:     sendCMD(0x02);
-[e ( _sendCMD (1 -> -> 2 `i `c ]
+[; ;LCD_I2C_LIB.c: 65:     sendCMD(0x03);
+[e ( _sendCMD (1 -> -> 3 `i `c ]
+"66
+[; ;LCD_I2C_LIB.c: 66:     _delay((unsigned long)((5)*(20000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
 "67
-[; ;LCD_I2C_LIB.c: 67:     i2c_lcd_command( 0x20 | 0x00 | 0x08 | 0x00 );
-[e ( _i2c_lcd_command (1 -> | | | -> 32 `i -> 0 `i -> 8 `i -> 0 `i `uc ]
+[; ;LCD_I2C_LIB.c: 67:     sendCMD(0x03);
+[e ( _sendCMD (1 -> -> 3 `i `c ]
 "68
-[; ;LCD_I2C_LIB.c: 68:     _delay((unsigned long)((37)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+[; ;LCD_I2C_LIB.c: 68:     _delay((unsigned long)((100)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"69
+[; ;LCD_I2C_LIB.c: 69:     sendCMD(0x03);
+[e ( _sendCMD (1 -> -> 3 `i `c ]
 "70
-[; ;LCD_I2C_LIB.c: 70:     _lcd_params = 0x04 | 0x02 | 0x01;
-[e = __lcd_params -> | | -> 4 `i -> 2 `i -> 1 `i `uc ]
-"71
-[; ;LCD_I2C_LIB.c: 71:     i2c_lcd_command(0x08 | _lcd_params);
-[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
+[; ;LCD_I2C_LIB.c: 70:     sendCMD(0x02);
+[e ( _sendCMD (1 -> -> 2 `i `c ]
 "72
-[; ;LCD_I2C_LIB.c: 72:     _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+[; ;LCD_I2C_LIB.c: 72:     i2c_lcd_command( 0x20 | 0x00 | 0x08 | 0x00 );
+[e ( _i2c_lcd_command (1 -> | | | -> 32 `i -> 0 `i -> 8 `i -> 0 `i `uc ]
+"73
+[; ;LCD_I2C_LIB.c: 73:     _delay((unsigned long)((37)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"74
-[; ;LCD_I2C_LIB.c: 74:     i2c_lcd_command(0x01);
-[e ( _i2c_lcd_command (1 -> -> 1 `i `uc ]
 "75
-[; ;LCD_I2C_LIB.c: 75:     _delay((unsigned long)((2)*(20000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+[; ;LCD_I2C_LIB.c: 75:     _lcd_params = 0x04 | 0x02 | 0x01;
+[e = __lcd_params -> | | -> 4 `i -> 2 `i -> 1 `i `uc ]
 "76
-[; ;LCD_I2C_LIB.c: 76: }
+[; ;LCD_I2C_LIB.c: 76:     i2c_lcd_command(0x08 | _lcd_params);
+[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
+"77
+[; ;LCD_I2C_LIB.c: 77:     _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"79
+[; ;LCD_I2C_LIB.c: 79:     i2c_lcd_command(0x01);
+[e ( _i2c_lcd_command (1 -> -> 1 `i `uc ]
+"80
+[; ;LCD_I2C_LIB.c: 80:     _delay((unsigned long)((2)*(20000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+"81
+[; ;LCD_I2C_LIB.c: 81: }
 [e :UE 377 ]
 }
-"80
-[; ;LCD_I2C_LIB.c: 80: void i2c_lcd_puts(char *str){
+"85
+[; ;LCD_I2C_LIB.c: 85: void i2c_lcd_puts(char *str){
 [v _i2c_lcd_puts `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _i2c_lcd_puts ]
 [v _str `*uc ~T0 @X0 1 r1 ]
 [f ]
-"81
-[; ;LCD_I2C_LIB.c: 81:     while(*str){
+"86
+[; ;LCD_I2C_LIB.c: 86:     while(*str){
 [e $U 379  ]
 [e :U 380 ]
 {
-"82
-[; ;LCD_I2C_LIB.c: 82:         i2c_lcd_write(*str);
+"87
+[; ;LCD_I2C_LIB.c: 87:         i2c_lcd_write(*str);
 [e ( _i2c_lcd_write (1 -> *U _str `uc ]
-"83
-[; ;LCD_I2C_LIB.c: 83:         str++;
+"88
+[; ;LCD_I2C_LIB.c: 88:         str++;
 [e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
-"84
-[; ;LCD_I2C_LIB.c: 84:     }
+"89
+[; ;LCD_I2C_LIB.c: 89:     }
 }
 [e :U 379 ]
-"81
-[; ;LCD_I2C_LIB.c: 81:     while(*str){
+"86
+[; ;LCD_I2C_LIB.c: 86:     while(*str){
 [e $ != -> *U _str `i -> 0 `i 380  ]
 [e :U 381 ]
-"85
-[; ;LCD_I2C_LIB.c: 85: }
+"90
+[; ;LCD_I2C_LIB.c: 90: }
 [e :UE 378 ]
 }
-"87
-[; ;LCD_I2C_LIB.c: 87: void i2c_lcd_set_cursor(uint8_t row, uint8_t col){
+"92
+[; ;LCD_I2C_LIB.c: 92: void i2c_lcd_set_cursor(uint8_t row, uint8_t col){
 [v _i2c_lcd_set_cursor `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _i2c_lcd_set_cursor ]
 [v _row `uc ~T0 @X0 1 r1 ]
 [v _col `uc ~T0 @X0 1 r2 ]
 [f ]
-"89
-[; ;LCD_I2C_LIB.c: 89:  switch(row){
+"94
+[; ;LCD_I2C_LIB.c: 94:  switch(row){
 [e $U 384  ]
 {
-"90
-[; ;LCD_I2C_LIB.c: 90:         case 1: i2c_lcd_command(0x80+col-1); break;
+"95
+[; ;LCD_I2C_LIB.c: 95:         case 1: i2c_lcd_command(0x80+col-1); break;
 [e :U 385 ]
 [e ( _i2c_lcd_command (1 -> - + -> 128 `i -> _col `i -> 1 `i `uc ]
 [e $U 383  ]
-"91
-[; ;LCD_I2C_LIB.c: 91:         case 2: i2c_lcd_command(0xC0+col-1); break;
+"96
+[; ;LCD_I2C_LIB.c: 96:         case 2: i2c_lcd_command(0xC0+col-1); break;
 [e :U 386 ]
 [e ( _i2c_lcd_command (1 -> - + -> 192 `i -> _col `i -> 1 `i `uc ]
 [e $U 383  ]
-"92
-[; ;LCD_I2C_LIB.c: 92:         case 3: i2c_lcd_command(0x94+col-1); break;
+"97
+[; ;LCD_I2C_LIB.c: 97:         case 3: i2c_lcd_command(0x94+col-1); break;
 [e :U 387 ]
 [e ( _i2c_lcd_command (1 -> - + -> 148 `i -> _col `i -> 1 `i `uc ]
 [e $U 383  ]
-"93
-[; ;LCD_I2C_LIB.c: 93:         case 4: i2c_lcd_command(0xD4+col-1); break;
+"98
+[; ;LCD_I2C_LIB.c: 98:         case 4: i2c_lcd_command(0xD4+col-1); break;
 [e :U 388 ]
 [e ( _i2c_lcd_command (1 -> - + -> 212 `i -> _col `i -> 1 `i `uc ]
 [e $U 383  ]
-"94
-[; ;LCD_I2C_LIB.c: 94:     }
+"99
+[; ;LCD_I2C_LIB.c: 99:     }
 }
 [e $U 383  ]
 [e :U 384 ]
@@ -814,70 +820,51 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 4 `i 388
  383 ]
 [e :U 383 ]
-"95
-[; ;LCD_I2C_LIB.c: 95: }
+"100
+[; ;LCD_I2C_LIB.c: 100: }
 [e :UE 382 ]
 }
-"98
-[; ;LCD_I2C_LIB.c: 98: void i2c_lcd_clear(void){
+"103
+[; ;LCD_I2C_LIB.c: 103: void i2c_lcd_clear(void){
 [v _i2c_lcd_clear `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_clear ]
 [f ]
-"99
-[; ;LCD_I2C_LIB.c: 99:  i2c_lcd_command(0x01);
+"104
+[; ;LCD_I2C_LIB.c: 104:  i2c_lcd_command(0x01);
 [e ( _i2c_lcd_command (1 -> -> 1 `i `uc ]
-"100
-[; ;LCD_I2C_LIB.c: 100:  _delay((unsigned long)((2)*(20000000UL/4000.0)));
+"105
+[; ;LCD_I2C_LIB.c: 105:  _delay((unsigned long)((2)*(20000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"101
-[; ;LCD_I2C_LIB.c: 101: }
+"106
+[; ;LCD_I2C_LIB.c: 106: }
 [e :UE 389 ]
 }
-"102
-[; ;LCD_I2C_LIB.c: 102: void i2c_lcd_return_home(void){
+"107
+[; ;LCD_I2C_LIB.c: 107: void i2c_lcd_return_home(void){
 [v _i2c_lcd_return_home `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_return_home ]
 [f ]
-"103
-[; ;LCD_I2C_LIB.c: 103:  i2c_lcd_command(0x02);
+"108
+[; ;LCD_I2C_LIB.c: 108:  i2c_lcd_command(0x02);
 [e ( _i2c_lcd_command (1 -> -> 2 `i `uc ]
-"104
-[; ;LCD_I2C_LIB.c: 104:  _delay((unsigned long)((2)*(20000000UL/4000.0)));
+"109
+[; ;LCD_I2C_LIB.c: 109:  _delay((unsigned long)((2)*(20000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"105
-[; ;LCD_I2C_LIB.c: 105: }
+"110
+[; ;LCD_I2C_LIB.c: 110: }
 [e :UE 390 ]
 }
-"107
-[; ;LCD_I2C_LIB.c: 107: void i2c_lcd_on(void){
+"112
+[; ;LCD_I2C_LIB.c: 112: void i2c_lcd_on(void){
 [v _i2c_lcd_on `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_on ]
 [f ]
-"108
-[; ;LCD_I2C_LIB.c: 108:  _lcd_params |= 0x04;
-[e =| __lcd_params -> -> 4 `i `uc ]
-"109
-[; ;LCD_I2C_LIB.c: 109:  i2c_lcd_command(0x08 |_lcd_params);
-[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
-"110
-[; ;LCD_I2C_LIB.c: 110:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"111
-[; ;LCD_I2C_LIB.c: 111: }
-[e :UE 391 ]
-}
-"112
-[; ;LCD_I2C_LIB.c: 112: void i2c_lcd_off(void){
-[v _i2c_lcd_off `(v ~T0 @X0 1 ef ]
-{
-[e :U _i2c_lcd_off ]
-[f ]
 "113
-[; ;LCD_I2C_LIB.c: 113:  _lcd_params &= ~0x04;
-[e =& __lcd_params -> ~ -> 4 `i `uc ]
+[; ;LCD_I2C_LIB.c: 113:  _lcd_params |= 0x04;
+[e =| __lcd_params -> -> 4 `i `uc ]
 "114
 [; ;LCD_I2C_LIB.c: 114:  i2c_lcd_command(0x08 |_lcd_params);
 [e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
@@ -886,36 +873,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
 "116
 [; ;LCD_I2C_LIB.c: 116: }
+[e :UE 391 ]
+}
+"117
+[; ;LCD_I2C_LIB.c: 117: void i2c_lcd_off(void){
+[v _i2c_lcd_off `(v ~T0 @X0 1 ef ]
+{
+[e :U _i2c_lcd_off ]
+[f ]
+"118
+[; ;LCD_I2C_LIB.c: 118:  _lcd_params &= ~0x04;
+[e =& __lcd_params -> ~ -> 4 `i `uc ]
+"119
+[; ;LCD_I2C_LIB.c: 119:  i2c_lcd_command(0x08 |_lcd_params);
+[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
+"120
+[; ;LCD_I2C_LIB.c: 120:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"121
+[; ;LCD_I2C_LIB.c: 121: }
 [e :UE 392 ]
 }
-"118
-[; ;LCD_I2C_LIB.c: 118: void i2c_lcd_enable_blink(void){
+"123
+[; ;LCD_I2C_LIB.c: 123: void i2c_lcd_enable_blink(void){
 [v _i2c_lcd_enable_blink `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_enable_blink ]
 [f ]
-"119
-[; ;LCD_I2C_LIB.c: 119:  _lcd_params |= 0x01;
-[e =| __lcd_params -> -> 1 `i `uc ]
-"120
-[; ;LCD_I2C_LIB.c: 120:  i2c_lcd_command(0x08 |_lcd_params);
-[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
-"121
-[; ;LCD_I2C_LIB.c: 121:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"122
-[; ;LCD_I2C_LIB.c: 122: }
-[e :UE 393 ]
-}
-"123
-[; ;LCD_I2C_LIB.c: 123: void i2c_lcd_disable_blink(void){
-[v _i2c_lcd_disable_blink `(v ~T0 @X0 1 ef ]
-{
-[e :U _i2c_lcd_disable_blink ]
-[f ]
 "124
-[; ;LCD_I2C_LIB.c: 124:  _lcd_params &= ~0x01;
-[e =& __lcd_params -> ~ -> 1 `i `uc ]
+[; ;LCD_I2C_LIB.c: 124:  _lcd_params |= 0x01;
+[e =| __lcd_params -> -> 1 `i `uc ]
 "125
 [; ;LCD_I2C_LIB.c: 125:  i2c_lcd_command(0x08 |_lcd_params);
 [e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
@@ -924,36 +911,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
 "127
 [; ;LCD_I2C_LIB.c: 127: }
+[e :UE 393 ]
+}
+"128
+[; ;LCD_I2C_LIB.c: 128: void i2c_lcd_disable_blink(void){
+[v _i2c_lcd_disable_blink `(v ~T0 @X0 1 ef ]
+{
+[e :U _i2c_lcd_disable_blink ]
+[f ]
+"129
+[; ;LCD_I2C_LIB.c: 129:  _lcd_params &= ~0x01;
+[e =& __lcd_params -> ~ -> 1 `i `uc ]
+"130
+[; ;LCD_I2C_LIB.c: 130:  i2c_lcd_command(0x08 |_lcd_params);
+[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
+"131
+[; ;LCD_I2C_LIB.c: 131:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"132
+[; ;LCD_I2C_LIB.c: 132: }
 [e :UE 394 ]
 }
-"129
-[; ;LCD_I2C_LIB.c: 129: void i2c_lcd_enable_cursor(void){
+"134
+[; ;LCD_I2C_LIB.c: 134: void i2c_lcd_enable_cursor(void){
 [v _i2c_lcd_enable_cursor `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_enable_cursor ]
 [f ]
-"130
-[; ;LCD_I2C_LIB.c: 130:  _lcd_params |= 0x02;
-[e =| __lcd_params -> -> 2 `i `uc ]
-"131
-[; ;LCD_I2C_LIB.c: 131:  i2c_lcd_command(0x08 |_lcd_params);
-[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
-"132
-[; ;LCD_I2C_LIB.c: 132:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"133
-[; ;LCD_I2C_LIB.c: 133: }
-[e :UE 395 ]
-}
-"134
-[; ;LCD_I2C_LIB.c: 134: void i2c_lcd_disable_cursor(void){
-[v _i2c_lcd_disable_cursor `(v ~T0 @X0 1 ef ]
-{
-[e :U _i2c_lcd_disable_cursor ]
-[f ]
 "135
-[; ;LCD_I2C_LIB.c: 135:  _lcd_params &= ~0x02;
-[e =& __lcd_params -> ~ -> 2 `i `uc ]
+[; ;LCD_I2C_LIB.c: 135:  _lcd_params |= 0x02;
+[e =| __lcd_params -> -> 2 `i `uc ]
 "136
 [; ;LCD_I2C_LIB.c: 136:  i2c_lcd_command(0x08 |_lcd_params);
 [e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
@@ -962,53 +949,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
 "138
 [; ;LCD_I2C_LIB.c: 138: }
+[e :UE 395 ]
+}
+"139
+[; ;LCD_I2C_LIB.c: 139: void i2c_lcd_disable_cursor(void){
+[v _i2c_lcd_disable_cursor `(v ~T0 @X0 1 ef ]
+{
+[e :U _i2c_lcd_disable_cursor ]
+[f ]
+"140
+[; ;LCD_I2C_LIB.c: 140:  _lcd_params &= ~0x02;
+[e =& __lcd_params -> ~ -> 2 `i `uc ]
+"141
+[; ;LCD_I2C_LIB.c: 141:  i2c_lcd_command(0x08 |_lcd_params);
+[e ( _i2c_lcd_command (1 -> | -> 8 `i -> __lcd_params `i `uc ]
+"142
+[; ;LCD_I2C_LIB.c: 142:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+[e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
+"143
+[; ;LCD_I2C_LIB.c: 143: }
 [e :UE 396 ]
 }
-"140
-[; ;LCD_I2C_LIB.c: 140: void i2c_lcd_scroll_left(void){
+"145
+[; ;LCD_I2C_LIB.c: 145: void i2c_lcd_scroll_left(void){
 [v _i2c_lcd_scroll_left `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_scroll_left ]
 [f ]
-"141
-[; ;LCD_I2C_LIB.c: 141:   i2c_lcd_command(0x10 | 0x08 | 0x00);
+"146
+[; ;LCD_I2C_LIB.c: 146:   i2c_lcd_command(0x10 | 0x08 | 0x00);
 [e ( _i2c_lcd_command (1 -> | | -> 16 `i -> 8 `i -> 0 `i `uc ]
-"142
-[; ;LCD_I2C_LIB.c: 142:   _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+"147
+[; ;LCD_I2C_LIB.c: 147:   _delay((unsigned long)((37)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"143
-[; ;LCD_I2C_LIB.c: 143: }
+"148
+[; ;LCD_I2C_LIB.c: 148: }
 [e :UE 397 ]
 }
-"144
-[; ;LCD_I2C_LIB.c: 144: void i2c_lcd_scroll_right(void){
+"149
+[; ;LCD_I2C_LIB.c: 149: void i2c_lcd_scroll_right(void){
 [v _i2c_lcd_scroll_right `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_lcd_scroll_right ]
 [f ]
-"145
-[; ;LCD_I2C_LIB.c: 145:   i2c_lcd_command(0x10 | 0x08 | 0x04);
+"150
+[; ;LCD_I2C_LIB.c: 150:   i2c_lcd_command(0x10 | 0x08 | 0x04);
 [e ( _i2c_lcd_command (1 -> | | -> 16 `i -> 8 `i -> 4 `i `uc ]
-"146
-[; ;LCD_I2C_LIB.c: 146:   _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+"151
+[; ;LCD_I2C_LIB.c: 151:   _delay((unsigned long)((37)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"147
-[; ;LCD_I2C_LIB.c: 147: }
+"152
+[; ;LCD_I2C_LIB.c: 152: }
 [e :UE 398 ]
 }
-"149
-[; ;LCD_I2C_LIB.c: 149: void i2c_lcd_custom_char(uint8_t mem, uint8_t *charmap){
+"154
+[; ;LCD_I2C_LIB.c: 154: void i2c_lcd_custom_char(uint8_t mem, uint8_t *charmap){
 [v _i2c_lcd_custom_char `(v ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _i2c_lcd_custom_char ]
 [v _mem `uc ~T0 @X0 1 r1 ]
 [v _charmap `*uc ~T0 @X0 1 r2 ]
 [f ]
-"150
-[; ;LCD_I2C_LIB.c: 150:  i2c_lcd_command(0x40 | ((mem&0x07)<<3) );
+"155
+[; ;LCD_I2C_LIB.c: 155:  i2c_lcd_command(0x40 | ((mem&0x07)<<3) );
 [e ( _i2c_lcd_command (1 -> | -> 64 `i << & -> _mem `i -> 7 `i -> 3 `i `uc ]
-"151
-[; ;LCD_I2C_LIB.c: 151:  for(uint8_t i=0; i<=7; i++){
+"156
+[; ;LCD_I2C_LIB.c: 156:  for(uint8_t i=0; i<=7; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -1016,28 +1022,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 401  ]
 [e :U 400 ]
 {
-"152
-[; ;LCD_I2C_LIB.c: 152:   lcd_write(charmap[i]);
+"157
+[; ;LCD_I2C_LIB.c: 157:   lcd_write(charmap[i]);
 [e ( _lcd_write -> *U + _charmap * -> _i `ux -> -> # *U _charmap `ui `ux `i ]
-"153
-[; ;LCD_I2C_LIB.c: 153:  }
+"158
+[; ;LCD_I2C_LIB.c: 158:  }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ <= -> _i `i -> 7 `i 400  ]
 [e :U 401 ]
 }
-"154
-[; ;LCD_I2C_LIB.c: 154:  i2c_lcd_command(0x80);
+"159
+[; ;LCD_I2C_LIB.c: 159:  i2c_lcd_command(0x80);
 [e ( _i2c_lcd_command (1 -> -> 128 `i `uc ]
-"155
-[; ;LCD_I2C_LIB.c: 155:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
+"160
+[; ;LCD_I2C_LIB.c: 160:  _delay((unsigned long)((37)*(20000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 37 `i `d / -> -> 20000000 `ul `d .4000000.0 `ul ]
-"156
-[; ;LCD_I2C_LIB.c: 156: }
+"161
+[; ;LCD_I2C_LIB.c: 161: }
 [e :UE 399 ]
 }
-"157
-[; ;LCD_I2C_LIB.c: 157: void i2c_lcd_out(char row, char col, char *str){
+"162
+[; ;LCD_I2C_LIB.c: 162: void i2c_lcd_out(char row, char col, char *str){
 [v _i2c_lcd_out `(v ~T0 @X0 1 ef3`uc`uc`*uc ]
 {
 [e :U _i2c_lcd_out ]
@@ -1045,34 +1051,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _col `uc ~T0 @X0 1 r2 ]
 [v _str `*uc ~T0 @X0 1 r3 ]
 [f ]
-"158
-[; ;LCD_I2C_LIB.c: 158:     i2c_lcd_set_cursor(row,col);
+"163
+[; ;LCD_I2C_LIB.c: 163:     i2c_lcd_set_cursor(row,col);
 [e ( _i2c_lcd_set_cursor (2 , -> _row `uc -> _col `uc ]
-"159
-[; ;LCD_I2C_LIB.c: 159:     while(*str){
+"164
+[; ;LCD_I2C_LIB.c: 164:     while(*str){
 [e $U 404  ]
 [e :U 405 ]
 {
-"160
-[; ;LCD_I2C_LIB.c: 160:         i2c_lcd_write(*str);
+"165
+[; ;LCD_I2C_LIB.c: 165:         i2c_lcd_write(*str);
 [e ( _i2c_lcd_write (1 -> *U _str `uc ]
-"161
-[; ;LCD_I2C_LIB.c: 161:         str++;
+"166
+[; ;LCD_I2C_LIB.c: 166:         str++;
 [e ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
-"162
-[; ;LCD_I2C_LIB.c: 162:     }
+"167
+[; ;LCD_I2C_LIB.c: 167:     }
 }
 [e :U 404 ]
-"159
-[; ;LCD_I2C_LIB.c: 159:     while(*str){
+"164
+[; ;LCD_I2C_LIB.c: 164:     while(*str){
 [e $ != -> *U _str `i -> 0 `i 405  ]
 [e :U 406 ]
-"164
-[; ;LCD_I2C_LIB.c: 164: }
+"169
+[; ;LCD_I2C_LIB.c: 169: }
 [e :UE 403 ]
 }
-"165
-[; ;LCD_I2C_LIB.c: 165: void i2c_lcd_char(char row, char col, char letra){
+"170
+[; ;LCD_I2C_LIB.c: 170: void i2c_lcd_char(char row, char col, char letra){
 [v _i2c_lcd_char `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _i2c_lcd_char ]
@@ -1080,13 +1086,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _col `uc ~T0 @X0 1 r2 ]
 [v _letra `uc ~T0 @X0 1 r3 ]
 [f ]
-"166
-[; ;LCD_I2C_LIB.c: 166:     i2c_lcd_set_cursor(row,col);
+"171
+[; ;LCD_I2C_LIB.c: 171:     i2c_lcd_set_cursor(row,col);
 [e ( _i2c_lcd_set_cursor (2 , -> _row `uc -> _col `uc ]
-"167
-[; ;LCD_I2C_LIB.c: 167:     i2c_lcd_write(letra);
+"172
+[; ;LCD_I2C_LIB.c: 172:     i2c_lcd_write(letra);
 [e ( _i2c_lcd_write (1 -> _letra `uc ]
-"168
-[; ;LCD_I2C_LIB.c: 168: }
+"173
+[; ;LCD_I2C_LIB.c: 173: }
 [e :UE 407 ]
+}
+"175
+[; ;LCD_I2C_LIB.c: 175: void i2c_lcd_backlight_on(void){
+[v _i2c_lcd_backlight_on `(v ~T0 @X0 1 ef ]
+{
+[e :U _i2c_lcd_backlight_on ]
+[f ]
+"176
+[; ;LCD_I2C_LIB.c: 176:     LED_STATUS = (1<<3);
+[e = _LED_STATUS -> << -> 1 `i -> 3 `i `uc ]
+"177
+[; ;LCD_I2C_LIB.c: 177:     PCF_Wr(LED_STATUS);
+[e ( _PCF_Wr (1 -> _LED_STATUS `c ]
+"179
+[; ;LCD_I2C_LIB.c: 179: }
+[e :UE 408 ]
+}
+"180
+[; ;LCD_I2C_LIB.c: 180: void i2c_lcd_backlight_off(void){
+[v _i2c_lcd_backlight_off `(v ~T0 @X0 1 ef ]
+{
+[e :U _i2c_lcd_backlight_off ]
+[f ]
+"181
+[; ;LCD_I2C_LIB.c: 181:     LED_STATUS = 0x00;
+[e = _LED_STATUS -> -> 0 `i `uc ]
+"182
+[; ;LCD_I2C_LIB.c: 182:     PCF_Wr(LED_STATUS);
+[e ( _PCF_Wr (1 -> _LED_STATUS `c ]
+"184
+[; ;LCD_I2C_LIB.c: 184: }
+[e :UE 409 ]
 }

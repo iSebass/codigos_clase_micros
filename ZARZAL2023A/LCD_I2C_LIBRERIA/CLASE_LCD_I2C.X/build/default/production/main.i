@@ -5778,6 +5778,9 @@ void i2c_lcd_custom_char(uint8_t mem, uint8_t *charmap);
 
 void i2c_lcd_out(char row, char col, char *str);
 void i2c_lcd_char(char row, char col, char letra);
+
+void i2c_lcd_backlight_on(void);
+void i2c_lcd_backlight_off(void);
 # 4 "main.c" 2
 
 

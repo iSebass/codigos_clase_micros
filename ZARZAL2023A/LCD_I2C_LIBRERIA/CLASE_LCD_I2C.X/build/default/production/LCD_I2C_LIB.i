@@ -5757,6 +5757,9 @@ void i2c_lcd_custom_char(uint8_t mem, uint8_t *charmap);
 
 void i2c_lcd_out(char row, char col, char *str);
 void i2c_lcd_char(char row, char col, char letra);
+
+void i2c_lcd_backlight_on(void);
+void i2c_lcd_backlight_off(void);
 # 1 "LCD_I2C_LIB.c" 2
 
 # 1 "./config.h" 1
@@ -5784,12 +5787,17 @@ void I2C_Condiciones_Espera(void);
 
 
 
+
+
+
 static uint8_t _lcd_params;
+
+static uint8_t LED_STATUS = (1<<3);
 
 void PCF_Wr(int8_t dato){
     I2C_Start();
     I2C_Wr( (0x27<<1)|0);
-    I2C_Wr(dato);
+    I2C_Wr(dato | LED_STATUS);
     I2C_Stop();
 }
 void loadPCF(int8_t dato, uint8_t mode){
@@ -5946,4 +5954,15 @@ void i2c_lcd_out(char row, char col, char *str){
 void i2c_lcd_char(char row, char col, char letra){
     i2c_lcd_set_cursor(row,col);
     i2c_lcd_write(letra);
+}
+
+void i2c_lcd_backlight_on(void){
+    LED_STATUS = (1<<3);
+    PCF_Wr(LED_STATUS);
+
+}
+void i2c_lcd_backlight_off(void){
+    LED_STATUS = 0x00;
+    PCF_Wr(LED_STATUS);
+
 }

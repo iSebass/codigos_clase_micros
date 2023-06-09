@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\CLASE_LCD_I2C.X.production.sym \
   --cmf=dist/default/production\CLASE_LCD_I2C.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\iProf\AppData\Local\Temp\xcAsnrc.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\iProf\AppData\Local\Temp\xcAs4qg.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/CLASE_LCD_I2C.X.production.map \
-  --md=C:\Users\iProf\AppData\Local\Temp\xcAsnrc.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\iProf\AppData\Local\Temp\xcAs4qg.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
   -AABS1=00h-07FFh -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\iProf\AppData\Local\Temp\xcAsnrc.o \
+  C:\Users\iProf\AppData\Local\Temp\xcAs4qg.o \
   dist/default/production\CLASE_LCD_I2C.X.production.o 
 
 Object code version is 3.11
@@ -33,7 +33,7 @@ Machine type is 18F4550
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\iProf\AppData\Local\Temp\xcAsnrc.o
+C:\Users\iProf\AppData\Local\Temp\xcAs4qg.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
@@ -41,44 +41,47 @@ dist/default/production\CLASE_LCD_I2C.X.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 smallconst                          800      800       18      400       0
-                text14                              A4A      A4A       1A      40C       0
+                text14                              A82      A82       1A      40C       0
                 text13                              A24      A24       26      40C       0
-                text12                              AB0      AB0        8      40C       0
-                text11                              AA8      AA8        8      40C       0
-                text10                              A88      A88        C      40C       0
-                text9                               A64      A64       18      40C       0
+                text12                              AC4      AC4        8      40C       0
+                text11                              ABC      ABC        8      40C       0
+                text10                              A9C      A9C        C      40C       0
+                text9                               A68      A68       1A      40C       0
                 text8                               906      906       5A      40C       0
                 text7                               9F8      9F8       2C      40C       0
-                text6                               A9E      A9E        A      40C       0
+                text6                               AB2      AB2        A      40C       0
                 text5                               818      818       7C      40C       0
                 text4                               9CC      9CC       2C      40C       0
-                text3                               A94      A94        A      40C       0
+                text3                               AA8      AA8        A      40C       0
                 text2                               996      996       36      40C       0
                 text1                               894      894       72      40C       0
                 text0                               960      960       36      40C       0
                 cstackCOMRAM                          1        1       10        1       1
+                dataCOMRAM                           12       12        1        1       1
                 bssCOMRAM                            11       11        1        1       1
-                cinit                               A7C      A7C        C      40C       0
+                cinit                               A4A      A4A       1E      40C       0
+                idataCOMRAM                         ACC      ACC        1      40C       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 init                                  0        0        4         0
-                text14                              A4A      A4A       1A         0
+                text14                              A82      A82       1A         0
                 text13                              A24      A24       26         0
-                text12                              AB0      AB0        8         0
-                text11                              AA8      AA8        8         0
-                text10                              A88      A88        C         0
-                text9                               A64      A64       18         0
+                text12                              AC4      AC4        8         0
+                text11                              ABC      ABC        8         0
+                text10                              A9C      A9C        C         0
+                text9                               A68      A68       1A         0
                 text8                               906      906       5A         0
                 text7                               9F8      9F8       2C         0
-                text6                               A9E      A9E        A         0
+                text6                               AB2      AB2        A         0
                 text5                               818      818       7C         0
                 text4                               9CC      9CC       2C         0
-                text3                               A94      A94        A         0
+                text3                               AA8      AA8        A         0
                 text2                               996      996       36         0
                 text1                               894      894       72         0
                 text0                               960      960       36         0
-                cinit                               A7C      A7C        C         0
+                cinit                               A4A      A4A       1E         0
+                idataCOMRAM                         ACC      ACC        1         0
 
         CLASS   CONST          
 
@@ -89,6 +92,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   COMRAM         
                 cstackCOMRAM                          1        1       10         1
+                dataCOMRAM                           12       12        1         1
                 bssCOMRAM                            11       11        1         1
 
         CLASS   ABS1           
@@ -136,9 +140,9 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  000011  000012         1       1  COMRAM  
+                cstackCOMRAM                   000001  000012  000013         1       1  COMRAM  
                 smallconst                     000800  000018  000818       400       0  SMALLCON
-                text5                          000818  0002A0  000AB8       40C       0  CODE    
+                text5                          000818  0002B5  000ACD       40C       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -152,18 +156,18 @@ UNUSED ADDRESS RANGES
         BANK5            000500-0005FF              100
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
-        BIGRAM           000012-0007FF              7EE
+        BIGRAM           000013-0007FF              7ED
         BIGSFR           000F60-000FFF               A0
         CODE             000004-0007FF              7FC
-                         000AB8-007FFF             7548
-        COMRAM           000012-00005F               4E
+                         000ACD-007FFF             7533
+        COMRAM           000013-00005F               4D
         CONST            000004-0007FF              7FC
-                         000AB8-007FFF             7548
+                         000ACD-007FFF             7533
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000AB8-007FFF             7548
+        MEDIUMCONST      000ACD-007FFF             7533
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000AB8-007FFF              100
+        SMALLCONST       000ACD-007FFF              100
 
                                   Symbol Table
 
@@ -171,11 +175,12 @@ I2C_Wr@data                     cstackCOMRAM 000002
 PCF_Wr@dato                     cstackCOMRAM 000003
 _ADCON1                         (abs)        000FC1
 _I2C_Condiciones_Espera         text13       000A24
-_I2C_Init                       text14       000A4A
-_I2C_Start                      text12       000AB0
-_I2C_Stop                       text11       000AA8
-_I2C_Wr                         text10       000A88
-_PCF_Wr                         text9        000A64
+_I2C_Init                       text14       000A82
+_I2C_Start                      text12       000AC4
+_I2C_Stop                       text11       000ABC
+_I2C_Wr                         text10       000A9C
+_LED_STATUS                     dataCOMRAM   000012
+_PCF_Wr                         text9        000A68
 _SSPADD                         (abs)        000FC8
 _SSPBUF                         (abs)        000FC9
 _SSPCON1bits                    (abs)        000FC6
@@ -207,12 +212,14 @@ __Hconfig                       config       30000E
 __Hconst                        const        000000
 __HcstackCOMRAM                 cstackCOMRAM 000000
 __Hdata                         data         000000
+__HdataCOMRAM                   dataCOMRAM   000000
 __Heeprom_data                  eeprom_data  000000
 __Hfarbss                       farbss       000000
 __Hfardata                      fardata      000000
 __Hheap                         heap         000000
 __Hibigdata                     ibigdata     000000
 __Hidata                        idata        000000
+__HidataCOMRAM                  idataCOMRAM  000000
 __Hidloc                        idloc        200008
 __Hifardata                     ifardata     000000
 __Hinit                         init         000004
@@ -238,8 +245,8 @@ __Hreset_vec                    reset_vec    000000
 __Hrparam                       rparam       000000
 __Hsfr                          sfr          000000
 __Hsmallconst                   smallconst   000818
-__Hspace_0                      (abs)        000AB8
-__Hspace_1                      (abs)        000012
+__Hspace_0                      (abs)        000ACD
+__Hspace_1                      (abs)        000013
 __Hspace_2                      (abs)        000000
 __Hspace_4                      (abs)        60000E
 __Hstack                        stack        000000
@@ -284,12 +291,14 @@ __Lconfig                       config       000000
 __Lconst                        const        000000
 __LcstackCOMRAM                 cstackCOMRAM 000000
 __Ldata                         data         000000
+__LdataCOMRAM                   dataCOMRAM   000000
 __Leeprom_data                  eeprom_data  000000
 __Lfarbss                       farbss       000000
 __Lfardata                      fardata      000000
 __Lheap                         heap         000000
 __Libigdata                     ibigdata     000000
 __Lidata                        idata        000000
+__LidataCOMRAM                  idataCOMRAM  000000
 __Lidloc                        idloc        000000
 __Lifardata                     ifardata     000000
 __Linit                         init         000000
@@ -338,8 +347,8 @@ __Ltext6                        text6        000000
 __Ltext7                        text7        000000
 __Ltext8                        text8        000000
 __Ltext9                        text9        000000
-__S0                            (abs)        000AB8
-__S1                            (abs)        000012
+__S0                            (abs)        000ACD
+__S1                            (abs)        000013
 __S4                            (abs)        000000
 __S5                            (abs)        000000
 ___heap_hi                      (abs)        000000
@@ -352,55 +361,57 @@ ___sp                           stack        000000
 __accesstop                     (abs)        000060
 __activetblptr                  (abs)        000002
 __end_of_I2C_Condiciones_Espera text13       000A4A
-__end_of_I2C_Init               text14       000A64
-__end_of_I2C_Start              text12       000AB8
-__end_of_I2C_Stop               text11       000AB0
-__end_of_I2C_Wr                 text10       000A94
-__end_of_PCF_Wr                 text9        000A7C
-__end_of__initialization        cinit        000A7E
-__end_of_i2c_lcd_command        text6        000AA8
+__end_of_I2C_Init               text14       000A9C
+__end_of_I2C_Start              text12       000ACC
+__end_of_I2C_Stop               text11       000AC4
+__end_of_I2C_Wr                 text10       000AA8
+__end_of_PCF_Wr                 text9        000A82
+__end_of__initialization        cinit        000A5E
+__end_of_i2c_lcd_command        text6        000ABC
 __end_of_i2c_lcd_init           text5        000894
 __end_of_i2c_lcd_puts           text2        0009CC
 __end_of_i2c_lcd_set_cursor     text1        000906
-__end_of_i2c_lcd_write          text3        000A9E
+__end_of_i2c_lcd_write          text3        000AB2
 __end_of_loadPCF                text8        000960
 __end_of_main                   text0        000996
 __end_of_sendCMD                text7        000A24
 __end_of_sendDATA               text4        0009F8
-__initialization                cinit        000A7C
+__initialization                cinit        000A4A
 __lcd_params                    bssCOMRAM    000011
 __mediumconst                   mediumconst  000000
 __pbssCOMRAM                    bssCOMRAM    000011
-__pcinit                        cinit        000A7C
+__pcinit                        cinit        000A4A
 __pcstackCOMRAM                 cstackCOMRAM 000001
+__pdataCOMRAM                   dataCOMRAM   000012
+__pidataCOMRAM                  idataCOMRAM  000ACC
 __psmallconst                   smallconst   000800
 __ptext0                        text0        000960
 __ptext1                        text1        000894
-__ptext10                       text10       000A88
-__ptext11                       text11       000AA8
-__ptext12                       text12       000AB0
+__ptext10                       text10       000A9C
+__ptext11                       text11       000ABC
+__ptext12                       text12       000AC4
 __ptext13                       text13       000A24
-__ptext14                       text14       000A4A
+__ptext14                       text14       000A82
 __ptext2                        text2        000996
-__ptext3                        text3        000A94
+__ptext3                        text3        000AA8
 __ptext4                        text4        0009CC
 __ptext5                        text5        000818
-__ptext6                        text6        000A9E
+__ptext6                        text6        000AB2
 __ptext7                        text7        0009F8
 __ptext8                        text8        000906
-__ptext9                        text9        000A64
+__ptext9                        text9        000A68
 __ramtop                        ramtop       000800
 __smallconst                    smallconst   000800
-_i2c_lcd_command                text6        000A9E
+_i2c_lcd_command                text6        000AB2
 _i2c_lcd_init                   text5        000818
 _i2c_lcd_puts                   text2        000996
 _i2c_lcd_set_cursor             text1        000894
-_i2c_lcd_write                  text3        000A94
+_i2c_lcd_write                  text3        000AA8
 _loadPCF                        text8        000906
 _main                           text0        000960
 _sendCMD                        text7        0009F8
 _sendDATA                       text4        0009CC
-end_of_initialization           cinit        000A7E
+end_of_initialization           cinit        000A5E
 i2c_lcd_command@cmd             cstackCOMRAM 00000C
 i2c_lcd_puts@str                cstackCOMRAM 00000D
 i2c_lcd_set_cursor@col          cstackCOMRAM 00000D
@@ -423,7 +434,7 @@ sendDATA@nibbleL                cstackCOMRAM 00000A
 stackhi                         (abs)        000000
 stacklo                         (abs)        000000
 start                           init         000000
-start_initialization            cinit        000A7C
+start_initialization            cinit        000A4A
 
 
 MODULE INFORMATION
@@ -431,30 +442,30 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 I2C_LIB.c
 		_I2C_Condiciones_Espera		CODE           	0A24	0000	38
-		_I2C_Wr        		CODE           	0A88	0000	12
-		_I2C_Stop      		CODE           	0AA8	0000	8
-		_I2C_Init      		CODE           	0A4A	0000	26
-		_I2C_Start     		CODE           	0AB0	0000	8
+		_I2C_Wr        		CODE           	0A9C	0000	12
+		_I2C_Stop      		CODE           	0ABC	0000	8
+		_I2C_Init      		CODE           	0A82	0000	26
+		_I2C_Start     		CODE           	0AC4	0000	8
 
 I2C_LIB.c estimated size: 92
 
 shared
-		__initialization		CODE           	0A7C	0000	2
+		__initialization		CODE           	0A4A	0000	20
 
-shared estimated size: 2
+shared estimated size: 20
 
 LCD_I2C_LIB.c
 		_i2c_lcd_init  		CODE           	0818	0000	124
 		_i2c_lcd_puts  		CODE           	0996	0000	54
-		_i2c_lcd_write 		CODE           	0A94	0000	10
+		_i2c_lcd_write 		CODE           	0AA8	0000	10
 		_loadPCF       		CODE           	0906	0000	90
 		_sendCMD       		CODE           	09F8	0000	44
 		_sendDATA      		CODE           	09CC	0000	44
-		_i2c_lcd_command		CODE           	0A9E	0000	10
-		_PCF_Wr        		CODE           	0A64	0000	24
+		_i2c_lcd_command		CODE           	0AB2	0000	10
+		_PCF_Wr        		CODE           	0A68	0000	26
 		_i2c_lcd_set_cursor		CODE           	0894	0000	114
 
-LCD_I2C_LIB.c estimated size: 514
+LCD_I2C_LIB.c estimated size: 516
 
 main.c
 		_main          		CODE           	0960	0000	54
