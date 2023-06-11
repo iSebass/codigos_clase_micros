@@ -2,10 +2,11 @@
 #define	LCD_I2C_LIB_H
 
 #include <xc.h>
+#include "config.h"
 #define _delay_ms(x)   __delay_ms(x)
 #define _delay_us(x)   __delay_us(x)
 
-#define DIR_PCF     0x27
+
 
 /************************************************************************/
 /* Comportamiento de RS                                                 */
@@ -138,7 +139,7 @@ void sendCMD(int8_t cmd);
 /************************************************************************/
 /* METODOS DE LIBRERIA                                                  */
 /************************************************************************/
-void i2c_lcd_init(void);
+void i2c_lcd_init();
 void i2c_lcd_write(uint8_t letra);
 void i2c_lcd_command(uint8_t cmd);
 

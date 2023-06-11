@@ -5743,7 +5743,7 @@ void I2C_Condiciones_Espera(void);
 # 3 "main.c" 2
 
 # 1 "./LCD_I2C_LIB.h" 1
-# 133 "./LCD_I2C_LIB.h"
+# 134 "./LCD_I2C_LIB.h"
 void PCF_Wr(int8_t dato);
 void loadPCF(int8_t dato, uint8_t mode);
 void sendDATA(int8_t dato);
@@ -5752,7 +5752,7 @@ void sendCMD(int8_t cmd);
 
 
 
-void i2c_lcd_init(void);
+void i2c_lcd_init();
 void i2c_lcd_write(uint8_t letra);
 void i2c_lcd_command(uint8_t cmd);
 
@@ -5785,18 +5785,36 @@ void i2c_lcd_backlight_off(void);
 
 
 
+
 void main(void){
 
     ADCON1 = 0x0F;
 
+
     I2C_Init();
+
     i2c_lcd_init();
-    i2c_lcd_puts("Hola UNIVALLE");
+
+    i2c_lcd_set_cursor(1,1);
+    i2c_lcd_puts("EN PCB SI ");
+
+
     i2c_lcd_set_cursor(2,1);
-    i2c_lcd_puts("Zarzal");
+    i2c_lcd_puts(" FUNCIONA :)");
+
+
+    TRISDbits.TRISD0 = 0;
+    PORTDbits.RD0 = 1;
+
+
 
 
     while(1){
+
+
+
+        PORTDbits.RD0 ^= 1;
+        _delay((unsigned long)((1000)*(20000000UL/4000.0)));
 
 
     }

@@ -5722,7 +5722,10 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
 # 4 "./LCD_I2C_LIB.h" 2
-# 133 "./LCD_I2C_LIB.h"
+
+# 1 "./config.h" 1
+# 5 "./LCD_I2C_LIB.h" 2
+# 134 "./LCD_I2C_LIB.h"
 void PCF_Wr(int8_t dato);
 void loadPCF(int8_t dato, uint8_t mode);
 void sendDATA(int8_t dato);
@@ -5731,7 +5734,7 @@ void sendCMD(int8_t cmd);
 
 
 
-void i2c_lcd_init(void);
+void i2c_lcd_init();
 void i2c_lcd_write(uint8_t letra);
 void i2c_lcd_command(uint8_t cmd);
 
@@ -5762,8 +5765,6 @@ void i2c_lcd_backlight_on(void);
 void i2c_lcd_backlight_off(void);
 # 1 "LCD_I2C_LIB.c" 2
 
-# 1 "./config.h" 1
-# 2 "LCD_I2C_LIB.c" 2
 
 # 1 "./I2C_LIB.h" 1
 
@@ -5794,9 +5795,11 @@ static uint8_t _lcd_params;
 
 static uint8_t LED_STATUS = (1<<3);
 
+extern char DIR_PCF = 0x27;
+
 void PCF_Wr(int8_t dato){
     I2C_Start();
-    I2C_Wr( (0x27<<1)|0);
+    I2C_Wr( DIR_PCF<<1 );
     I2C_Wr(dato | LED_STATUS);
     I2C_Stop();
 }

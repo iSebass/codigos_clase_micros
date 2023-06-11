@@ -24,7 +24,7 @@
 
 
 #pragma config PWRT = OFF
-#pragma config BOR = ON
+#pragma config BOR = OFF
 #pragma config BORV = 3
 #pragma config VREGEN = OFF
 

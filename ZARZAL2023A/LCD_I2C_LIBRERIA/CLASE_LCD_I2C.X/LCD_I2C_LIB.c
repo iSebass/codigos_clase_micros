@@ -10,9 +10,11 @@ static uint8_t _lcd_params;
 
 static uint8_t LED_STATUS = LEDON;
 
+extern char DIR_PCF = 0x27;
+
 void PCF_Wr(int8_t dato){
     I2C_Start();
-    I2C_Wr( (DIR_PCF<<1)|0);
+    I2C_Wr( DIR_PCF<<1 );
     I2C_Wr(dato | LED_STATUS);
     I2C_Stop();
 }

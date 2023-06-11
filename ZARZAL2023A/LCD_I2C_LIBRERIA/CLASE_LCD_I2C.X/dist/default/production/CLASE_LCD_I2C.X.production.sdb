@@ -37,27 +37,51 @@
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
 "33
 [v _I2C_Wr I2C_Wr `(v  1 e 1 0 ]
-"13 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\LCD_I2C_LIB.c
+"15 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\LCD_I2C_LIB.c
 [v _PCF_Wr PCF_Wr `(v  1 e 1 0 ]
-"19
+"21
 [v _loadPCF loadPCF `(v  1 e 1 0 ]
-"35
+"37
 [v _sendDATA sendDATA `(v  1 e 1 0 ]
-"44
+"46
 [v _sendCMD sendCMD `(v  1 e 1 0 ]
-"54
+"56
 [v _i2c_lcd_write i2c_lcd_write `(v  1 e 1 0 ]
-"57
+"59
 [v _i2c_lcd_command i2c_lcd_command `(v  1 e 1 0 ]
-"61
+"63
 [v _i2c_lcd_init i2c_lcd_init `(v  1 e 1 0 ]
-"85
+"87
 [v _i2c_lcd_puts i2c_lcd_puts `(v  1 e 1 0 ]
-"92
+"94
 [v _i2c_lcd_set_cursor i2c_lcd_set_cursor `(v  1 e 1 0 ]
-"7 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\main.c
+"8 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\main.c
 [v _main main `(v  1 e 1 0 ]
-[s S129 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S53 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2737 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[s S93 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S102 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S105 . 1 `S53 1 . 1 0 `S93 1 . 1 0 `S102 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES105  1 e 1 @3971 ]
+[s S235 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -66,8 +90,8 @@
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
-"3658 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
-[s S138 . 1 `uc 1 RB0 1 0 :1:0 
+"3658
+[s S244 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -76,13 +100,25 @@
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-[u S147 . 1 `S129 1 . 1 0 `S138 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES147  1 e 1 @3987 ]
+[u S253 . 1 `S235 1 . 1 0 `S244 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES253  1 e 1 @3987 ]
+[s S44 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4034
+[u S62 . 1 `S44 1 . 1 0 `S53 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES62  1 e 1 @3989 ]
 "6582
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "6807
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
-[s S339 . 1 `uc 1 SEN 1 0 :1:0 
+[s S445 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -92,32 +128,32 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6824
-[u S348 . 1 `S339 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES348  1 e 1 @4037 ]
-[s S310 . 1 `uc 1 SSPM 1 0 :4:0 
+[u S454 . 1 `S445 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES454  1 e 1 @4037 ]
+[s S416 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6889
-[s S316 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S422 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S321 . 1 `S310 1 . 1 0 `S316 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES321  1 e 1 @4038 ]
+[u S427 . 1 `S416 1 . 1 0 `S422 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES427  1 e 1 @4038 ]
 "6939
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S169 . 1 `uc 1 . 1 0 :2:0 
+[s S275 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "7022
-[s S172 . 1 `uc 1 . 1 0 :5:0 
+[s S278 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S175 . 1 `uc 1 BF 1 0 :1:0 
+[s S281 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -126,56 +162,56 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S184 . 1 `uc 1 . 1 0 :2:0 
+[s S290 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S189 . 1 `uc 1 . 1 0 :2:0 
+[s S295 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S195 . 1 `uc 1 . 1 0 :2:0 
+[s S301 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S200 . 1 `uc 1 . 1 0 :2:0 
+[s S306 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S203 . 1 `uc 1 . 1 0 :5:0 
+[s S309 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S206 . 1 `uc 1 . 1 0 :2:0 
+[s S312 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S211 . 1 `uc 1 . 1 0 :2:0 
+[s S317 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S216 . 1 `uc 1 . 1 0 :2:0 
+[s S322 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S221 . 1 `uc 1 . 1 0 :2:0 
+[s S327 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S227 . 1 `uc 1 . 1 0 :2:0 
+[s S333 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S232 . 1 `S169 1 . 1 0 `S172 1 . 1 0 `S175 1 . 1 0 `S184 1 . 1 0 `S189 1 . 1 0 `S195 1 . 1 0 `S200 1 . 1 0 `S203 1 . 1 0 `S206 1 . 1 0 `S211 1 . 1 0 `S216 1 . 1 0 `S221 1 . 1 0 `S227 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES232  1 e 1 @4039 ]
+[u S338 . 1 `S275 1 . 1 0 `S278 1 . 1 0 `S281 1 . 1 0 `S290 1 . 1 0 `S295 1 . 1 0 `S301 1 . 1 0 `S306 1 . 1 0 `S309 1 . 1 0 `S312 1 . 1 0 `S317 1 . 1 0 `S322 1 . 1 0 `S327 1 . 1 0 `S333 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES338  1 e 1 @4039 ]
 "7187
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "7194
@@ -184,89 +220,89 @@
 [v __lcd_params _lcd_params `uc  1 s 1 _lcd_params ]
 "11
 [v _LED_STATUS LED_STATUS `uc  1 s 1 LED_STATUS ]
-"7 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\main.c
+"8 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"24
+"42
 } 0
-"92 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\LCD_I2C_LIB.c
+"94 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\LCD_I2C_LIB.c
 [v _i2c_lcd_set_cursor i2c_lcd_set_cursor `(v  1 e 1 0 ]
 {
 [v i2c_lcd_set_cursor@row row `uc  1 a 1 wreg ]
 [v i2c_lcd_set_cursor@row row `uc  1 a 1 wreg ]
 [v i2c_lcd_set_cursor@col col `uc  1 p 1 12 ]
 [v i2c_lcd_set_cursor@row row `uc  1 a 1 15 ]
-"100
+"102
 } 0
-"85
+"87
 [v _i2c_lcd_puts i2c_lcd_puts `(v  1 e 1 0 ]
 {
 [v i2c_lcd_puts@str str `*.25uc  1 p 2 12 ]
-"90
+"92
 } 0
-"54
+"56
 [v _i2c_lcd_write i2c_lcd_write `(v  1 e 1 0 ]
 {
 [v i2c_lcd_write@letra letra `uc  1 a 1 wreg ]
 [v i2c_lcd_write@letra letra `uc  1 a 1 wreg ]
 [v i2c_lcd_write@letra letra `uc  1 a 1 11 ]
-"56
+"58
 } 0
-"35
+"37
 [v _sendDATA sendDATA `(v  1 e 1 0 ]
 {
 [v sendDATA@dato dato `c  1 a 1 wreg ]
-"36
+"38
 [v sendDATA@nibbleL nibbleL `uc  1 a 1 9 ]
 [v sendDATA@nibbleH nibbleH `uc  1 a 1 8 ]
-"35
+"37
 [v sendDATA@dato dato `c  1 a 1 wreg ]
-"38
+"40
 [v sendDATA@dato dato `c  1 a 1 10 ]
-"43
+"45
 } 0
-"61
+"63
 [v _i2c_lcd_init i2c_lcd_init `(v  1 e 1 0 ]
 {
-"81
+"83
 } 0
-"57
+"59
 [v _i2c_lcd_command i2c_lcd_command `(v  1 e 1 0 ]
 {
 [v i2c_lcd_command@cmd cmd `uc  1 a 1 wreg ]
 [v i2c_lcd_command@cmd cmd `uc  1 a 1 wreg ]
 [v i2c_lcd_command@cmd cmd `uc  1 a 1 11 ]
-"59
+"61
 } 0
-"44
+"46
 [v _sendCMD sendCMD `(v  1 e 1 0 ]
 {
 [v sendCMD@cmd cmd `c  1 a 1 wreg ]
-"45
+"47
 [v sendCMD@nibbleL nibbleL `uc  1 a 1 9 ]
 [v sendCMD@nibbleH nibbleH `uc  1 a 1 8 ]
-"44
+"46
 [v sendCMD@cmd cmd `c  1 a 1 wreg ]
-"47
+"49
 [v sendCMD@cmd cmd `c  1 a 1 10 ]
-"52
+"54
 } 0
-"19
+"21
 [v _loadPCF loadPCF `(v  1 e 1 0 ]
 {
 [v loadPCF@dato dato `c  1 a 1 wreg ]
 [v loadPCF@dato dato `c  1 a 1 wreg ]
 [v loadPCF@mode mode `uc  1 p 1 3 ]
 [v loadPCF@dato dato `c  1 a 1 6 ]
-"34
+"36
 } 0
-"13
+"15
 [v _PCF_Wr PCF_Wr `(v  1 e 1 0 ]
 {
 [v PCF_Wr@dato dato `c  1 a 1 wreg ]
 [v PCF_Wr@dato dato `c  1 a 1 wreg ]
 [v PCF_Wr@dato dato `c  1 a 1 2 ]
-"18
+"20
 } 0
 "33 C:\LABORAL\UNIVALLE\codigos_clase_micros\ZARZAL2023A\LCD_I2C_LIBRERIA\CLASE_LCD_I2C.X\I2C_LIB.c
 [v _I2C_Wr I2C_Wr `(v  1 e 1 0 ]

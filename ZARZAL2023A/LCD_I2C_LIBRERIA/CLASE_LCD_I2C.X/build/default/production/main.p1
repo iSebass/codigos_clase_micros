@@ -6,15 +6,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9 ./I2C_LIB.h
 [; ;./I2C_LIB.h: 9: void I2C_Init(void);
 [v _I2C_Init `(v ~T0 @X0 0 ef ]
-"141 ./LCD_I2C_LIB.h
-[; ;./LCD_I2C_LIB.h: 141: void i2c_lcd_init(void);
-[v _i2c_lcd_init `(v ~T0 @X0 0 ef ]
-"145
-[; ;./LCD_I2C_LIB.h: 145: void i2c_lcd_puts(char *str);
-[v _i2c_lcd_puts `(v ~T0 @X0 0 ef1`*uc ]
-"146
-[; ;./LCD_I2C_LIB.h: 146: void i2c_lcd_set_cursor(uint8_t row, uint8_t col);
+"142 ./LCD_I2C_LIB.h
+[; ;./LCD_I2C_LIB.h: 142: void i2c_lcd_init();
+[v _i2c_lcd_init `(v ~T0 @X0 0 e? ]
+"147
+[; ;./LCD_I2C_LIB.h: 147: void i2c_lcd_set_cursor(uint8_t row, uint8_t col);
 [v _i2c_lcd_set_cursor `(v ~T0 @X0 0 ef2`uc`uc ]
+"146
+[; ;./LCD_I2C_LIB.h: 146: void i2c_lcd_puts(char *str);
+[v _i2c_lcd_puts `(v ~T0 @X0 0 ef1`*uc ]
+"4013 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4013:     struct {
+[s S160 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S160 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"4023
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4023:     struct {
+[s S161 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S161 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"4012
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4012: typedef union {
+[u S159 `S160 1 `S161 1 ]
+[n S159 . . . ]
+"4034
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 4034: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
+[v _TRISDbits `VS159 ~T0 @X0 0 e@3989 ]
+"2712
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2712:     struct {
+[s S117 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S117 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"2722
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2722:     struct {
+[s S118 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S118 . SPP0 SPP1 SPP2 SPP3 SPP4 SPP5 SPP6 SPP7 ]
+"2732
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2732:     struct {
+[s S119 :7 `uc 1 :1 `uc 1 ]
+[n S119 . . SS2 ]
+"2711
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2711: typedef union {
+[u S116 `S117 1 `S118 1 `S119 1 ]
+[n S116 . . . . ]
+"2737
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 2737: extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
+[v _PORTDbits `VS116 ~T0 @X0 0 e@3971 ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 55: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -526,46 +564,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h: 8894: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"7 main.c
-[; ;main.c: 7: void main(void){
+"8 main.c
+[; ;main.c: 8: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"9
-[; ;main.c: 9:     ADCON1 = 0x0F;
+"10
+[; ;main.c: 10:     ADCON1 = 0x0F;
 [e = _ADCON1 -> -> 15 `i `uc ]
-"11
-[; ;main.c: 11:     I2C_Init();
-[e ( _I2C_Init ..  ]
-"12
-[; ;main.c: 12:     i2c_lcd_init();
-[e ( _i2c_lcd_init ..  ]
 "13
-[; ;main.c: 13:     i2c_lcd_puts("Hola UNIVALLE");
-[e ( _i2c_lcd_puts (1 :s 1C ]
-"14
-[; ;main.c: 14:     i2c_lcd_set_cursor(2,1);
-[e ( _i2c_lcd_set_cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 13:     I2C_Init();
+[e ( _I2C_Init ..  ]
 "15
-[; ;main.c: 15:     i2c_lcd_puts("Zarzal");
-[e ( _i2c_lcd_puts (1 :s 2C ]
+[; ;main.c: 15:     i2c_lcd_init();
+[e ( _i2c_lcd_init ..  ]
+"17
+[; ;main.c: 17:     i2c_lcd_set_cursor(1,1);
+[e ( _i2c_lcd_set_cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "18
-[; ;main.c: 18:     while(1){
+[; ;main.c: 18:     i2c_lcd_puts("EN PCB SI ");
+[e ( _i2c_lcd_puts (1 :s 1C ]
+"21
+[; ;main.c: 21:     i2c_lcd_set_cursor(2,1);
+[e ( _i2c_lcd_set_cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"22
+[; ;main.c: 22:     i2c_lcd_puts(" FUNCIONA :)");
+[e ( _i2c_lcd_puts (1 :s 2C ]
+"25
+[; ;main.c: 25:     TRISDbits.TRISD0 = 0;
+[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
+"26
+[; ;main.c: 26:     PORTDbits.RD0 = 1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+"31
+[; ;main.c: 31:     while(1){
 [e :U 369 ]
 {
-"21
-[; ;main.c: 21:     }
+"35
+[; ;main.c: 35:         PORTDbits.RD0 ^= 1;
+[e =^ . . _PORTDbits 0 0 -> -> 1 `i `Vuc ]
+"36
+[; ;main.c: 36:         _delay((unsigned long)((1000)*(20000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+"39
+[; ;main.c: 39:     }
 }
 [e :U 368 ]
 [e $U 369  ]
 [e :U 370 ]
-"23
-[; ;main.c: 23:     return;
+"41
+[; ;main.c: 41:     return;
 [e $UE 367  ]
-"24
-[; ;main.c: 24: }
+"42
+[; ;main.c: 42: }
 [e :UE 367 ]
 }
-[a 2C 90 97 114 122 97 108 0 ]
-[a 1C 72 111 108 97 32 85 78 73 86 65 76 76 69 0 ]
+[a 2C 32 70 85 78 67 73 79 78 65 32 58 41 0 ]
+[a 1C 69 78 32 80 67 66 32 83 73 32 0 ]
