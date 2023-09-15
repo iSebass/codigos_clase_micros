@@ -49,6 +49,8 @@ void setYEAR(char year){
     I2C_Wr(DIR_YEAR);
     I2C_Wr(year);
     I2C_Stop();
+            
+    I2C_Rd()
 }
 
 char getHH(void);
