@@ -1,21 +1,36 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"3387 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 3387: extern volatile unsigned char ANSELB __attribute__((address(0x18D)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@397 ]
-"1376
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 1376: extern volatile unsigned char TRISB __attribute__((address(0x08D)));
-[v _TRISB `Vuc ~T0 @X0 0 e@141 ]
-"2426
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 2426:     struct {
-[s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S121 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"2425
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 2425: typedef union {
-[u S120 `S121 1 ]
-[n S120 . . ]
-"2437
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 2437: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
-[v _LATBbits `VS120 ~T0 @X0 0 e@269 ]
+"8 config.c
+[p x FOSC  =  HS         ]
+"9
+[p x WDTE  =  OFF        ]
+"10
+[p x PWRTE  =  OFF       ]
+"11
+[p x MCLRE  =  ON        ]
+"12
+[p x CP  =  OFF          ]
+"13
+[p x CPD  =  OFF         ]
+"14
+[p x BOREN  =  ON        ]
+"15
+[p x CLKOUTEN  =  OFF    ]
+"16
+[p x IESO  =  ON         ]
+"17
+[p x FCMEN  =  ON        ]
+"20
+[p x WRT  =  OFF         ]
+"21
+[p x VCAPEN  =  OFF      ]
+"22
+[p x PLLEN  =  OFF       ]
+"23
+[p x STVREN  =  ON       ]
+"24
+[p x BORV  =  LO         ]
+"25
+[p x LVP  =  ON            ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -541,96 +556,3 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7793
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 7793: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"3 SEVEN_SEG_LIB.c
-[; ;SEVEN_SEG_LIB.c: 3: char deco_cc_values[10]={63,6,91,79,102,109,125,7,127,103};
-[v _deco_cc_values `uc ~T0 @X0 -> 10 `i e ]
-[i _deco_cc_values
-:U ..
--> -> 63 `i `uc
--> -> 6 `i `uc
--> -> 91 `i `uc
--> -> 79 `i `uc
--> -> 102 `i `uc
--> -> 109 `i `uc
--> -> 125 `i `uc
--> -> 7 `i `uc
--> -> 127 `i `uc
--> -> 103 `i `uc
-..
-]
-"4
-[; ;SEVEN_SEG_LIB.c: 4: char deco_ac_values[10]={192,249,164,176,153,146,130,248,128,152};
-[v _deco_ac_values `uc ~T0 @X0 -> 10 `i e ]
-[i _deco_ac_values
-:U ..
--> -> 192 `i `uc
--> -> 249 `i `uc
--> -> 164 `i `uc
--> -> 176 `i `uc
--> -> 153 `i `uc
--> -> 146 `i `uc
--> -> 130 `i `uc
--> -> 248 `i `uc
--> -> 128 `i `uc
--> -> 152 `i `uc
-..
-]
-"6
-[; ;SEVEN_SEG_LIB.c: 6: void decoInit(){
-[v _decoInit `(v ~T0 @X0 1 ef ]
-{
-[e :U _decoInit ]
-[f ]
-"7
-[; ;SEVEN_SEG_LIB.c: 7:     ANSELB = 0x00;
-[e = _ANSELB -> -> 0 `i `uc ]
-"8
-[; ;SEVEN_SEG_LIB.c: 8:     TRISB = 0x00;
-[e = _TRISB -> -> 0 `i `uc ]
-"9
-[; ;SEVEN_SEG_LIB.c: 9: }
-[e :UE 379 ]
-}
-"11
-[; ;SEVEN_SEG_LIB.c: 11: void decoAC(char num){
-[v _decoAC `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _decoAC ]
-[v _num `uc ~T0 @X0 1 r1 ]
-[f ]
-"13
-[; ;SEVEN_SEG_LIB.c: 13: }
-[e :UE 380 ]
-}
-"15
-[; ;SEVEN_SEG_LIB.c: 15: void decoCC(char num){
-[v _decoCC `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _decoCC ]
-[v _num `uc ~T0 @X0 1 r1 ]
-[f ]
-"17
-[; ;SEVEN_SEG_LIB.c: 17:     LATBbits.LATB6 = (deco_cc_values[num]&1) != 0 ? 1:0;
-[e = . . _LATBbits 0 6 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 1 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"18
-[; ;SEVEN_SEG_LIB.c: 18:     LATBbits.LATB0 = (deco_cc_values[num]&2) != 0 ? 1:0;
-[e = . . _LATBbits 0 0 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 2 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"19
-[; ;SEVEN_SEG_LIB.c: 19:     LATBbits.LATB2 = (deco_cc_values[num]&4) != 0 ? 1:0;
-[e = . . _LATBbits 0 2 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 4 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"20
-[; ;SEVEN_SEG_LIB.c: 20:     LATBbits.LATB3 = (deco_cc_values[num]&8) != 0 ? 1:0;
-[e = . . _LATBbits 0 3 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 8 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"21
-[; ;SEVEN_SEG_LIB.c: 21:     LATBbits.LATB4 = (deco_cc_values[num]&16) != 0 ? 1:0;
-[e = . . _LATBbits 0 4 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 16 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"22
-[; ;SEVEN_SEG_LIB.c: 22:     LATBbits.LATB5 = (deco_cc_values[num]&32) != 0 ? 1:0;
-[e = . . _LATBbits 0 5 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 32 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"23
-[; ;SEVEN_SEG_LIB.c: 23:     LATBbits.LATB1 = (deco_cc_values[num]&64) != 0 ? 1:0;
-[e = . . _LATBbits 0 1 -> ? != & -> *U + &U _deco_cc_values * -> _num `ux -> -> # *U &U _deco_cc_values `ui `ux `i -> 64 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
-"25
-[; ;SEVEN_SEG_LIB.c: 25: }
-[e :UE 381 ]
-}

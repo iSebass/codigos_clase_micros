@@ -1,4 +1,4 @@
-# 1 "SEVEN_SEG_LIB.c"
+# 1 "config.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,33 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "SEVEN_SEG_LIB.c" 2
-# 1 "./SEVEN_SEG_LIB.h" 1
+# 1 "config.c" 2
+
+
+
+
+
+
+
+#pragma config FOSC = HS
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config CLKOUTEN = OFF
+#pragma config IESO = ON
+#pragma config FCMEN = ON
+
+
+#pragma config WRT = OFF
+#pragma config VCAPEN = OFF
+#pragma config PLLEN = OFF
+#pragma config STVREN = ON
+#pragma config BORV = LO
+#pragma config LVP = ON
+
 
 
 
@@ -5377,34 +5402,5 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 5 "./SEVEN_SEG_LIB.h" 2
-# 19 "./SEVEN_SEG_LIB.h"
-void decoInit();
-void decoCC(char num);
-void decoAC(char num);
-# 1 "SEVEN_SEG_LIB.c" 2
+# 30 "config.c" 2
 
-
-char deco_cc_values[10]={63,6,91,79,102,109,125,7,127,103};
-char deco_ac_values[10]={192,249,164,176,153,146,130,248,128,152};
-
-void decoInit(){
-    ANSELB = 0x00;
-    TRISB = 0x00;
-}
-
-void decoAC(char num){
-
-}
-
-void decoCC(char num){
-
-    LATBbits.LATB6 = (deco_cc_values[num]&1) != 0 ? 1:0;
-    LATBbits.LATB0 = (deco_cc_values[num]&2) != 0 ? 1:0;
-    LATBbits.LATB2 = (deco_cc_values[num]&4) != 0 ? 1:0;
-    LATBbits.LATB3 = (deco_cc_values[num]&8) != 0 ? 1:0;
-    LATBbits.LATB4 = (deco_cc_values[num]&16) != 0 ? 1:0;
-    LATBbits.LATB5 = (deco_cc_values[num]&32) != 0 ? 1:0;
-    LATBbits.LATB1 = (deco_cc_values[num]&64) != 0 ? 1:0;
-
-}

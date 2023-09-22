@@ -8,13 +8,13 @@
 #define TRIS_PORT  TRISB
 #define LAT_PORT   LATB
 
-#define SEGA 0
-#define SEGB 1
-#define SEGC 2
-#define SEGD 3
-#define SEGE 4
-#define SEGF 5
-#define SEGG 6
+#define SEGA LATBbits.LATB6
+#define SEGB LATBbits.LATB0
+#define SEGC LATBbits.LATB2
+#define SEGD LATBbits.LATB3
+#define SEGE LATBbits.LATB4
+#define SEGF LATBbits.LATB5
+#define SEGG LATBbits.LATB1
 
 void decoInit();
 void decoCC(char num);

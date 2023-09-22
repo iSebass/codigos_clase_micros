@@ -11,24 +11,19 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\iProf\AppData\Local\Temp\xcAs678.o
+$C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 2 2 2 2 1
 config CONFIG 4 8007 8007 2 2 1
-$dist/default/production\GPIO_P2.X.production.o
-cinit CODE 0 7E4 7E4 1C 2 1
+$dist/default/production\HOLA_MUNDO.X.production.o
+cinit CODE 0 7FD 7FD 3 2 1
 idloc IDLOC 5 8000 8000 4 2 1
-text1 CODE 0 748 748 5 2 1
-text2 CODE 0 78E 78E 56 2 1
-idataCOMMON CODE 0 753 753 A 2 1
-maintext CODE 0 767 767 27 2 1
-cstackCOMMON COMMON 1 7A 7A 3 1 1
-inittext CODE 0 74D 74D 6 2 1
-idataBANK0 CODE 0 75D 75D A 2 1
-dataBANK0 BANK0 1 20 20 A 1 1
-dataCOMMON COMMON 1 70 70 A 1 1
-bssCOMMON COMMON 1 7D 7D 1 1 1
+text1 CODE 0 720 720 6A 2 1
+text2 CODE 0 701 701 1F 2 1
+text3 CODE 0 6E2 6E2 1F 2 1
+maintext CODE 0 78A 78A 73 2 1
+cstackCOMMON COMMON 1 70 70 A 1 1
 config CONFIG 4 8007 8007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -36,7 +31,7 @@ config CONFIG 4 8007 8007 2 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 2A-6F 1
+RAM 20-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -49,7 +44,7 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 2A-6F 1
+BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -59,9 +54,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-747 2
+CONST 4-6E1 2
 CONST 800-3FFF 2
-ENTRY 4-747 2
+ENTRY 4-6E1 2
 ENTRY 800-3FFF 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -85,7 +80,7 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-CODE 4-747 2
+CODE 4-6E1 2
 CODE 800-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -101,10 +96,11 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
+COMMON 7A-7D 1
 EEDATA F000-F0FF 2
-STRCODE 4-747 2
+STRCODE 4-6E1 2
 STRCODE 800-3FFF 2
-STRING 4-747 2
+STRING 4-6E1 2
 STRING 800-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -119,65 +115,64 @@ STRING 800-3FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/production\GPIO_P2.X.production.o
-7E4 cinit CODE >1571:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E4 cinit CODE >1574:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E4 cinit CODE >1612:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E5 cinit CODE >1613:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E6 cinit CODE >1614:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E7 cinit CODE >1615:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E8 cinit CODE >1616:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7E9 cinit CODE >1617:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7EA cinit CODE >1618:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7EB cinit CODE >1619:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7EC cinit CODE >1620:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7ED cinit CODE >1621:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F0 cinit CODE >1625:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F1 cinit CODE >1626:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F2 cinit CODE >1627:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F3 cinit CODE >1628:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F4 cinit CODE >1629:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F5 cinit CODE >1630:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F6 cinit CODE >1631:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F7 cinit CODE >1632:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F8 cinit CODE >1633:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7F9 cinit CODE >1634:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7FC cinit CODE >1639:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7FD cinit CODE >1645:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7FD cinit CODE >1647:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-7FE cinit CODE >1648:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-78E text2 CODE >15:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-78F text2 CODE >17:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-79B text2 CODE >18:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-7A7 text2 CODE >19:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-7B3 text2 CODE >20:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-7BF text2 CODE >21:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-7CB text2 CODE >22:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-7D7 text2 CODE >23:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-7E3 text2 CODE >25:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-748 text1 CODE >6:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-748 text1 CODE >7:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-74A text1 CODE >8:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-74C text1 CODE >9:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\SEVEN_SEG_LIB.c
-767 maintext CODE >7:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-767 maintext CODE >8:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-76A maintext CODE >9:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-76B maintext CODE >10:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-76D maintext CODE >11:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-770 maintext CODE >14:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-774 maintext CODE >15:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-778 maintext CODE >16:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-77A maintext CODE >16:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-77E maintext CODE >17:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-77F maintext CODE >18:C:\LABORAL\UNIVALLE\MICROS\GPIO_P2.X\main.c
-74D inittext CODE >1601:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-74D inittext CODE >1602:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-74E inittext CODE >1603:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-74E inittext CODE >1604:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-74F inittext CODE >1605:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-750 inittext CODE >1606:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-751 inittext CODE >1607:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
-752 inittext CODE >1608:C:\Users\iProf\AppData\Local\Temp\xcAs678.s
+$dist/default/production\HOLA_MUNDO.X.production.o
+7FD cinit CODE >1187:C:\Users\iProf\AppData\Local\Temp\xcAshuc.s
+7FD cinit CODE >1190:C:\Users\iProf\AppData\Local\Temp\xcAshuc.s
+7FD cinit CODE >1196:C:\Users\iProf\AppData\Local\Temp\xcAshuc.s
+7FD cinit CODE >1198:C:\Users\iProf\AppData\Local\Temp\xcAshuc.s
+7FE cinit CODE >1199:C:\Users\iProf\AppData\Local\Temp\xcAshuc.s
+6E2 text3 CODE >36:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+6E2 text3 CODE >37:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+6E5 text3 CODE >38:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+6F1 text3 CODE >39:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+6F4 text3 CODE >40:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+700 text3 CODE >41:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+701 text2 CODE >42:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+701 text2 CODE >43:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+704 text2 CODE >44:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+710 text2 CODE >45:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+713 text2 CODE >46:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+71F text2 CODE >47:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+720 text1 CODE >48:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+720 text1 CODE >49:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+723 text1 CODE >50:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+72F text1 CODE >51:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+732 text1 CODE >52:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+73E text1 CODE >53:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+741 text1 CODE >54:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+74D text1 CODE >55:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+750 text1 CODE >56:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+75C text1 CODE >57:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+75F text1 CODE >58:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+76B text1 CODE >59:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+76E text1 CODE >60:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+77A text1 CODE >61:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+77D text1 CODE >62:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+789 text1 CODE >64:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+78A maintext CODE >8:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+78A maintext CODE >10:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+78D maintext CODE >11:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+78E maintext CODE >12:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+790 maintext CODE >15:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+792 maintext CODE >16:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+794 maintext CODE >19:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+796 maintext CODE >20:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+799 maintext CODE >21:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7A2 maintext CODE >21:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7A6 maintext CODE >21:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7AA maintext CODE >23:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7B6 maintext CODE >24:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7B8 maintext CODE >25:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7BB maintext CODE >26:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7C4 maintext CODE >26:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7C8 maintext CODE >26:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7CC maintext CODE >27:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7D8 maintext CODE >28:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7DA maintext CODE >29:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7DD maintext CODE >30:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7E6 maintext CODE >30:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7EA maintext CODE >30:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
+7EE maintext CODE >31:C:\LABORAL\UNIVALLE\MICROS\HOLA_MUNDO.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -190,47 +185,38 @@ $dist/default/production\GPIO_P2.X.production.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 3 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
-__LdataBANK0 0 0 ABS 0 dataBANK0 -
+___latbits 3 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 7E 0 ABS 0 - -
+__Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
-__HidataBANK0 0 0 ABS 0 idataBANK0 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+main@i 74 0 COMMON 1 cstackCOMMON dist/default/production\HOLA_MUNDO.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-_main ECE 0 CODE 0 maintext dist/default/production\GPIO_P2.X.production.o
-btemp 7E 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
-start 4 0 CODE 0 init C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
-__LidataBANK0 0 0 ABS 0 idataBANK0 -
+_LATD 10F 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+_main F14 0 CODE 0 maintext dist/default/production\HOLA_MUNDO.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
+start 4 0 CODE 0 init C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
 __Hpowerup 0 0 CODE 0 powerup -
-decoCC@num 7A 0 COMMON 1 cstackCOMMON dist/default/production\GPIO_P2.X.production.o
-__HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
-wtemp0 7E 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+wtemp0 7E 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-__pidataCOMMON EA6 0 CODE 0 idataCOMMON dist/default/production\GPIO_P2.X.production.o
-_ANSELB 18D 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
-_BORCON 116 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
-__LdataCOMMON 0 0 ABS 0 dataCOMMON -
+_ANSELD 18F 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
+_BORCON 116 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_decoCC FC8 0 CODE 0 text2 dist/default/production\GPIO_P2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-___stacklo 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-__LidataCOMMON 0 0 ABS 0 idataCOMMON -
-start_initialization FC8 0 CODE 0 cinit dist/default/production\GPIO_P2.X.production.o
-_OSCCON 99 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\iProf\AppData\Local\Temp\xcAs678.o
+___stackhi 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+___stacklo 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+start_initialization FFA 0 CODE 0 cinit dist/default/production\HOLA_MUNDO.X.production.o
+_OSCCON 99 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -292,6 +278,9 @@ __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 4 config -
+_secuencia_A DC4 0 CODE 0 text3 dist/default/production\HOLA_MUNDO.X.production.o
+_secuencia_B E02 0 CODE 0 text2 dist/default/production\HOLA_MUNDO.X.production.o
+_secuencia_C E40 0 CODE 0 text1 dist/default/production\HOLA_MUNDO.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -302,7 +291,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit FC8 0 CODE 0 cinit -
+__Lcinit FFA 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -327,8 +316,6 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram E9A 0 CODE 0 inittext dist/default/production\GPIO_P2.X.production.o
-__Linittext 0 0 ABS 0 inittext -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
@@ -361,13 +348,10 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 800 0 ABS 0 - -
-__S1 7E 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_decoCC F1C 0 CODE 0 text2 dist/default/production\GPIO_P2.X.production.o
-__HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\GPIO_P2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -390,49 +374,45 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext ECE 0 CODE 0 maintext dist/default/production\GPIO_P2.X.production.o
+__pmaintext F14 0 CODE 0 maintext dist/default/production\HOLA_MUNDO.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-__Hinittext 0 0 ABS 0 inittext -
-_LATBbits 10D 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
-_OSCTUNE 98 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
+main@i_52 76 0 COMMON 1 cstackCOMMON dist/default/production\HOLA_MUNDO.X.production.o
+main@i_53 78 0 COMMON 1 cstackCOMMON dist/default/production\HOLA_MUNDO.X.production.o
+_OSCTUNE 98 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 7D 0 COMMON 1 bssCOMMON dist/default/production\GPIO_P2.X.production.o
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization FFA 0 CODE 0 cinit dist/default/production\GPIO_P2.X.production.o
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\HOLA_MUNDO.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
-_decoInit E90 0 CODE 0 text1 dist/default/production\GPIO_P2.X.production.o
-__ptext1 E90 0 CODE 0 text1 dist/default/production\GPIO_P2.X.production.o
-__ptext2 F1C 0 CODE 0 text2 dist/default/production\GPIO_P2.X.production.o
-__end_of_decoInit E9A 0 CODE 0 text1 dist/default/production\GPIO_P2.X.production.o
+__ptext1 E40 0 CODE 0 text1 dist/default/production\HOLA_MUNDO.X.production.o
+__ptext2 E02 0 CODE 0 text2 dist/default/production\HOLA_MUNDO.X.production.o
+__ptext3 DC4 0 CODE 0 text3 dist/default/production\HOLA_MUNDO.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-___heap_lo 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAs678.o
-__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\GPIO_P2.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+___heap_lo 0 0 ABS 0 - C:\Users\iProf\AppData\Local\Temp\xcAshuc.o
+__end_of_secuencia_A E02 0 CODE 0 text3 dist/default/production\HOLA_MUNDO.X.production.o
+__end_of_secuencia_B E40 0 CODE 0 text2 dist/default/production\HOLA_MUNDO.X.production.o
+__end_of_secuencia_C F14 0 CODE 0 text1 dist/default/production\HOLA_MUNDO.X.production.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\HOLA_MUNDO.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 EBA 0 CODE 0 idataBANK0 dist/default/production\GPIO_P2.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 7A 0 COMMON 1 cstackCOMMON dist/default/production\GPIO_P2.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\HOLA_MUNDO.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main F1C 0 CODE 0 maintext dist/default/production\GPIO_P2.X.production.o
-_TRISB 8D 0 ABS 0 - dist/default/production\GPIO_P2.X.production.o
+__end_of_main FFA 0 CODE 0 maintext dist/default/production\HOLA_MUNDO.X.production.o
+_TRISD 8F 0 ABS 0 - dist/default/production\HOLA_MUNDO.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__HdataBANK0 0 0 ABS 0 dataBANK0 -
-_contador 7D 0 COMMON 1 bssCOMMON dist/default/production\GPIO_P2.X.production.o
-__initialization FC8 0 CODE 0 cinit dist/default/production\GPIO_P2.X.production.o
-__pdataCOMMON 70 0 COMMON 1 dataCOMMON dist/default/production\GPIO_P2.X.production.o
-_deco_cc_values 70 0 COMMON 1 dataCOMMON dist/default/production\GPIO_P2.X.production.o
+__initialization FFA 0 CODE 0 cinit dist/default/production\HOLA_MUNDO.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -458,16 +438,13 @@ _deco_cc_values 70 0 COMMON 1 dataCOMMON dist/default/production\GPIO_P2.X.produ
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7E4 FC8 1C 2
-text1 0 748 E90 5 2
-text2 0 78E F1C 56 2
-idataCOMMON 0 753 EA6 A 2
-maintext 0 767 ECE 27 2
-inittext 0 74D E9A 6 2
+cinit 0 7FD FFA 3 2
+text1 0 720 E40 6A 2
+text2 0 701 E02 1F 2
+text3 0 6E2 DC4 1F 2
+maintext 0 78A F14 73 2
+cstackCOMMON 1 70 70 A 1
 reset_vec 0 0 0 4 2
-idataBANK0 0 75D EBA A 2
-dataBANK0 1 20 20 A 1
-dataCOMMON 1 70 70 E 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

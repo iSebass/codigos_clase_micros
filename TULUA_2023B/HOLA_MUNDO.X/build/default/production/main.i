@@ -1,4 +1,4 @@
-# 1 "SEVEN_SEG_LIB.c"
+# 1 "main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,12 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "SEVEN_SEG_LIB.c" 2
-# 1 "./SEVEN_SEG_LIB.h" 1
-
-
-
-
+# 1 "main.c" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5377,34 +5372,70 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 5 "./SEVEN_SEG_LIB.h" 2
-# 19 "./SEVEN_SEG_LIB.h"
-void decoInit();
-void decoCC(char num);
-void decoAC(char num);
-# 1 "SEVEN_SEG_LIB.c" 2
+# 1 "main.c" 2
+
+# 1 "./config.h" 1
+# 2 "main.c" 2
 
 
-char deco_cc_values[10]={63,6,91,79,102,109,125,7,127,103};
-char deco_ac_values[10]={192,249,164,176,153,146,130,248,128,152};
+void secuencia_A();
+void secuencia_B();
+void secuencia_C();
 
-void decoInit(){
-    ANSELB = 0x00;
-    TRISB = 0x00;
+void main(void){
+
+    OSCCON = 0x38;
+    OSCTUNE = 0x00;
+    BORCON = 0x00;
+
+
+    ANSELD = 0x00;
+    TRISD = 0b00000000;
+
+    while(1){
+        for(int i=0; i<=6; i++){
+            secuencia_A();
+        }
+
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+        for(int i=0; i<=6; i++){
+            secuencia_B();
+        }
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+        for(int i=0; i<=6; i++){
+            secuencia_C();
+        }
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+    }
 }
 
-void decoAC(char num){
 
+void secuencia_A(){
+    LATD = 0b10101010;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b01010101;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
 }
-
-void decoCC(char num){
-
-    LATBbits.LATB6 = (deco_cc_values[num]&1) != 0 ? 1:0;
-    LATBbits.LATB0 = (deco_cc_values[num]&2) != 0 ? 1:0;
-    LATBbits.LATB2 = (deco_cc_values[num]&4) != 0 ? 1:0;
-    LATBbits.LATB3 = (deco_cc_values[num]&8) != 0 ? 1:0;
-    LATBbits.LATB4 = (deco_cc_values[num]&16) != 0 ? 1:0;
-    LATBbits.LATB5 = (deco_cc_values[num]&32) != 0 ? 1:0;
-    LATBbits.LATB1 = (deco_cc_values[num]&64) != 0 ? 1:0;
+void secuencia_B(){
+    LATD = 0xF0;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0x0F;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+}
+void secuencia_C(){
+    LATD = 0b10000001;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b11000011;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b11101111;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b11111111;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b11101111;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b11000111;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
+    LATD = 0b10000001;
+    _delay((unsigned long)((200)*(8000000/4000.0)));
 
 }
