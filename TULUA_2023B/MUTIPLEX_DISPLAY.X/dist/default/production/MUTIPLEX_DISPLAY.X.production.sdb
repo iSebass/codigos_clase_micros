@@ -1,0 +1,125 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1939 ]
+[d frameptr 6 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"10 C:\LABORAL\UNIVALLE\MICROS\MUTIPLEX_DISPLAY.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"6 C:\LABORAL\UNIVALLE\MICROS\MUTIPLEX_DISPLAY.X\SEVEN_SEG_LIB.c
+[v _decoInit decoInit `(v  1 e 1 0 ]
+"21
+[v _decoCC decoCC `(v  1 e 1 0 ]
+"1376 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S30 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1517
+[u S39 . 1 `S30 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES39  1 e 1 @143 ]
+"1958
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"2016
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S115 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2437
+[u S124 . 1 `S115 1 . 1 0 ]
+[v _LATBbits LATBbits `VES124  1 e 1 @269 ]
+[s S51 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"2564
+[s S60 . 1 `uc 1 LATD 1 0 :8:0 
+]
+[u S62 . 1 `S51 1 . 1 0 `S60 1 . 1 0 ]
+[v _LATDbits LATDbits `VES62  1 e 1 @271 ]
+"2924
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3387
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3445
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+"5 C:\LABORAL\UNIVALLE\MICROS\MUTIPLEX_DISPLAY.X\main.c
+[v _counter counter `uc  1 e 1 0 ]
+"6
+[v _unidades unidades `uc  1 e 1 0 ]
+[v _decenas decenas `uc  1 e 1 0 ]
+"3 C:\LABORAL\UNIVALLE\MICROS\MUTIPLEX_DISPLAY.X\SEVEN_SEG_LIB.c
+[v _deco_cc_values deco_cc_values `[10]uc  1 e 10 0 ]
+"4
+[v _deco_ac_values deco_ac_values `[10]uc  1 e 10 0 ]
+"10 C:\LABORAL\UNIVALLE\MICROS\MUTIPLEX_DISPLAY.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"51
+} 0
+"6 C:\LABORAL\UNIVALLE\MICROS\MUTIPLEX_DISPLAY.X\SEVEN_SEG_LIB.c
+[v _decoInit decoInit `(v  1 e 1 0 ]
+{
+"9
+} 0
+"21
+[v _decoCC decoCC `(v  1 e 1 0 ]
+{
+[v decoCC@num num `uc  1 a 1 wreg ]
+[v decoCC@num num `uc  1 a 1 wreg ]
+"23
+[v decoCC@num num `uc  1 a 1 0 ]
+"31
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
