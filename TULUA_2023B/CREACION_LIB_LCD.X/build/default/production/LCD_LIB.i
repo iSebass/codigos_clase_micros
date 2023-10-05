@@ -5553,7 +5553,12 @@ void lcd_scroll_right(void){
 }
 
 void lcd_custom_char(uint8_t mem, uint8_t *charmap){
-
+    lcd_command(0x40 | ((mem&7)<<3) );
+    for( char i = 0; i<=7; i++ ){
+       lcd_write(charmap[i]);
+    }
+    lcd_command(0x80);
+    _delay((unsigned long)((37)*(8000000UL/4000000.0)));
 }
 
 void lcd_out(char row, char col, char *str){

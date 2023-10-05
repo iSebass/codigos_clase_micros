@@ -145,7 +145,12 @@ void lcd_scroll_right(void){
 }
 
 void lcd_custom_char(uint8_t mem, uint8_t *charmap){
-    
+    lcd_command(_LCD_SET_CGRAM_ADDR | ((mem&7)<<3) );
+    for( char i = 0; i<=7; i++ ){
+       lcd_write(charmap[i]); 
+    }
+    lcd_command(_LCD_SET_DDRAM_ADDR);
+    _delay_us(37);
 }
 
 void lcd_out(char row, char col, char *str){

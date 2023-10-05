@@ -9,9 +9,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "160
 [; ;./LCD_LIB.h: 160: void lcd_disable_cursor(void);
 [v _lcd_disable_cursor `(v ~T0 @X0 0 ef ]
+"165
+[; ;./LCD_LIB.h: 165: void lcd_custom_char(uint8_t mem, uint8_t *charmap);
+[v _lcd_custom_char `(v ~T0 @X0 0 ef2`uc`*uc ]
 "167
 [; ;./LCD_LIB.h: 167: void lcd_out(char row, char col, char *str);
 [v _lcd_out `(v ~T0 @X0 0 ef3`uc`uc`*uc ]
+"168
+[; ;./LCD_LIB.h: 168: void lcd_char(char row, char col, char letra);
+[v _lcd_char `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"144
+[; ;./LCD_LIB.h: 144: void lcd_write(uint8_t letra);
+[v _lcd_write `(v ~T0 @X0 0 ef1`uc ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -537,40 +546,82 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7793
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h: 7793: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
 "5 main.c
-[; ;main.c: 5: void main(void){
+[; ;main.c: 5: char customChar1[] = {
+[v _customChar1 `uc ~T0 @X0 -> 8 `i e ]
+[i _customChar1
+:U ..
+-> -> 14 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 31 `i `uc
+-> -> 27 `i `uc
+-> -> 27 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+..
+]
+"16
+[; ;main.c: 16: char customChar2[] = {
+[v _customChar2 `uc ~T0 @X0 -> 8 `i e ]
+[i _customChar2
+:U ..
+-> -> 2 `i `uc
+-> -> 6 `i `uc
+-> -> 30 `i `uc
+-> -> 30 `i `uc
+-> -> 30 `i `uc
+-> -> 6 `i `uc
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+..
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"27
+[; ;main.c: 27: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"7
-[; ;main.c: 7:     lcd_init();
+"29
+[; ;main.c: 29:     lcd_init();
 [e ( _lcd_init ..  ]
-"8
-[; ;main.c: 8:     lcd_disable_blink();
+"30
+[; ;main.c: 30:     lcd_disable_blink();
 [e ( _lcd_disable_blink ..  ]
-"9
-[; ;main.c: 9:     lcd_disable_cursor();
+"31
+[; ;main.c: 31:     lcd_disable_cursor();
 [e ( _lcd_disable_cursor ..  ]
-"11
-[; ;main.c: 11:     lcd_out(2,3,"Univalle");
+"33
+[; ;main.c: 33:     lcd_custom_char(0,customChar1);
+[e ( _lcd_custom_char (2 , -> -> 0 `i `uc -> &U _customChar1 `*uc ]
+"34
+[; ;main.c: 34:     lcd_custom_char(1,customChar2);
+[e ( _lcd_custom_char (2 , -> -> 1 `i `uc -> &U _customChar2 `*uc ]
+"36
+[; ;main.c: 36:     lcd_out(2,3,"Univalle");
 [e ( _lcd_out (3 , , -> -> 2 `i `uc -> -> 3 `i `uc :s 1C ]
-"13
-[; ;main.c: 13:     while(1){
+"37
+[; ;main.c: 37:     lcd_char(3,1,0);
+[e ( _lcd_char (3 , , -> -> 3 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
+"38
+[; ;main.c: 38:     lcd_write(1);
+[e ( _lcd_write (1 -> -> 1 `i `uc ]
+"40
+[; ;main.c: 40:     while(1){
 [e :U 381 ]
 {
-"15
-[; ;main.c: 15:     }
+"42
+[; ;main.c: 42:     }
 }
 [e :U 380 ]
 [e $U 381  ]
 [e :U 382 ]
-"17
-[; ;main.c: 17:     return;
+"44
+[; ;main.c: 44:     return;
 [e $UE 379  ]
-"18
-[; ;main.c: 18: }
+"45
+[; ;main.c: 45: }
 [e :UE 379 ]
 }
 [a 1C 85 110 105 118 97 108 108 101 0 ]
