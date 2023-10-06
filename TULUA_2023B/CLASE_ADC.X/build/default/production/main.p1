@@ -580,7 +580,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 8: int conver;
 [v _conver `i ~T0 @X0 1 e ]
 "9
-[; ;main.c: 9: char txtLCD[20]=" ";
+[; ;main.c: 9: float pot, temp;
+[v _pot `f ~T0 @X0 1 e ]
+[v _temp `f ~T0 @X0 1 e ]
+"10
+[; ;main.c: 10: char txtLCD[20]=" ";
 [v _txtLCD `uc ~T0 @X0 -> 20 `i e ]
 [i _txtLCD
 :U ..
@@ -589,58 +593,80 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"11
-[; ;main.c: 11: void main(void){
+"12
+[; ;main.c: 12: void main(void){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"13
-[; ;main.c: 13:     ANSELAbits.ANSA0 = 1;
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
 "14
-[; ;main.c: 14:     TRISAbits.TRISA0 = 1;
+[; ;main.c: 14:     ANSELAbits.ANSA0 = 1;
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
+"15
+[; ;main.c: 15:     TRISAbits.TRISA0 = 1;
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-"16
-[; ;main.c: 16:     lcd_init();
-[e ( _lcd_init ..  ]
 "17
-[; ;main.c: 17:     lcd_disable_blink();
-[e ( _lcd_disable_blink ..  ]
+[; ;main.c: 17:     ANSELAbits.ANSA1 = 1;
+[e = . . _ANSELAbits 0 1 -> -> 1 `i `uc ]
 "18
-[; ;main.c: 18:     lcd_disable_cursor();
-[e ( _lcd_disable_cursor ..  ]
-"19
-[; ;main.c: 19:     ADC_Init();
-[e ( _ADC_Init ..  ]
+[; ;main.c: 18:     TRISAbits.TRISA1 = 1;
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
 "20
-[; ;main.c: 20:     while(1){
+[; ;main.c: 20:     lcd_init();
+[e ( _lcd_init ..  ]
+"21
+[; ;main.c: 21:     lcd_disable_blink();
+[e ( _lcd_disable_blink ..  ]
+"22
+[; ;main.c: 22:     lcd_disable_cursor();
+[e ( _lcd_disable_cursor ..  ]
+"23
+[; ;main.c: 23:     ADC_Init();
+[e ( _ADC_Init ..  ]
+"24
+[; ;main.c: 24:     while(1){
 [e :U 383 ]
 {
-"21
-[; ;main.c: 21:         conver = ADC_Read(0);
-[e = _conver ( _ADC_Read (1 -> -> 0 `i `uc ]
-"22
-[; ;main.c: 22:         sprintf(txtLCD,"Conver: %04d", conver);
-[e ( _sprintf (1 , (. , &U _txtLCD :s 1C _conver ]
-"23
-[; ;main.c: 23:         lcd_out(1,1,txtLCD);
-[e ( _lcd_out (3 , , -> -> 1 `i `uc -> -> 1 `i `uc &U _txtLCD ]
-"24
-[; ;main.c: 24:         _delay((unsigned long)((10)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "25
-[; ;main.c: 25:     }
+[; ;main.c: 25:         conver = ADC_Read(0);
+[e = _conver ( _ADC_Read (1 -> -> 0 `i `uc ]
+"26
+[; ;main.c: 26:         pot = (5.0/1023.0)*conver;
+[e = _pot -> * / .5.0 .1023.0 -> _conver `d `f ]
+"27
+[; ;main.c: 27:         sprintf(txtLCD,"POT: %3.1f", pot);
+[e ( _sprintf (1 , (. , &U _txtLCD :s 1C -> _pot `d ]
+"28
+[; ;main.c: 28:         lcd_out(1,1,txtLCD);
+[e ( _lcd_out (3 , , -> -> 1 `i `uc -> -> 1 `i `uc &U _txtLCD ]
+"30
+[; ;main.c: 30:         conver = ADC_Read(1);
+[e = _conver ( _ADC_Read (1 -> -> 1 `i `uc ]
+"31
+[; ;main.c: 31:         temp = (150.0/307.0)*conver;
+[e = _temp -> * / .150.0 .307.0 -> _conver `d `f ]
+"32
+[; ;main.c: 32:         sprintf(txtLCD,"TEMP: %3.1f", temp);
+[e ( _sprintf (1 , (. , &U _txtLCD :s 2C -> _temp `d ]
+"33
+[; ;main.c: 33:         lcd_out(2,1,txtLCD);
+[e ( _lcd_out (3 , , -> -> 2 `i `uc -> -> 1 `i `uc &U _txtLCD ]
+"35
+[; ;main.c: 35:         _delay((unsigned long)((10)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"36
+[; ;main.c: 36:     }
 }
 [e :U 382 ]
 [e $U 383  ]
 [e :U 384 ]
-"26
-[; ;main.c: 26:     return;
+"37
+[; ;main.c: 37:     return;
 [e $UE 381  ]
-"27
-[; ;main.c: 27: }
+"38
+[; ;main.c: 38: }
 [e :UE 381 ]
 }
-[p f _sprintf 8421508 ]
-[a 1C 67 111 110 118 101 114 58 32 37 48 52 100 0 ]
+[p f _sprintf 8495104 ]
+[a 1C 80 79 84 58 32 37 51 46 49 102 0 ]
+[a 2C 84 69 77 80 58 32 37 51 46 49 102 0 ]
