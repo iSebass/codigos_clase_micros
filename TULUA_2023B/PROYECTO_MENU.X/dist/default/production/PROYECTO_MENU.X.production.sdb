@@ -1,0 +1,415 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1939 ]
+[d frameptr 6 ]
+"18 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\main.c
+[e E3320 . `uc
+MPPAL 0
+MMOTORES 1
+SENSORES 2
+RELOJ 3
+MTEMP 4
+MLDR 5
+MDHT 6
+MMOTORA 7
+MMOTORB 8
+]
+"123 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\SOLUCION.c
+[e E3320 . `uc
+MPPAL 0
+MMOTORES 1
+SENSORES 2
+RELOJ 3
+MTEMP 4
+MLDR 5
+MDHT 6
+MMOTORA 7
+MMOTORB 8
+]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"9 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\LCD_LIB.c
+[v __write_nibble _write_nibble `(v  1 e 1 0 ]
+"22
+[v __send_byte _send_byte `(v  1 e 1 0 ]
+"32
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"71
+[v _lcd_write lcd_write `(v  1 e 1 0 ]
+"74
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+"84
+[v _lcd_set_cursor lcd_set_cursor `(v  1 e 1 0 ]
+"121
+[v _lcd_disable_blink lcd_disable_blink `(v  1 e 1 0 ]
+"132
+[v _lcd_disable_cursor lcd_disable_cursor `(v  1 e 1 0 ]
+"156
+[v _lcd_out lcd_out `(v  1 e 1 0 ]
+"164
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+"21 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"19 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\SOLUCION.c
+[v _SystemInit SystemInit `(v  1 e 1 0 ]
+"28
+[v _configurarPuertos configurarPuertos `(v  1 e 1 0 ]
+"63
+[v _motorA_Derecha motorA_Derecha `(v  1 e 1 0 ]
+"67
+[v _motorA_Izquierda motorA_Izquierda `(v  1 e 1 0 ]
+"88
+[v _MenuPPAL MenuPPAL `(v  1 e 1 0 ]
+"131
+[v _MenuSensores MenuSensores `(v  1 e 1 0 ]
+"184
+[v _MenuMotores MenuMotores `(v  1 e 1 0 ]
+"232
+[v _MenuMotorA MenuMotorA `(v  1 e 1 0 ]
+"277
+[v _MenuMotorB MenuMotorB `(v  1 e 1 0 ]
+"284
+[v _MenuRELOJ MenuRELOJ `(v  1 e 1 0 ]
+"287
+[v _MenuTemp MenuTemp `(v  1 e 1 0 ]
+"290
+[v _MenuLDR MenuLDR `(v  1 e 1 0 ]
+[s S459 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"509 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1939.h
+[u S468 . 1 `S459 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES468  1 e 1 @13 ]
+[s S266 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1331
+[u S275 . 1 `S266 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES275  1 e 1 @140 ]
+[s S335 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1393
+[u S344 . 1 `S335 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES344  1 e 1 @141 ]
+"1500
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+[s S356 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1517
+[u S365 . 1 `S356 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES365  1 e 1 @143 ]
+[s S424 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1788
+[s S433 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S438 . 1 `S424 1 . 1 0 `S433 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES438  1 e 1 @149 ]
+"1958
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"2016
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2157
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"2177
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+[s S52 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"2226
+[s S60 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S64 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S67 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[u S70 . 1 `S52 1 . 1 0 `S60 1 . 1 0 `S64 1 . 1 0 `S67 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES70  1 e 1 @157 ]
+[s S22 . 1 `uc 1 ADPREF0 1 0 :1:0 
+`uc 1 ADPREF1 1 0 :1:1 
+`uc 1 ADNREF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCS0 1 0 :1:4 
+`uc 1 ADCS1 1 0 :1:5 
+`uc 1 ADCS2 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2308
+[s S31 . 1 `uc 1 ADPREF 1 0 :2:0 
+`uc 1 . 1 0 :2:2 
+`uc 1 ADCS 1 0 :3:4 
+]
+[u S35 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES35  1 e 1 @158 ]
+[s S377 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2437
+[u S386 . 1 `S377 1 . 1 0 ]
+[v _LATBbits LATBbits `VES386  1 e 1 @269 ]
+"2544
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+[s S398 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"2564
+[s S407 . 1 `uc 1 LATD 1 0 :8:0 
+]
+[u S409 . 1 `S398 1 . 1 0 `S407 1 . 1 0 ]
+[v _LATDbits LATDbits `VES409  1 e 1 @271 ]
+"2924
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+[s S244 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 ANSA3 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+]
+"3347
+[s S251 . 1 `uc 1 ANSELA 1 0 :6:0 
+]
+[u S253 . 1 `S244 1 . 1 0 `S251 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES253  1 e 1 @396 ]
+[s S287 . 1 `uc 1 ANSB0 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+]
+"3405
+[s S294 . 1 `uc 1 ANSELB 1 0 :6:0 
+]
+[u S296 . 1 `S287 1 . 1 0 `S294 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES296  1 e 1 @397 ]
+"3445
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+[s S309 . 1 `uc 1 ANSD0 1 0 :1:0 
+`uc 1 ANSD1 1 0 :1:1 
+`uc 1 ANSD2 1 0 :1:2 
+`uc 1 ANSD3 1 0 :1:3 
+`uc 1 ANSD4 1 0 :1:4 
+`uc 1 ANSD5 1 0 :1:5 
+`uc 1 ANSD6 1 0 :1:6 
+`uc 1 ANSD7 1 0 :1:7 
+]
+"3465
+[s S318 . 1 `uc 1 ANSELD 1 0 :8:0 
+]
+[u S320 . 1 `S309 1 . 1 0 `S318 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES320  1 e 1 @399 ]
+"4064
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\LCD_LIB.c
+[v __lcd_params _lcd_params `uc  1 s 1 _lcd_params ]
+"18 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\main.c
+[v _currentMenu currentMenu `uc  1 e 1 0 ]
+"17 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\SOLUCION.c
+[v _op op `uc  1 e 1 0 ]
+"21 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"41
+} 0
+"19 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\SOLUCION.c
+[v _SystemInit SystemInit `(v  1 e 1 0 ]
+{
+"27
+} 0
+"32 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\LCD_LIB.c
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"70
+} 0
+"132
+[v _lcd_disable_cursor lcd_disable_cursor `(v  1 e 1 0 ]
+{
+"136
+} 0
+"121
+[v _lcd_disable_blink lcd_disable_blink `(v  1 e 1 0 ]
+{
+"125
+} 0
+"28 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\SOLUCION.c
+[v _configurarPuertos configurarPuertos `(v  1 e 1 0 ]
+{
+"62
+} 0
+"287
+[v _MenuTemp MenuTemp `(v  1 e 1 0 ]
+{
+"289
+} 0
+"131
+[v _MenuSensores MenuSensores `(v  1 e 1 0 ]
+{
+"183
+} 0
+"284
+[v _MenuRELOJ MenuRELOJ `(v  1 e 1 0 ]
+{
+"286
+} 0
+"88
+[v _MenuPPAL MenuPPAL `(v  1 e 1 0 ]
+{
+"130
+} 0
+"184
+[v _MenuMotores MenuMotores `(v  1 e 1 0 ]
+{
+"231
+} 0
+"277
+[v _MenuMotorB MenuMotorB `(v  1 e 1 0 ]
+{
+"282
+} 0
+"232
+[v _MenuMotorA MenuMotorA `(v  1 e 1 0 ]
+{
+"276
+} 0
+"67
+[v _motorA_Izquierda motorA_Izquierda `(v  1 e 1 0 ]
+{
+"70
+} 0
+"63
+[v _motorA_Derecha motorA_Derecha `(v  1 e 1 0 ]
+{
+"66
+} 0
+"156 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\LCD_LIB.c
+[v _lcd_out lcd_out `(v  1 e 1 0 ]
+{
+[v lcd_out@row row `uc  1 a 1 wreg ]
+[v lcd_out@row row `uc  1 a 1 wreg ]
+[v lcd_out@col col `uc  1 p 1 11 ]
+[v lcd_out@str str `*.25uc  1 p 2 12 ]
+[v lcd_out@row row `uc  1 a 1 1 ]
+"163
+} 0
+"164
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+{
+[v lcd_char@row row `uc  1 a 1 wreg ]
+[v lcd_char@row row `uc  1 a 1 wreg ]
+[v lcd_char@col col `uc  1 p 1 11 ]
+[v lcd_char@letra letra `uc  1 p 1 12 ]
+[v lcd_char@row row `uc  1 a 1 0 ]
+"167
+} 0
+"71
+[v _lcd_write lcd_write `(v  1 e 1 0 ]
+{
+[v lcd_write@letra letra `uc  1 a 1 wreg ]
+[v lcd_write@letra letra `uc  1 a 1 wreg ]
+[v lcd_write@letra letra `uc  1 a 1 6 ]
+"73
+} 0
+"84
+[v _lcd_set_cursor lcd_set_cursor `(v  1 e 1 0 ]
+{
+[v lcd_set_cursor@row row `uc  1 a 1 wreg ]
+[v lcd_set_cursor@row row `uc  1 a 1 wreg ]
+[v lcd_set_cursor@col col `uc  1 p 1 7 ]
+[v lcd_set_cursor@row row `uc  1 a 1 10 ]
+"94
+} 0
+"74
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+{
+[v lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_command@cmd cmd `uc  1 a 1 6 ]
+"76
+} 0
+"22
+[v __send_byte _send_byte `(v  1 e 1 0 ]
+{
+[v __send_byte@value value `uc  1 a 1 wreg ]
+[v __send_byte@value value `uc  1 a 1 wreg ]
+[v __send_byte@mode mode `uc  1 p 1 2 ]
+[v __send_byte@value value `uc  1 a 1 5 ]
+"30
+} 0
+"9
+[v __write_nibble _write_nibble `(v  1 e 1 0 ]
+{
+[v __write_nibble@nibble nibble `uc  1 a 1 wreg ]
+[v __write_nibble@nibble nibble `uc  1 a 1 wreg ]
+[v __write_nibble@nibble nibble `uc  1 a 1 1 ]
+"20
+} 0
+"290 C:\LABORAL\UNIVALLE\MICROS\PROYECTO_MENU.X\SOLUCION.c
+[v _MenuLDR MenuLDR `(v  1 e 1 0 ]
+{
+"292
+} 0
