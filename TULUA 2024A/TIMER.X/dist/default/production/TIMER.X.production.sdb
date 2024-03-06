@@ -1,0 +1,113 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1939 ]
+[d frameptr 6 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\LABORAL\UNIVALLE\MICROS 2024\CLASES\TIMER.X\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S117 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:/Users/iProf/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1939.h
+[s S126 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S131 . 1 `S117 1 . 1 0 `S126 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES131  1 e 1 @11 ]
+"880
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+[s S94 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1330
+[u S103 . 1 `S94 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES103  1 e 1 @140 ]
+[s S51 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1516
+[u S60 . 1 `S51 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES60  1 e 1 @143 ]
+"1764
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+"1957
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"2015
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S149 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"2563
+[s S158 . 1 `uc 1 LATD 1 0 :8:0 
+]
+[u S160 . 1 `S149 1 . 1 0 `S158 1 . 1 0 ]
+[v _LATDbits LATDbits `VES160  1 e 1 @271 ]
+"2923
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+[s S72 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 ANSA3 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+]
+"3346
+[s S79 . 1 `uc 1 ANSELA 1 0 :6:0 
+]
+[u S81 . 1 `S72 1 . 1 0 `S79 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES81  1 e 1 @396 ]
+[s S25 . 1 `uc 1 ANSD0 1 0 :1:0 
+`uc 1 ANSD1 1 0 :1:1 
+`uc 1 ANSD2 1 0 :1:2 
+`uc 1 ANSD3 1 0 :1:3 
+`uc 1 ANSD4 1 0 :1:4 
+`uc 1 ANSD5 1 0 :1:5 
+`uc 1 ANSD6 1 0 :1:6 
+`uc 1 ANSD7 1 0 :1:7 
+]
+"3464
+[s S34 . 1 `uc 1 ANSELD 1 0 :8:0 
+]
+[u S36 . 1 `S25 1 . 1 0 `S34 1 . 1 0 ]
+[v _ANSELDbits ANSELDbits `VES36  1 e 1 @399 ]
+"4 C:\LABORAL\UNIVALLE\MICROS 2024\CLASES\TIMER.X\main.c
+[v _contador contador `i  1 e 2 0 ]
+"6
+[v _main main `(v  1 e 1 0 ]
+{
+"33
+} 0
